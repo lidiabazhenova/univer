@@ -1,4 +1,6 @@
-package com.lidiabazhenova.login;
+package com.lidiabazhenova.webapp.login;
+
+import com.lidiabazhenova.webapp.todo.TodoService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +11,9 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/login.do")
 public class LoginServlet extends HttpServlet {
-    private LoginService service = new LoginService();
+    private LoginService userValidationService = new LoginService();
+    private TodoService todoService = new TodoService();
+
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
@@ -23,10 +27,11 @@ public class LoginServlet extends HttpServlet {
                           HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
-        boolean isValidUser = service.validateUser(name, password);
+        boolean isValidUser = userValidationService.validateUser(name, password);
 
         if (isValidUser) {
-            request.setAttribute("name", name);
+            request.setAttribute("username", name);
+            request.setAttribute("todos", todoService.retrieveTodos());
             request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
         } else {
             request.setAttribute("errorMessage", "Invalid Credentials!!");

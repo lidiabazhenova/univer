@@ -1,4 +1,4 @@
-package com.lidiabazhenova.login;
+package com.lidiabazhenova.webapp.login;
 
 public class LoginService {
 

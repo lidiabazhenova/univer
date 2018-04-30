@@ -5,5 +5,6 @@
 </head>
 <body>
 <div>Welcome, ${username}</div>
+<p>${todos}</p>
 </body>
 </html>
