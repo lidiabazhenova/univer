@@ -5,6 +5,5 @@
 </head>
 <body>
 <div>Welcome, ${username}</div>
-<div>password is ${password}</div>
 </body>
 </html>
