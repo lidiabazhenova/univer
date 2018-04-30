@@ -30,9 +30,7 @@ public class LoginServlet extends HttpServlet {
         boolean isValidUser = userValidationService.validateUser(name, password);
 
         if (isValidUser) {
-            request.setAttribute("username", name);
-            request.setAttribute("todos", todoService.retrieveTodos());
-            request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
+            response.sendRedirect("/todo.do");
         } else {
             request.setAttribute("errorMessage", "Invalid Credentials!!");
             request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
