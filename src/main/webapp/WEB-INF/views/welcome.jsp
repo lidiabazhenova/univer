@@ -4,6 +4,6 @@
     <title>Welcome</title>
 </head>
 <body>
-Welcome, ${username}
+<div>Welcome, ${username}</div>
 </body>
 </html>

@@ -4,6 +4,7 @@
     <title>Welcome</title>
 </head>
 <body>
-Welcome, ${username}
+<div>Welcome, ${username}</div>
+<div>password is ${password}</div>
 </body>
 </html>
