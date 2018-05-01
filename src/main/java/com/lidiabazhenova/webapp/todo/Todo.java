@@ -1,5 +1,7 @@
 package com.lidiabazhenova.webapp.todo;
 
+import java.util.Objects;
+
 public class Todo {
 
     public Todo(String name) {
@@ -15,6 +17,19 @@ public class Todo {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Todo todo = (Todo) o;
+        return Objects.equals(name, todo.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 
     @Override

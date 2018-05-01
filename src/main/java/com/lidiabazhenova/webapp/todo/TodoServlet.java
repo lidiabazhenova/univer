@@ -13,12 +13,19 @@ import java.io.IOException;
 public class TodoServlet extends HttpServlet {
     private TodoService todoService = new TodoService();
 
-
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("todos", todoService.retrieveTodos());
         request.getRequestDispatcher("/WEB-INF/views/todo.jsp").forward(
                 request, response);
+    }
+
+    protected void doPost(HttpServletRequest request,
+                          HttpServletResponse response) throws ServletException, IOException {
+        String newTodo = request.getParameter("todo");
+        todoService.addTodo(new Todo(newTodo));
+        request.setAttribute("todos", todoService.retrieveTodos());
+        response.sendRedirect("/todo.do");
     }
 }
 
