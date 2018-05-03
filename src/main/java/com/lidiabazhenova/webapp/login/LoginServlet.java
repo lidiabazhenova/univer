@@ -12,8 +12,6 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/login.do")
 public class LoginServlet extends HttpServlet {
     private LoginService userValidationService = new LoginService();
-    private TodoService todoService = new TodoService();
-
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
@@ -31,7 +29,7 @@ public class LoginServlet extends HttpServlet {
 
         if (isValidUser) {
             request.getSession().setAttribute("username", name);
-            response.sendRedirect("/todo.do");
+            response.sendRedirect("/list-todos.do");
         } else {
             request.setAttribute("errorMessage", "Invalid Credentials!!");
             request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);

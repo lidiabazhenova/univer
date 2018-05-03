@@ -4,12 +4,21 @@ import java.util.Objects;
 
 public class Todo {
 
-    public Todo(String name) {
-        super();
+    private String name;
+    private String product;
+
+    public Todo(String name, String product) {
         this.name = name;
+        this.product = product;
     }
 
-    private String name;
+    public String getProduct() {
+        return product;
+    }
+
+    public void setProduct(String product) {
+        this.product = product;
+    }
 
     public String getName() {
         return name;
@@ -33,7 +42,11 @@ public class Todo {
     }
 
     @Override
-    public String toString() {
-        return "Todo [name=" + name + "]";
+    public String  toString() {
+        final StringBuffer sb = new StringBuffer("Todo{");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", product='").append(product).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }

@@ -1,4 +1,4 @@
-package com.lidiabazhenova.webapp.login;
+package com.lidiabazhenova.webapp.logout;
 
 import com.lidiabazhenova.webapp.todo.TodoService;
 
