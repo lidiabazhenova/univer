@@ -7,7 +7,7 @@
     <form action="/add-todo.do" method="post">
         <fieldset class="form-group">
             <label>URL</label>
-            <input type="text" name="todo" class="form-control"/><br/>
+            <input type="text" name="url" class="form-control"/><br/>
         </fieldset>
         <fieldset class="form-group">
             <label>Product:</label>

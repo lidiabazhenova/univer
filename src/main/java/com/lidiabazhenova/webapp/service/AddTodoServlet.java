@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/add-service.do")
+@WebServlet(urlPatterns = "/add-todo.do")
 public class AddTodoServlet extends HttpServlet {
     private TodoService todoService = new TodoService();
 
@@ -21,7 +21,7 @@ public class AddTodoServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws ServletException, IOException {
-        String newTodo = request.getParameter("service");
+        String newTodo = request.getParameter("url");
         String product = request.getParameter("product");
         todoService.addTodo(new Todo(newTodo, product));
         request.setAttribute("todos", todoService.retrieveTodos());

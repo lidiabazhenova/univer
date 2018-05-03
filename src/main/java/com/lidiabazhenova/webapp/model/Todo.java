@@ -4,11 +4,11 @@ import java.util.Objects;
 
 public class Todo {
 
-    private String name;
+    private String url;
     private String product;
 
-    public Todo(String name, String product) {
-        this.name = name;
+    public Todo(String url, String product) {
+        this.url = url;
         this.product = product;
     }
 
@@ -20,12 +20,12 @@ public class Todo {
         this.product = product;
     }
 
-    public String getName() {
-        return name;
+    public String getUrl() {
+        return url;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     @Override
@@ -33,18 +33,18 @@ public class Todo {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Todo todo = (Todo) o;
-        return Objects.equals(name, todo.name);
+        return Objects.equals(url, todo.url);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(url);
     }
 
     @Override
     public String  toString() {
         final StringBuffer sb = new StringBuffer("Todo{");
-        sb.append("name='").append(name).append('\'');
+        sb.append("url='").append(url).append('\'');
         sb.append(", product='").append(product).append('\'');
         sb.append('}');
         return sb.toString();
