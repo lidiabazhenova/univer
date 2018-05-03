@@ -1,5 +1,6 @@
 package com.lidiabazhenova.webapp.controllers;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,8 +15,8 @@ public class ListProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("products", productService.retrieveProducts());
-        request.getRequestDispatcher("/WEB-INF/views/list-products.jsp").forward(
-                request, response);
+        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/list-products.jsp");
+        dis.forward(request, response);
     }
 }
 

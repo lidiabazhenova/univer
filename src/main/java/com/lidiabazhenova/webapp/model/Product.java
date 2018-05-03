@@ -34,7 +34,7 @@ public class Product {
     }
 
     @Override
-    public String  toString() {
+    public String toString() {
         final StringBuffer sb = new StringBuffer("Product{");
         sb.append("productUrl='").append(productUrl).append('\'');
         sb.append(", productName='").append(productName).append('\'');
@@ -42,7 +42,7 @@ public class Product {
         return sb.toString();
     }
 
-    public static class ProductBuilder{
+    public static class ProductBuilder {
         private String productUrl;
         private String productName;
 
@@ -55,11 +55,13 @@ public class Product {
             this.productName = productName;
             return this;
         }
+
         public Product build() {
             validateRequiredFields();
 
             return new Product(this);
         }
+
         protected void validateRequiredFields() {
 //            if (productUrl == null) {
 //                throw new NullPointerException("Please, enter url");

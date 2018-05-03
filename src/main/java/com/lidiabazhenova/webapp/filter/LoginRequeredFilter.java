@@ -22,7 +22,8 @@ public class LoginRequeredFilter implements Filter {
         if (request.getSession().getAttribute("username") != null) {
             filterChain.doFilter(servletRequest, servletResponse);
         } else {
-            request.getRequestDispatcher("/login.do").forward(servletRequest, servletResponse);
+            RequestDispatcher dis = request.getRequestDispatcher("/login.do");
+            dis.forward(servletRequest, servletResponse);
         }
     }
 

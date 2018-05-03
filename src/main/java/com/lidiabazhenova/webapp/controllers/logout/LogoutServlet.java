@@ -1,5 +1,6 @@
 package com.lidiabazhenova.webapp.controllers.logout;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,8 +14,8 @@ public class LogoutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
         request.getSession().invalidate();
-        request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(
-                request, response);
+        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/login.jsp");
+        dis.forward(request, response);
     }
 }
 

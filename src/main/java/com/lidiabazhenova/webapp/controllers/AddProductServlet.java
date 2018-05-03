@@ -2,6 +2,7 @@ package com.lidiabazhenova.webapp.controllers;
 
 import com.lidiabazhenova.webapp.model.Product;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,8 +16,8 @@ public class AddProductServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/views/add-product.jsp").forward(
-                request, response);
+        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/add-product.jsp");
+        dis.forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request,
@@ -26,12 +27,6 @@ public class AddProductServlet extends HttpServlet {
         productService.addProduct(product);
         request.setAttribute("products", productService.retrieveProducts());
         response.sendRedirect("/list-products.do");
-    }
-    private boolean validateUser(String user, String password) {
-        if (user.equals("user") && password.equals("password"))
-            return true;
-
-        return false;
     }
 }
 
