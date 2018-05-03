@@ -1,4 +1,4 @@
-package com.lidiabazhenova.webapp.service;
+package com.lidiabazhenova.webapp.controllers;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

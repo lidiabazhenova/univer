@@ -1,4 +1,4 @@
-package com.lidiabazhenova.webapp.login;
+package com.lidiabazhenova.webapp.controllers.login;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +9,7 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/login.do")
 public class LoginServlet extends HttpServlet {
-    private LoginService userValidationService = new LoginService();
+    private LoginValidation userValidation = new LoginValidation();
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
@@ -23,7 +23,7 @@ public class LoginServlet extends HttpServlet {
                           HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
-        boolean isValidUser = userValidationService.validateUser(name, password);
+        boolean isValidUser = userValidation.validateUser(name, password);
 
         if (isValidUser) {
             request.getSession().setAttribute("username", name);

@@ -1,4 +1,4 @@
-package com.lidiabazhenova.webapp.logout;
+package com.lidiabazhenova.webapp.controllers.logout;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

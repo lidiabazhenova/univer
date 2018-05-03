@@ -7,25 +7,17 @@ public class Product {
     private String productUrl;
     private String productName;
 
-    public Product(String productUrl, String productName) {
-        this.productUrl = productUrl;
-        this.productName = productName;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public Product(ProductBuilder productBuilder) {
+        this.productUrl = productBuilder.productUrl;
+        this.productName = productBuilder.productName;
     }
 
     public String getProductUrl() {
         return productUrl;
     }
 
-    public void setProductUrl(String productUrl) {
-        this.productUrl = productUrl;
+    public String getProductName() {
+        return productName;
     }
 
     @Override
@@ -49,4 +41,34 @@ public class Product {
         sb.append('}');
         return sb.toString();
     }
+
+    public static class ProductBuilder{
+        private String productUrl;
+        private String productName;
+
+        public ProductBuilder setProductUrl(String productUrl) {
+            this.productUrl = productUrl;
+            return this;
+        }
+
+        public ProductBuilder setProductName(String productName) {
+            this.productName = productName;
+            return this;
+        }
+        public Product build() {
+            validateRequiredFields();
+
+            return new Product(this);
+        }
+        protected void validateRequiredFields() {
+//            if (productUrl == null) {
+//                throw new NullPointerException("Please, enter url");
+//            }
+//
+//            if (productName == null) {
+//                throw new NullPointerException("Please, enter name");
+//            }
+        }
+    }
+
 }

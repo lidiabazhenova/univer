@@ -1,4 +1,4 @@
-package com.lidiabazhenova.webapp.service;
+package com.lidiabazhenova.webapp.controllers;
 
 import com.lidiabazhenova.webapp.model.Product;
 
@@ -15,7 +15,9 @@ public class DeleteProductServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
-        productService.deleteProduct(new Product(request.getParameter("product"), request.getParameter("productName")));
+        final Product product = new Product.ProductBuilder().setProductUrl(request.getParameter("product"))
+                .setProductName(request.getParameter("productName")).build();
+        productService.deleteProduct(product);
         response.sendRedirect("/list-products.do");
     }
 }

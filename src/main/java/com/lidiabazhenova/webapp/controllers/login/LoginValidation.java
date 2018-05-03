@@ -1,6 +1,6 @@
-package com.lidiabazhenova.webapp.login;
+package com.lidiabazhenova.webapp.controllers.login;
 
-public class LoginService {
+public class LoginValidation {
 
     public boolean validateUser(String user, String password) {
         if (user.equals("user") && password.equals("password"))
