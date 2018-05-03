@@ -1,4 +1,6 @@
-package com.lidiabazhenova.webapp.todo;
+package com.lidiabazhenova.webapp.service;
+
+import com.lidiabazhenova.webapp.model.Todo;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -7,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/add-todo.do")
+@WebServlet(urlPatterns = "/add-service.do")
 public class AddTodoServlet extends HttpServlet {
     private TodoService todoService = new TodoService();
 
@@ -19,7 +21,7 @@ public class AddTodoServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws ServletException, IOException {
-        String newTodo = request.getParameter("todo");
+        String newTodo = request.getParameter("service");
         String product = request.getParameter("product");
         todoService.addTodo(new Todo(newTodo, product));
         request.setAttribute("todos", todoService.retrieveTodos());

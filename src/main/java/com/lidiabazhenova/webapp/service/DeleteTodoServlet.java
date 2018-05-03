@@ -1,6 +1,6 @@
-package com.lidiabazhenova.webapp.todo;
+package com.lidiabazhenova.webapp.service;
 
-import com.lidiabazhenova.webapp.login.LoginService;
+import com.lidiabazhenova.webapp.model.Todo;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,15 +9,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/list-todos.do")
-public class ListTodoServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/delete-service.do")
+public class DeleteTodoServlet extends HttpServlet {
     private TodoService todoService = new TodoService();
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("todos", todoService.retrieveTodos());
-        request.getRequestDispatcher("/WEB-INF/views/list-todos.jsp").forward(
-                request, response);
+        todoService.deleteTodo(new Todo(request.getParameter("service"), request.getParameter("product")));
+        response.sendRedirect("/list-todos.do");
     }
 }
 

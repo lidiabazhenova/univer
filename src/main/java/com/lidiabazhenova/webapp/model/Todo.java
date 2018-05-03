@@ -1,4 +1,4 @@
-package com.lidiabazhenova.webapp.todo;
+package com.lidiabazhenova.webapp.model;
 
 import java.util.Objects;
 

@@ -1,4 +1,6 @@
-package com.lidiabazhenova.webapp.todo;
+package com.lidiabazhenova.webapp.service;
+
+import com.lidiabazhenova.webapp.model.Todo;
 
 import java.util.ArrayList;
 import java.util.List;

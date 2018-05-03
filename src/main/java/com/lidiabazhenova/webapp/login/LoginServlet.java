@@ -1,7 +1,5 @@
 package com.lidiabazhenova.webapp.login;
 
-import com.lidiabazhenova.webapp.todo.TodoService;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
