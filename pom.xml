@@ -11,7 +11,7 @@
 
     <name>WebProjectDiplom Maven Webapp</name>
     <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
+    <url>http://localhost:8080</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -89,7 +89,8 @@
                     <groupId>org.apache.tomcat.maven</groupId>
                     <artifactId>tomcat7-maven-plugin</artifactId>
                     <version>2.2</version>
-                    <configuration><contextReloadable>true</contextReloadable>
+                    <configuration>
+                        <contextReloadable>true</contextReloadable>
                     </configuration>
                 </plugin>
             </plugins>

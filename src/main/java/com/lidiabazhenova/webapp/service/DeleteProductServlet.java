@@ -1,6 +1,6 @@
 package com.lidiabazhenova.webapp.service;
 
-import com.lidiabazhenova.webapp.model.Todo;
+import com.lidiabazhenova.webapp.model.Product;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,14 +9,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/delete-todo.do")
-public class DeleteTodoServlet extends HttpServlet {
-    private TodoService todoService = new TodoService();
+@WebServlet(urlPatterns = "/delete-product.do")
+public class DeleteProductServlet extends HttpServlet {
+    private ProductService productService = new ProductService();
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
-        todoService.deleteTodo(new Todo(request.getParameter("todo"), request.getParameter("product")));
-        response.sendRedirect("/list-todos.do");
+        productService.deleteProduct(new Product(request.getParameter("product"), request.getParameter("productName")));
+        response.sendRedirect("/list-products.do");
     }
 }
 
