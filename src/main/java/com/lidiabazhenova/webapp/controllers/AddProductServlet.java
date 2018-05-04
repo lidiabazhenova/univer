@@ -24,9 +24,17 @@ public class AddProductServlet extends HttpServlet {
                           HttpServletResponse response) throws ServletException, IOException {
         final Product product = new Product.ProductBuilder().setProductName(request.getParameter("productName"))
                 .setProductUrl(request.getParameter("productUrl")).build();
-        productService.addProduct(product);
-        request.setAttribute("products", productService.retrieveProducts());
-        response.sendRedirect("/list-products.do");
+
+        if (product.validateRequiredFields()) {
+            productService.addProduct(product);
+            request.setAttribute("products", productService.retrieveProducts());
+            response.sendRedirect("/list-products.do");
+        } else {
+            request.setAttribute("errorMessage", "Empty Credentials!!");
+            RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views//add-product.jsp");
+            dis.forward(request, response);
+            return;
+        }
     }
 }
 

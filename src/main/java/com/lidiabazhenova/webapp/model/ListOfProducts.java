@@ -4,12 +4,12 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.util.Objects;
 
-public class Product {
+public class ListOfProducts {
 
     private String productUrl;
     private String productName;
 
-    public Product(ProductBuilder productBuilder) {
+    public ListOfProducts(ProductBuilder productBuilder) {
         this.productUrl = productBuilder.productUrl;
         this.productName = productBuilder.productName;
     }
@@ -26,7 +26,7 @@ public class Product {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
+        ListOfProducts product = (ListOfProducts) o;
         return Objects.equals(productUrl, product.productUrl);
     }
 
@@ -58,10 +58,10 @@ public class Product {
             return this;
         }
 
-        public Product build() {
+        public ListOfProducts build() {
             //validateRequiredFields();
 
-            return new Product(this);
+            return new ListOfProducts(this);
         }
     }
 

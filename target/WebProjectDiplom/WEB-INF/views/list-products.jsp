@@ -9,7 +9,7 @@
         <caption>Your purchasing list:</caption>
         <thead>
         <th>URL</th>
-        <th>Product</th>
+        <th>Products</th>
         <th>Actions</th>
         </thead>
         <tbody>
@@ -24,7 +24,7 @@
         </tbody>
     </table>
     <div class="error-msg">${errorMessage}</div>
-    <a class="btn bg-success" href="/add-product.do">Add New Todo</a>
+    <a class="btn bg-success" href="/add-product.do">Add New Product</a>
 </div>
 
 <%@include file="../common/footer.jspf"%>
