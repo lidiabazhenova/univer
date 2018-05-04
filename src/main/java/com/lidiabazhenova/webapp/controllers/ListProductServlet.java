@@ -1,5 +1,7 @@
 package com.lidiabazhenova.webapp.controllers;
 
+import com.lidiabazhenova.webapp.service.ProductService;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
