@@ -6,12 +6,20 @@ import java.util.Objects;
 
 public class Product {
 
+    private Long productId;
     private String productUrl;
     private String productName;
 
+
     public Product(ProductBuilder productBuilder) {
+        this.productId = productBuilder.productId;
         this.productUrl = productBuilder.productUrl;
         this.productName = productBuilder.productName;
+
+    }
+
+    public Long getProductId() {
+        return productId;
     }
 
     public String getProductUrl() {
@@ -27,26 +35,33 @@ public class Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return Objects.equals(productUrl, product.productUrl);
+        return Objects.equals(productId, product.productId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(productUrl);
+        return Objects.hash(productId);
     }
 
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Product{");
-        sb.append("productUrl='").append(productUrl).append('\'');
+        sb.append("productId=").append(productId);
+        sb.append(", productUrl='").append(productUrl).append('\'');
         sb.append(", productName='").append(productName).append('\'');
         sb.append('}');
         return sb.toString();
     }
 
     public static class ProductBuilder {
+        private Long productId;
         private String productUrl;
         private String productName;
+
+        public ProductBuilder setProductId(Long productId) {
+            this.productId = productId;
+            return this;
+        }
 
         public ProductBuilder setProductUrl(String productUrl) {
             this.productUrl = productUrl;
@@ -59,13 +74,14 @@ public class Product {
         }
 
         public Product build() {
-            //validateRequiredFields();
-
             return new Product(this);
         }
     }
 
-    public boolean validateRequiredFields() {
+    //TODO validateRequiredFields;
+
+
+    public boolean validateNotBlank() {
         if ((StringUtils.isNotBlank(productUrl)) && (StringUtils.isNotBlank(productName))) {
             return true;
         } else return false;

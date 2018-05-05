@@ -1,5 +1,8 @@
 package com.lidiabazhenova.webapp.controllers;
 
+import com.lidiabazhenova.webapp.dao.ProductDao;
+import com.lidiabazhenova.webapp.exception.DataSourceException;
+import com.lidiabazhenova.webapp.model.Product;
 import com.lidiabazhenova.webapp.service.ProductService;
 
 import javax.servlet.RequestDispatcher;
@@ -9,14 +12,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(urlPatterns = "/list-products.do")
 public class ListProductServlet extends HttpServlet {
-    private ProductService productService = new ProductService();
+
+    final List<Product> products = ProductService.getInstance().retrieveProducts();
+
+    public ListProductServlet() throws DataSourceException {
+    }
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("products", productService.retrieveProducts());
+        request.setAttribute("products", products);
         RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/list-products.jsp");
         dis.forward(request, response);
     }
