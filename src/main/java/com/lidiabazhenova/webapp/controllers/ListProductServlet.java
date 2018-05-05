@@ -17,13 +17,19 @@ import java.util.List;
 @WebServlet(urlPatterns = "/list-products.do")
 public class ListProductServlet extends HttpServlet {
 
-    final List<Product> products = ProductService.getInstance().retrieveProducts();
+
 
     public ListProductServlet() throws DataSourceException {
     }
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
+        List<Product> products = null;
+        try {
+            products = ProductService.getInstance().retrieveProducts();
+        } catch (DataSourceException e) {
+            e.printStackTrace();
+        }
         request.setAttribute("products", products);
         RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/list-products.jsp");
         dis.forward(request, response);

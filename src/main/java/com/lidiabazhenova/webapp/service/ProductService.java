@@ -21,11 +21,11 @@ public class ProductService {
         return Collections.unmodifiableList(ProductDao.getInstance().getProducts());
     }
 
-//    public void addProduct(final Product product) throws DataSourceException {
-//        ProductDao.getInstance().insertUser(product);
-//    }
+    public void addProduct(final Product product) throws DataSourceException {
+        ProductDao.getInstance().insertProduct(product);
+    }
 
-//    public void deleteProduct(Product product) {
-//        products.remove(product);
-//    }
+    public void deleteProduct(final Long id) throws DataSourceException {
+        ProductDao.getInstance().deleteProduct(id);
+    }
 }

@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Product {
 
-    private Long productId;
+    private long productId;
     private String productUrl;
     private String productName;
 
@@ -18,7 +18,7 @@ public class Product {
 
     }
 
-    public Long getProductId() {
+    public long getProductId() {
         return productId;
     }
 
@@ -54,12 +54,12 @@ public class Product {
     }
 
     public static class ProductBuilder {
-        private Long productId;
+        private long productId;
         private String productUrl;
         private String productName;
 
-        public ProductBuilder setProductId(Long productId) {
-            this.productId = productId;
+        public ProductBuilder setProductId(long id) {
+            this.productId = id;
             return this;
         }
 

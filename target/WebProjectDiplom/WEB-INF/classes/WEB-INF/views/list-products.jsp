@@ -18,7 +18,7 @@
                 <td>${product.productUrl}</td>
                 <td>${product.productName}</td>
                 <td><a class="btn btn-danger"
-                       href="/delete-product.do?product=${product.productUrl}&productName=${product.productName}">Delete</a></td>
+                       href="/delete-product.do?productId=${product.productId}">Delete</a></td>
             </tr>
         </c:forEach>
         </tbody>

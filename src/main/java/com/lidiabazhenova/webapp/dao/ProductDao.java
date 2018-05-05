@@ -15,11 +15,18 @@ import java.util.List;
 
 public class ProductDao {
     public static final ProductDao HOLDER_INSTANCE = new ProductDao();
-    public static final String ALL_PRODUCTS_QUERY = "SELECT * FROM products";
+
+    private ProductDao() {
+    }
 
     public static ProductDao getInstance() {
         return HOLDER_INSTANCE;
     }
+
+    private static final String ALL_PRODUCTS_QUERY = "SELECT * FROM products";
+    private static final String DELETE_PRODUCT_QUERY = "DELETE FROM products WHERE id = ?";
+    private static final String INSERT_PRODUCT_QUERY = "INSERT INTO products(url, name) VALUES(?, ?)";
+    //private static final String UPDATE_PRODUCT_QUERY = "UPDATE product SET url = ?, name = ? WHERE id = ?";
 
     public List<Product> getProducts() throws DataSourceException {
         Connection connection = null;
@@ -31,7 +38,7 @@ public class ProductDao {
             preparedStatement = connection.prepareStatement(ALL_PRODUCTS_QUERY);
             resultSet = preparedStatement.executeQuery();
 
-            final List<Product> products = new ArrayList<>();
+            List<Product> products = new ArrayList<>();
             while (resultSet.next()) {
                 products.add(populateProductsFromResultSet(resultSet));
             }
@@ -45,23 +52,40 @@ public class ProductDao {
         }
     }
 
-//    public void insertProduct(final Product product) throws DataSourceException {
-//        Connection connection = null;
-//        PreparedStatement preparedStatement = null;
-//        try {
-//            connection = ConnectionUtil.getConnection();
-//            preparedStatement = connection.prepareStatement(INSERT_USER_QUERY);
-//
-//            preparedStatement.setString(1, user.getLogin());
-//            preparedStatement.setString(2, user.getPassword());
-//
-//            preparedStatement.executeUpdate();
-//        } catch (final SQLException ex) {
-//            throw new DataSourceException(ex);
-//        } finally {
-//            ConnectionUtil.close(preparedStatement, connection);
-//        }
-//    }
+    public void insertProduct(final Product product) throws DataSourceException {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            connection = ConnectionUtil.getConnection();
+            preparedStatement = connection.prepareStatement(INSERT_PRODUCT_QUERY);
+
+            preparedStatement.setString(1, product.getProductUrl());
+            preparedStatement.setString(2, product.getProductName());
+
+            preparedStatement.executeUpdate();
+        } catch (final SQLException ex) {
+            throw new DataSourceException(ex);
+        } finally {
+            ConnectionUtil.close(preparedStatement, connection);
+        }
+    }
+
+    public void deleteProduct(final long id) throws DataSourceException {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            connection = ConnectionUtil.getConnection();
+            preparedStatement = connection.prepareStatement(DELETE_PRODUCT_QUERY);
+
+            preparedStatement.setLong(1, id);
+
+            preparedStatement.executeUpdate();
+        } catch (final SQLException ex) {
+            throw new DataSourceException(ex);
+        } finally {
+            ConnectionUtil.close(preparedStatement, connection);
+        }
+    }
 
     private Product populateProductsFromResultSet(final ResultSet resultSet) throws SQLException {
         final Product product = new Product.ProductBuilder().setProductId(resultSet.getLong("id")).setProductUrl(resultSet.getString("url"))
