@@ -9,8 +9,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Currency;
 import java.util.List;
 
 public class ProductDao {
@@ -58,7 +56,7 @@ public class ProductDao {
         try {
             connection = ConnectionUtil.getConnection();
             preparedStatement = connection.prepareStatement(INSERT_PRODUCT_QUERY);
-
+        //TODO max length url
             preparedStatement.setString(1, product.getProductUrl());
             preparedStatement.setString(2, product.getProductName());
 
@@ -88,7 +86,9 @@ public class ProductDao {
     }
 
     private Product populateProductsFromResultSet(final ResultSet resultSet) throws SQLException {
-        final Product product = new Product.ProductBuilder().setProductId(resultSet.getLong("id")).setProductUrl(resultSet.getString("url"))
+        final Product product = new Product.ProductBuilder()
+                .setProductId(resultSet.getLong("id"))
+                .setProductUrl(resultSet.getString("url"))
                 .setProductName(resultSet.getString("name")).build();
         return product;
     }

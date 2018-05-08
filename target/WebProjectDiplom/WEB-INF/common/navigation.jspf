@@ -1,10 +1,29 @@
-<nav class="navbar navbar-default">
-    <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="/list-products.do">List products</a></li>
-        <li><a href="http://www.oz.by">oz.by</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
+<nav class="navbar navbar-default" style="background-color: #e3f2fd">
+    <div class="container-fluid">
+        <div class="navbar-header ">
+            <a class="navbar-brand" href="#">Automation.purchase.do</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#navigation.jspf">Home</a></li>
+            <li><a href="/list-products.do">List products</a></li>
+            <li><a href="http://www.oz.by">oz.by</a></li>
+            <li><a href="/example.do">Example</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
         <li><a href="/logout.do">Logout</a></li>
-    </ul>
+        </ul>
+    </div>
 </nav>
+
+<%--<nav class="navbar" style="background-color: #e3f2fd;" navbar-fixed-top>--%>
+
+    <%--<ul class="nav navbar-nav navbar-left">--%>
+        <%--<li class="active"><a href="#navigation.jspf">Home</a></li>--%>
+        <%--<li><a href="/list-products.do">List products</a></li>--%>
+        <%--<li><a href="http://www.oz.by">oz.by</a></li>--%>
+    <%--</ul>--%>
+    <%--<ul class="nav navbar-nav navbar-right">--%>
+        <%--<li><a href="/logout.do">Logout</a></li>--%>
+    <%--</ul>--%>
+
+<%--</nav>--%>

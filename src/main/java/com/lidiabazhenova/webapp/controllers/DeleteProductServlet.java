@@ -2,7 +2,6 @@ package com.lidiabazhenova.webapp.controllers;
 
 import com.lidiabazhenova.webapp.exception.DataSourceException;
 import com.lidiabazhenova.webapp.model.Product;
-import com.lidiabazhenova.webapp.dao.ProductDao;
 import com.lidiabazhenova.webapp.service.ProductService;
 
 import javax.servlet.ServletException;
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet(urlPatterns = "/delete-product.do")
 public class DeleteProductServlet extends HttpServlet {

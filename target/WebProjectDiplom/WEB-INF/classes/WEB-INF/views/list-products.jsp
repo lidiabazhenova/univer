@@ -1,30 +1,52 @@
-<%@include file="../common/header.jspf"%>
+<%@include file="../common/header.jspf" %>
 
-<%@include file="../common/navigation.jspf"%>
+<body>
 
-<div class="container">
-    <H1>Welcome, ${username}</H1>
+<%@include file="../common/navigation.jspf" %>
 
-    <table class="table table-striped">
-        <caption>Your purchasing list:</caption>
-        <thead>
-        <th>URL</th>
-        <th>Products</th>
-        <th>Actions</th>
-        </thead>
-        <tbody>
-        <c:forEach items="${products}" var="product">
-            <tr>
-                <td>${product.productUrl}</td>
-                <td>${product.productName}</td>
-                <td><a class="btn btn-danger"
-                       href="/delete-product.do?productId=${product.productId}">Delete</a></td>
-            </tr>
-        </c:forEach>
-        </tbody>
-    </table>
+<div class="container-outer">
+
+    <H1 class="text-center">Welcome, ${username}</H1>
+
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="text-info text-center">
+                        Your purchasing list:
+                    </h4>
+                </div>
+                <table class="table table-fixed">
+                    <thead>
+                    <tr>
+                        <th class="col-lg-9">URL</th>
+                        <th class="col-lg-2">Products</th>
+                        <th class="col-lg-1">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach items="${products}" var="product">
+                        <tr>
+                            <td class="col-lg-9">${product.productUrl}</td>
+                            <td class="col-lg-2">${product.productName}</td>
+                            <td style="padding-right: 5px">&nbsp;&nbsp;<a class="btn btn-danger"
+                                               href="/delete-product.do?productId=${product.productId}">Delete</a></td>
+                        </tr>
+                    </c:forEach>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     <div class="error-msg">${errorMessage}</div>
-    <a class="btn bg-success" href="/add-product.do">Add New Product</a>
 </div>
 
-<%@include file="../common/footer.jspf"%>
+
+<div><button type="button" class="btn bg-success" style="position: absolute; right: 200px"><a href="/add-product.do">Add New Product</a></button></div>
+
+<%@include file="../common/footer.jspf" %>
+
+</body>
+
+</html>
