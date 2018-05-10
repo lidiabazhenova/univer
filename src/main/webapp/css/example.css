@@ -1,0 +1,58 @@
+/*
+  Theme Name: Alstar
+  Theme URL: https://bootstrapmade.com/alstar-free-parallax-bootstrap-template/
+  Author: BootstrapMade.com
+  Author URL: https://bootstrapmade.com
+*/
+
+/* ================================
+General
+================================= */
+
+body{
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 1.6em;
+}
+
+
+/* ================================
+Navbar
+================================= */
+
+
+
+nav.navbar.fixed-to-top{
+	top: 0px;
+}
+
+nav.navbar {
+	/*position: absolute;*/
+	/*top: -72px;*/
+	margin-bottom: 0px;
+	padding: 10px 0px 10px 0px;
+	width: 100%;
+	border-radius: 0px;
+	transition: all 0.2s;
+}
+.navbar-default {
+	border: none;
+	border-bottom: none;
+	opacity: 1;
+	/*display: none;*/
+	z-index: 9999;
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 2em;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #fff;
+	font-weight: 700;
+	text-transform: uppercase;
+}

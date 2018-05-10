@@ -7,15 +7,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d3bc901-74d5-4b6c-8b22-ca1c5ba51d86" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/styles.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/header.jspf" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/header.jspf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/navigation.jspf" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/navigation.jspf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-product.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-product.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/example.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/example.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-products.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-products.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/common/header.jspf" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/common/header.jspf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/common/navigation.jspf" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/common/navigation.jspf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/views/add-product.jsp" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/views/add-product.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/views/example.jsp" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/views/example.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/views/list-products.jsp" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/views/list-products.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/views/login.jsp" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/views/login.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/common/header.jspf" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/common/header.jspf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/common/navigation.jspf" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/common/navigation.jspf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/views/add-product.jsp" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/views/add-product.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/views/example.jsp" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/views/example.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/views/list-products.jsp" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/views/list-products.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/views/login.jsp" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/views/login.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/WEB-INF/common/header.jspf" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/common/header.jspf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/WEB-INF/common/navigation.jspf" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/common/navigation.jspf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/add-product.jsp" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/views/add-product.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/example.jsp" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/views/example.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/list-products.jsp" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/views/list-products.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/login.jsp" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/views/login.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,67 +46,103 @@
     <favorites_list name="WebProjectDiplom" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="list-products.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-products.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navigation.jspf" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/common/navigation.jspf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
-              <folding>
-                <element signature="e#35#68#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.jspf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/common/footer.jspf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.jspf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/common/header.jspf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="example.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/example.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.50963455">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+          <file leaf-file-name="list-products.jsp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-products.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="756">
+                  <caret line="38" column="2" lean-forward="false" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="header.jspf" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/common/header.jspf">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="118">
+                  <caret line="49" column="9" lean-forward="false" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="example.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/css/example.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="402">
+                  <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="8854">
+                  <caret line="457" column="34" lean-forward="false" selection-start-line="457" selection-start-column="29" selection-end-line="457" selection-end-column="34" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/css/styles.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="371">
+                  <caret line="178" column="1" lean-forward="false" selection-start-line="178" selection-start-column="1" selection-end-line="178" selection-end-column="1" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="add-product.jsp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-product.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="609">
+                  <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="example.jsp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/example.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="294">
+                  <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="list-products.jsp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-products.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-112">
+                  <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="Class" />
         <option value="Jsp File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -101,6 +154,12 @@
       <find>Category</find>
       <find>Todo</find>
       <find>name</find>
+      <find>element</find>
+      <find>before</find>
+      <find>@media</find>
+      <find>navbar</find>
+      <find>posi</find>
+      <find>after</find>
     </findStrings>
     <replaceStrings>
       <replace>/list-todos.do</replace>
@@ -120,10 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/TodoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/ListTodoServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/DeleteTodoServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/AddTodoServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/ListProductServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/AddProductServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/DeleteProductServlet.java" />
@@ -140,14 +195,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/validationservice/LoginValidation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/validationservice/Validation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/validationservice/ValidationEmptyFields.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/login/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/filter/LoginRequeredFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/logout/LogoutServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/login/RequaredFieldsValidation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/RequaredFieldsValidation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/ListFieldsValidation.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-product.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/model/ListOfProducts.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/model/ProductService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/ProductService.java" />
@@ -167,9 +220,15 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/example.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/example/ExampleServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/footer.jspf" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/logstyles.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/example.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-product.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-products.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/header.jspf" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/styles.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/example.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/navigation.jspf" />
       </list>
     </option>
@@ -195,7 +254,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="739" />
+    <option name="x" value="919" />
+    <option name="y" value="64" />
     <option name="width" value="970" />
     <option name="height" value="955" />
   </component>
@@ -254,92 +314,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebProjectDiplom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebProjectDiplom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebProjectDiplom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebProjectDiplom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebProjectDiplom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebProjectDiplom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="logout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebProjectDiplom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebProjectDiplom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebProjectDiplom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebProjectDiplom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="connection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebProjectDiplom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebProjectDiplom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebProjectDiplom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebProjectDiplom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebProjectDiplom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebProjectDiplom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebProjectDiplom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebProjectDiplom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WebProjectDiplom" type="b2602c69:ProjectViewProjectNode" />
@@ -703,12 +678,12 @@
       <workItem from="1525459664343" duration="23278000" />
       <workItem from="1525543558755" duration="1873000" />
       <workItem from="1525673485143" duration="32549000" />
-      <workItem from="1525802463352" duration="4414000" />
+      <workItem from="1525802463352" duration="26581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156962000" />
+    <option name="totallyTimeSpent" value="179129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -723,7 +698,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3991228" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -733,11 +708,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28179824" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29714912" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3078125" sideWeight="0.49561402" order="1" side_tool="false" content_ui="combo" x="568" y="60" width="319" height="624" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21614583" sideWeight="0.49561402" order="1" side_tool="false" content_ui="combo" x="568" y="60" width="319" height="624" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3078125" sideWeight="0.50438595" order="6" side_tool="true" content_ui="tabs" />
@@ -770,14 +745,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login1.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -972,22 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-product.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="189" column="0" lean-forward="false" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/AddProductServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -1028,14 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/common/navigation-bottom.jspf" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/logout/LogoutServlet.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1063,43 +1006,83 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/common/footer.jspf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+        <state relative-caret-position="126">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#16#22#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/example.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        <state relative-caret-position="294">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-products.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-product.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        <state relative-caret-position="609">
+          <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8854">
+          <caret line="457" column="34" lean-forward="false" selection-start-line="457" selection-start-column="29" selection-end-line="457" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/common/header.jspf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        <state relative-caret-position="118">
+          <caret line="49" column="9" lean-forward="false" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/example.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/common/navigation.jspf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
-          <folding>
-            <element signature="e#35#68#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="310">
+          <caret line="54" column="26" lean-forward="true" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="178" column="1" lean-forward="false" selection-start-line="178" selection-start-column="1" selection-end-line="178" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-products.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="38" column="2" lean-forward="false" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>

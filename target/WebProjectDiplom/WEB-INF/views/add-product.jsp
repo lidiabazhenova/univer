@@ -1,5 +1,7 @@
 <%@include file="../common/header.jspf"%>
 
+<body>
+
 <%@include file="../common/navigation.jspf"%>
 
 <div class="container">
@@ -27,4 +29,6 @@
 
 <%@include file="../common/footer.jspf"%>
 
+</body>
 
+</html>

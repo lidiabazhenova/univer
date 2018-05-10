@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>Automation</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700,800" rel="stylesheet" media="screen">
+    <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet" media="screen">
+    <link href="css/example.css" rel="stylesheet" media="screen">
+    <link href="color/default.css" rel="stylesheet" media="screen">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<div class="container">
-    <h2>Contextual Colors</h2>
-    <p>Use the contextual classes to provide "meaning through colors":</p>
-    <p class="text-muted">This text is muted.</p>
-    <p class="text-primary">This text is important.</p>
-    <p class="text-success">This text indicates success.</p>
-    <p class="text-info">This text represents some information.</p>
-    <p class="text-warning">This text represents a warning.</p>
-    <p class="text-danger">This text represents danger.</p>
-</div>
+
 
 </body>
 </html>

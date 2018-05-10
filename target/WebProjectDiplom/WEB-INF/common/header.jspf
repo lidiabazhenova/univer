@@ -7,15 +7,19 @@
 
     <title>Products</title>
 
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700,800" rel="stylesheet" media="screen">
     <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
-          rel="stylesheet">
+          rel="stylesheet" media="screen">
+    <link href="css/example.css" rel="stylesheet" media="screen">
+    <link href="color/default.css" rel="stylesheet" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <style>
 
-        ul.hr {
-            margin: 0; /* Обнуляем значение отступов */
-            padding: 4px; /* Значение полей */
-        }
         ul.hr li {
             display: inline; /* Отображать как строчный элемент */
             margin-right: 5px; /* Отступ слева */
@@ -25,16 +29,14 @@
 
         .table-fixed thead {
             width: 100%;
-            padding: 5px;
-            padding-right: 20px;
+            padding: 5px 20px 5px 5px;
         }
 
         .table-fixed tbody {
             height: 280px;
             overflow-y: auto;
             width: 100%;
-            padding: 5px;
-            padding-right: 10px;
+            padding: 5px 10px 5px 5px;
             word-wrap: break-word;
         }
 
