@@ -14,9 +14,18 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 1.6em;
-    margin-top: 90px;
-    margin-bottom: 90px;
-    background-color:transparent
+    background-color: white;
+}
+
+.bg-foundation {
+    background: url(../img/DSCN0633.jpg) no-repeat;
+    background-size: cover;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+}
+
+.foundation {
+    background: rgba(40, 57, 101, .9);
+
 }
 
 /* ================================
@@ -65,17 +74,16 @@ Buttons
 
 .add-button {
     padding: 10px 20px;
-    border-radius: 4px;
+    border-radius: 3px;
     margin-bottom: 80px;
+
 }
 
 #mybutton {
     position: fixed;
-    bottom: -4px;
+    bottom: 0px;
     width: 100%;
 }
-
-
 
 /* ================================
 Table
@@ -83,7 +91,7 @@ Table
 
 table {
     width: 100%;
-    height: 300px;;
+    height: 320px;;
     border-collapse: collapse;
     overflow: auto;
     background-color: white;
@@ -99,16 +107,22 @@ table, th, td {
     padding: 5px 20px 5px 5px;
 }
 
-.table-responsive thead, caption {
-    width: 100%;
-    height: 500px;
-    overflow-y: scroll ;
-}
-
 .tbody {
     width: 100%;
     padding: 5px 10px 5px 5px;
     word-wrap: break-word;
+}
+
+.header-center {
+    color: #fff;
+}
+
+.margin-header-center {
+    margin-top: 50px;
+}
+
+.table-container {
+    background-color: white;
 }
 
 @media screen and (max-width: 767px) {
@@ -116,7 +130,6 @@ table, th, td {
         border-bottom: 1px solid #ddd;
     }
 }
-
 
 /* ================================
 Footer

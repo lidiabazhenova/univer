@@ -30,7 +30,7 @@ a {
     max-width: 480px;
     min-height: 650px;
     position: relative;
-    background: url(https://vkurier.by/wp-content/uploads/2015/09/DSCN0633.jpg) no-repeat center;
+    background: url(../img/DSCN0633.jpg) no-repeat center;
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
 }
 
@@ -177,8 +177,6 @@ a {
 .login-html .sign-up:checked + .tab + .login-form .sign-up-htm {
     transform: rotate(0);
 }
-
-
 
 .error-msg {
     color: red;

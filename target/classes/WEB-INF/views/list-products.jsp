@@ -1,20 +1,16 @@
-<%@include file="../common/header.jspf" %>
+<%@include file="../common/form-page-begin.jspf" %>
 
-<body>
+<div class="container margin-header-center">
 
-<%@include file="../common/navigation.jspf" %>
+    <H1 class="text-center header-center">Welcome, ${username}</H1>
 
-<div class="container">
-
-    <H1 class="text-center">Welcome, ${username}</H1>
-
-    <div class="container">
+    <div class="container table-container">
 
         <div class="row">
 
             <div class="col-xs-12">
 
-                <div class="table-responsive" style="background-color: white;">
+                <div class="table-responsive">
 
                     <h4 class="text-info text-center">
                         Your purchasing list:
@@ -50,18 +46,18 @@
 
         </div>
 
+    </div>
+
+    <div class="container" style="min-height: 100px">
+        <div id="mybutton">
+            <button class="btn btn-success add-button"><a
+                    href="/add-product.do">Add
+                New Product</a></button>
+        </div>
 
     </div>
 
 </div>
-<div id="mybutton">
-    <button class="btn add-button"><a
-            href="/add-product.do">Add
-        New Product</a></button>
-</div>
 
-<%@include file="../common/footer.jspf" %>
-
-</body>
-</html>
+<%@include file="../common/form-page-end.jspf" %>
 

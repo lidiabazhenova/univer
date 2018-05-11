@@ -19,14 +19,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <style>
-        html {
-            /*background: url(img/bg.jpg) no-repeat center center fixed;*/
-            background: repeating-radial-gradient(black, white);
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
+
     </style>
 
 </head>
