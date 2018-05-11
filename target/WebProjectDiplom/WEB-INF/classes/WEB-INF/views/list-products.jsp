@@ -4,21 +4,21 @@
 
 <%@include file="../common/navigation.jspf" %>
 
-<div class="container-fluid">
+<div class="container">
 
     <H1 class="text-center">Welcome, ${username}</H1>
 
-    <div class="container-fluid">
+    <div class="container">
 
         <div class="row">
 
             <div class="col-xs-12">
 
-                <div class="table-responsive">
+                <div class="table-responsive" style="background-color: white;">
 
-                        <h4 class="text-info text-center">
-                            Your purchasing list:
-                        </h4>
+                    <h4 class="text-info text-center">
+                        Your purchasing list:
+                    </h4>
 
                     <table class="table-responsive">
 
@@ -31,7 +31,7 @@
                         </thead>
 
                         <tbody>
-                                                <c:forEach items="${products}" var="product">
+                        <c:forEach items="${products}" var="product">
                             <tr>
                                 <td class=".tbody">${product.productUrl}</td>
                                 <td>${product.productName}</td>
@@ -50,15 +50,17 @@
 
         </div>
 
-        <div class="container-fluid">
-            <button type="button" class="btn bg-success add-button"><a
-                    href="/add-product.do">Add
-                New Product</a></button>
-        </div>
+
     </div>
+
+</div>
+<div id="mybutton">
+    <button class="btn add-button"><a
+            href="/add-product.do">Add
+        New Product</a></button>
 </div>
 
-    <%@include file="../common/footer.jspf" %>
+<%@include file="../common/footer.jspf" %>
 
 </body>
 </html>

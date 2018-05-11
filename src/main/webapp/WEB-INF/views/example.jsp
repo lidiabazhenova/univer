@@ -12,6 +12,16 @@
 
     <!-- Custom styles for this template -->
     <link href="sticky-footer.css" rel="stylesheet">
+
+    <style>
+        html {
+            background: url(img/bg.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
