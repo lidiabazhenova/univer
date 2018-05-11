@@ -9,50 +9,105 @@
 General
 ================================= */
 
-body{
-	text-align: center;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-	line-height: 1.6em;
+body {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.6em;
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
-
 
 /* ================================
 Navbar
 ================================= */
 
-
-
-nav.navbar.fixed-to-top{
-	top: 0px;
+nav.navbar.fixed-to-top {
+    top: 0px;
 }
 
 nav.navbar {
-	/*position: absolute;*/
-	/*top: -72px;*/
-	margin-bottom: 0px;
-	padding: 10px 0px 10px 0px;
-	width: 100%;
-	border-radius: 0px;
-	transition: all 0.2s;
+
+    position: fixed;
+    top: -72px;
+    margin-bottom: 0px;
+    padding: 10px 0px 10px 0px;
+    width: 100%;
+    border-radius: 0px;
+    transition: all 0.2s;
 }
+
 .navbar-default {
-	border: none;
-	border-bottom: none;
-	opacity: 1;
-	/*display: none;*/
-	z-index: 9999;
+    border: none;
+    border-bottom: none;
+    opacity: 1;
+    /*display: none;*/
+    z-index: 9999;
 }
 
 .navbar-default .navbar-brand {
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2em;
 }
 
-.navbar-default .navbar-nav>li>a {
-	color: #fff;
-	font-weight: 700;
-	text-transform: uppercase;
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.add-button {
+    position: relative;
+}
+
+
+
+/*table caption {*/
+    /*padding: .5em 0;*/
+/*}*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.table-responsive thead, caption {
+    width: 100%;
+    padding: 5px 20px 5px 5px;
+}
+
+.tbody {
+    height: 280px;
+    
+    width: 100%;
+    padding: 5px 10px 5px 5px;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 767px) {
+    table caption {
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+
+/* ================================
+Footer
+================================= */
+
+footer.footer {
+    background: #00c1c1;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    line-height: 60px;
 }

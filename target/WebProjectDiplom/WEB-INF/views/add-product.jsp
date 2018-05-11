@@ -4,6 +4,8 @@
 
 <%@include file="../common/navigation.jspf"%>
 
+<H1 class="text-center">Addition new project in list</H1>
+
 <div class="container">
 
     <form action="/add-product.do" method="post">

@@ -4,51 +4,62 @@
 
 <%@include file="../common/navigation.jspf" %>
 
-<div class="container-outer">
+<div class="container-fluid">
 
     <H1 class="text-center">Welcome, ${username}</H1>
 
     <div class="container-fluid">
 
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="text-info text-center">
-                    Your purchasing list:
-                </h4>
-            </div>
-            <table class="table table-fixed">
-                <thead>
-                <tr>
-                    <th class="col-lg-9">URL</th>
-                    <th class="col-lg-2">Products</th>
-                    <th class="col-lg-1">Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach items="${products}" var="product">
-                    <tr>
-                        <td class="col-lg-9">${product.productUrl}</td>
-                        <td class="col-lg-2">${product.productName}</td>
-                        <td style="padding-right: 5px">&nbsp;&nbsp;<a class="btn btn-danger" href="/delete-product.do?productId=${product.productId}">Delete</a>
-                        </td>
-                    </tr>
-                </c:forEach>
+        <div class="row">
 
-                </tbody>
-            </table>
+            <div class="col-xs-12">
+
+                <div class="table-responsive">
+
+                        <h4 class="text-info text-center">
+                            Your purchasing list:
+                        </h4>
+
+                    <table class="table-responsive">
+
+                        <thead>
+                        <tr>
+                            <th>URL</th>
+                            <th>Products</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                                                <c:forEach items="${products}" var="product">
+                            <tr>
+                                <td class=".tbody">${product.productUrl}</td>
+                                <td>${product.productName}</td>
+                                <td>&nbsp;&nbsp;
+                                    <a class="btn btn-danger"
+                                       href="/delete-product.do?productId=${product.productId}">Delete</a>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-fluid">
+            <button type="button" class="btn bg-success add-button"><a
+                    href="/add-product.do">Add
+                New Product</a></button>
         </div>
     </div>
-    <div class="error-msg">${errorMessage}</div>
 </div>
 
-
-<div>
-    <button type="button" class="btn bg-success" style="position: absolute; right: 200px"><a href="/add-product.do">Add
-        New Product</a></button>
-</div>
-
-<%@include file="../common/footer.jspf" %>
+    <%@include file="../common/footer.jspf" %>
 
 </body>
-
 </html>
+

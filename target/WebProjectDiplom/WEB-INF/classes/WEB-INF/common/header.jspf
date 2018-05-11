@@ -20,27 +20,7 @@
 
     <style>
 
-        ul.hr li {
-            display: inline; /* Отображать как строчный элемент */
-            margin-right: 5px; /* Отступ слева */
-            border: 1px solid #000; /* Рамка вокруг текста */
-            padding: 3px; /* Поля вокруг текста */
-        }
-
-        .table-fixed thead {
-            width: 100%;
-            padding: 5px 20px 5px 5px;
-        }
-
-        .table-fixed tbody {
-            height: 280px;
-            overflow-y: auto;
-            width: 100%;
-            padding: 5px 10px 5px 5px;
-            word-wrap: break-word;
-        }
-
-        .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+                .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
             display: block;
         }
 
