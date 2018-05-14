@@ -7,7 +7,9 @@
     <div class="container" style="height: 100%">
 
         <form action="/add-product.do" method="post">
-            Your new action:
+            <h4 class="text-info text-center">
+            Your new product:
+            </h4>
             <c:if test="${errorMessage=='Empty Credentials!!'}">
                 <div class="alert alert-success alert-dismissible">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -16,15 +18,16 @@
             </c:if>
 
             <fieldset class="form-group">
-                <label>URL</label>
+                <label><H4 style="color: #fff">URL:</H4></label>
                 <input type="text" name="productUrl" class="form-control"/><br/>
             </fieldset>
             <fieldset class="form-group">
-                <label>Product:</label>
+                <label><H4 style="color: #fff">Product:</H4></label>
                 <input type="text" name="productName" class="form-control"/><br/>
             </fieldset>
             <input type="submit" class="btn btn-success" value="Add"/>
         </form>
+        <div><img src="/img/animation.gif"></div>
     </div>
 </div>
 

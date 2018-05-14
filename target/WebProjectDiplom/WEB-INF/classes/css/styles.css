@@ -1,12 +1,12 @@
+/* ================================
+General
+================================= */
+
 body {
     margin: 0;
     color: #6a6f8c;
     background: #c8c8c8;
     font: 600 16px/18px 'Open Sans', sans-serif;
-}
-
-*, :after, :before {
-    box-sizing: border-box
 }
 
 .clearfix:after, .clearfix:before {
@@ -19,10 +19,160 @@ body {
     display: block
 }
 
+
 a {
     color: inherit;
     text-decoration: none
 }
+
+*, :after, :before {
+    box-sizing: border-box
+}
+
+.my-btn {
+    text-transform: uppercase;
+    width: 100%;
+    color: #fff;
+    display: block;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .1);
+    background: #1161ee;
+}
+
+.bg-foundation {
+    background: url(../img/bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+.foundation {
+    background: rgba(40, 57, 101, .9);
+
+}
+
+/* ================================
+Navbar
+================================= */
+
+nav.navbar.fixed-to-top {
+    top: 0px;
+}
+
+nav.navbar {
+
+    position: fixed;
+    top: -72px;
+    margin-bottom: 0px;
+    padding: 10px 0px 10px 0px;
+    width: 100%;
+    border-radius: 0px;
+    transition: all 0.2s;
+}
+
+.navbar-default {
+    border: none;
+    border-bottom: none;
+    opacity: 1;
+    /*display: none;*/
+    z-index: 9999;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ================================
+Buttons
+================================= */
+
+.add-button {
+    padding: 10px 20px;
+    border-radius: 3px;
+    margin-bottom: 80px;
+
+}
+
+#mybutton {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+/* ================================
+Table
+================================= */
+
+table {
+    width: 100%;
+    height: 320px;;
+    border-collapse: collapse;
+    overflow: auto;
+    background-color: white;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.table-responsive thead, caption {
+    width: 100%;
+    padding: 5px 20px 5px 5px;
+}
+
+.tbody {
+    width: 100%;
+    padding: 5px 10px 5px 5px;
+    word-wrap: break-word;
+}
+
+.header-center {
+    color: #fff;
+}
+
+.margin-header-center {
+    margin-top: 50px;
+}
+
+.table-container {
+    background-color: white;
+}
+
+
+@media screen and (max-width: 767px) {
+    table caption {
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+/* ================================
+Footer
+================================= */
+
+.footer {
+    background: #00c1c1;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    line-height: 60px;
+}
+
+
+/* ================================
+Login form
+================================= */
 
 .login-wrap {
     width: 100%;
@@ -117,7 +267,6 @@ a {
     color: #aaa;
     font-size: 12px;
 }
-
 .login-form .group .button {
     background: #1161ee;
 }
@@ -182,4 +331,9 @@ a {
     color: red;
     text-align: center;
     margin: 0 0 20px 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none
 }

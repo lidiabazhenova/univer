@@ -8,9 +8,9 @@
 
         <div class="row">
 
-            <div class="col-xs-12">
+            <div class="col-xs-12" style="margin-bottom: 15px">
 
-                <div class="table-responsive">
+                <div class="table-responsive" style="box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);">
 
                     <h4 class="text-info text-center">
                         Your purchasing list:
@@ -48,9 +48,9 @@
 
     </div>
 
-    <div class="container" style="min-height: 100px">
+    <div class="container" style="min-height: 130px">
         <div id="mybutton">
-            <button class="btn btn-success add-button"><a
+            <button class="add-button"><a
                     href="/add-product.do">Add
                 New Product</a></button>
         </div>
