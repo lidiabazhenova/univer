@@ -4,13 +4,14 @@
 
     <H1 class="text-center header-center">Welcome, ${username}</H1>
 
-    <div class="container table-container">
+    <div class="container-fluid table-container">
 
         <div class="row">
 
             <div class="col-xs-12" style="margin-bottom: 15px">
 
-                <div class="table-responsive" style="box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);">
+                <div class="table-responsive"
+                     style="box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);">
 
                     <h4 class="text-info text-center">
                         Your purchasing list:
@@ -48,16 +49,15 @@
 
     </div>
 
-    <div class="container" style="min-height: 130px">
-        <div id="mybutton">
-            <button class="add-button"><a
+    <div class="list-add-form">
+        <div id="mybutton" class="group add-group">
+            <button class="button add-button"><a
                     href="/add-product.do">Add
                 New Product</a></button>
         </div>
 
+
     </div>
 
-</div>
-
-<%@include file="../common/form-page-end.jspf" %>
+    <%@include file="../common/form-page-end.jspf" %>
 

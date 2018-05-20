@@ -2,9 +2,9 @@
 
 <div class="container margin-header-center">
 
-    <H1 class="text-center header-center" style="margin-top: 70px">Addition new project in list</H1>
+    <H1 class="text-center header-center" style="margin-top: 70px">Addition new product in list</H1>
 
-    <div class="container" style="height: 100%">
+    <div class="container" style="margin-bottom: 70px">
 
         <form action="/add-product.do" method="post">
             <h4 class="text-info text-center">
@@ -25,7 +25,15 @@
                 <label><H4 style="color: #fff">Product:</H4></label>
                 <input type="text" name="productName" class="form-control"/><br/>
             </fieldset>
-            <input type="submit" class="btn btn-success" value="Add"/>
+            <div class="list-add-form">
+                <div id="mybutton" class="group add-group">
+                    <button class="button add-button"><a
+                            href="/add-product.do">Add
+                        New Product</a></button>
+                </div>
+
+
+            </div>
         </form>
         <div><img src="/img/animation.gif"></div>
     </div>

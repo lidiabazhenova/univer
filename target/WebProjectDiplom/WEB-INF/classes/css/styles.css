@@ -31,12 +31,9 @@ a {
 
 .my-btn {
     text-transform: uppercase;
-    width: 100%;
-    color: #fff;
-    display: block;
-    border: none;
-    padding: 15px 20px;
-    border-radius: 25px;
+    width: 50px;
+    height: 100%;
+
     background: rgba(255, 255, 255, .1);
     background: #1161ee;
 }
@@ -95,18 +92,29 @@ nav.navbar {
 Buttons
 ================================= */
 
-.add-button {
-    padding: 10px 20px;
-    border-radius: 3px;
-    margin-bottom: 80px;
 
-}
-
-#mybutton {
-    position: fixed;
-    bottom: 0px;
+.add-group {
     width: 100%;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+#add-button {
+    /*position: fixed;*/
+    bottom: 0px;
+    right: 0px;
+    height: 20px;
+    width: 100%;
+
+}
+
+.list-add-form .group {
+
+    /*margin-top: -70px;*/
+}
+
 
 /* ================================
 Table
@@ -142,10 +150,12 @@ table, th, td {
 
 .margin-header-center {
     margin-top: 50px;
+    margin-bottom: 70px;
 }
 
 .table-container {
     background-color: white;
+    margin-bottom: 0px;
 }
 
 
@@ -212,7 +222,8 @@ Login form
 
 .login-html .tab,
 .login-form .group .label,
-.login-form .group .button {
+.login-form .group .button,
+.list-add-form .group .button{
     text-transform: uppercase;
 }
 
@@ -238,20 +249,29 @@ Login form
     transform-style: preserve-3d;
 }
 
+/*.list-add-form {*/
+    /*min-height: 45px;*/
+    /*position: relative;*/
+    /*perspective: 1000px;*/
+    /*transform-style: preserve-3d;*/
+/*}*/
+
 .login-form .group {
     margin-bottom: 15px;
 }
 
 .login-form .group .label,
 .login-form .group .input,
-.login-form .group .button {
-    width: 100%;
+.login-form .group .button,
+.list-add-form .group .button {
+    width: 345px;
     color: #fff;
     display: block;
 }
 
 .login-form .group .input,
-.login-form .group .button {
+.login-form .group .button,
+.list-add-form .group .button{
     border: none;
     padding: 15px 20px;
     border-radius: 25px;
@@ -267,7 +287,8 @@ Login form
     color: #aaa;
     font-size: 12px;
 }
-.login-form .group .button {
+.login-form .group .button,
+.list-add-form .group .button{
     background: #1161ee;
 }
 
