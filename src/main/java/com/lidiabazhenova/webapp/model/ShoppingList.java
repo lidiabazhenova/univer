@@ -1,90 +1,30 @@
 package com.lidiabazhenova.webapp.model;
 
-import org.apache.commons.lang3.StringUtils;
-
-import java.util.Objects;
+import java.util.List;
 
 public class ShoppingList {
 
-    private long productId;
-    private String productUrl;
-    private String productName;
+    private long listId;
+    private String listTitle;
+    private List<Product> products;
 
 
-    public Product(ProductBuilder productBuilder) {
-        this.productId = productBuilder.productId;
-        this.productUrl = productBuilder.productUrl;
-        this.productName = productBuilder.productName;
-
+    public ShoppingList(long id, String title, List<Product> products) {
+        this.listId = id;
+        this.listTitle = title;
+        this.products = products;
     }
 
-    public long getProductId() {
-        return productId;
+
+    public long getListId() {
+        return listId;
     }
 
-    public String getProductUrl() {
-        return productUrl;
+    public String getListTitle() {
+        return listTitle;
     }
 
-    public String getProductName() {
-        return productName;
+    public List<Product> getProducts() {
+        return products;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
-        return Objects.equals(productId, product.productId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(productId);
-    }
-
-    @Override
-    public String toString() {
-        final StringBuffer sb = new StringBuffer("Product{");
-        sb.append("productId=").append(productId);
-        sb.append(", productUrl='").append(productUrl).append('\'');
-        sb.append(", productName='").append(productName).append('\'');
-        sb.append('}');
-        return sb.toString();
-    }
-
-    public static class ProductBuilder {
-        private long productId;
-        private String productUrl;
-        private String productName;
-
-        public ProductBuilder setProductId(long id) {
-            this.productId = id;
-            return this;
-        }
-
-        public ProductBuilder setProductUrl(String productUrl) {
-            this.productUrl = productUrl;
-            return this;
-        }
-
-        public ProductBuilder setProductName(String productName) {
-            this.productName = productName;
-            return this;
-        }
-
-        public Product build() {
-            return new Product(this);
-        }
-    }
-
-    //TODO validateRequiredFields;
-
-
-    public boolean validateNotBlank() {
-        if ((StringUtils.isNotBlank(productUrl)) && (StringUtils.isNotBlank(productName))) {
-            return true;
-        } else return false;
-    }
-
 }
