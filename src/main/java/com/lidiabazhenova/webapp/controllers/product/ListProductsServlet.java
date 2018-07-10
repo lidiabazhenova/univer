@@ -1,33 +1,37 @@
-package com.lidiabazhenova.webapp.controllers;
+package com.lidiabazhenova.webapp.controllers.product;
 
 import com.lidiabazhenova.webapp.exception.DataSourceException;
 import com.lidiabazhenova.webapp.model.Product;
 import com.lidiabazhenova.webapp.service.ProductService;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
-@WebServlet(urlPatterns = "/delete-product.do")
-public class DeleteProductServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/list-products.do")
+public class ListProductsServlet extends HttpServlet {
 
-    public DeleteProductServlet() throws DataSourceException {
+
+
+    public ListProductsServlet() throws DataSourceException {
     }
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
-        final Product product = new Product.ProductBuilder()
-                .setProductId(Long.valueOf(request.getParameter("productId"))).build();
+        List<Product> products = null;
         try {
-            ProductService.getInstance().deleteProduct(product.getProductId());
-            response.sendRedirect("/list-products.do");
+            products = ProductService.getInstance().retrieveProducts();
         } catch (DataSourceException e) {
             e.printStackTrace();
         }
-
+        request.setAttribute("products", products);
+        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/list-products.jsp");
+        dis.forward(request, response);
     }
 }
 

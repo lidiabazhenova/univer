@@ -80,9 +80,8 @@ public class Product {
 
     //TODO validateRequiredFields;
 
-
     public boolean validateNotBlank() {
-        if ((StringUtils.isNotBlank(productUrl)) && (StringUtils.isNotBlank(productName))) {
+        if ((StringUtils.isNotBlank(productUrl)) & (StringUtils.isNotBlank(productName))) {
             return true;
         } else return false;
     }

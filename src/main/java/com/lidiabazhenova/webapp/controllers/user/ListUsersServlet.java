@@ -1,9 +1,8 @@
-package com.lidiabazhenova.webapp.controllers;
+package com.lidiabazhenova.webapp.controllers.user;
 
-import com.lidiabazhenova.webapp.dao.ProductDao;
 import com.lidiabazhenova.webapp.exception.DataSourceException;
-import com.lidiabazhenova.webapp.model.Product;
-import com.lidiabazhenova.webapp.service.ProductService;
+import com.lidiabazhenova.webapp.model.User;
+import com.lidiabazhenova.webapp.service.UserService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,24 +13,23 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(urlPatterns = "/list-products.do")
-public class ListProductServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/list-users.do")
+public class ListUsersServlet extends HttpServlet {
 
 
-
-    public ListProductServlet() throws DataSourceException {
+    public ListUsersServlet() throws DataSourceException {
     }
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
-        List<Product> products = null;
+        List<User> users = null;
         try {
-            products = ProductService.getInstance().retrieveProducts();
+            users = UserService.getInstance().getUsers();
         } catch (DataSourceException e) {
             e.printStackTrace();
         }
-        request.setAttribute("products", products);
-        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/list-products.jsp");
+        request.setAttribute("users", users);
+        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/list-users.jsp");
         dis.forward(request, response);
     }
 }

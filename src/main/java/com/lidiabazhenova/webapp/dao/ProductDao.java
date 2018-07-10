@@ -24,7 +24,6 @@ public class ProductDao {
     private static final String ALL_PRODUCTS_QUERY = "SELECT * FROM products";
     private static final String DELETE_PRODUCT_QUERY = "DELETE FROM products WHERE id = ?";
     private static final String INSERT_PRODUCT_QUERY = "INSERT INTO products(url, name) VALUES(?, ?)";
-    //private static final String UPDATE_PRODUCT_QUERY = "UPDATE product SET url = ?, name = ? WHERE id = ?";
 
     public List<Product> getProducts() throws DataSourceException {
         Connection connection = null;

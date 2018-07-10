@@ -1,8 +1,7 @@
-package com.lidiabazhenova.webapp.controllers;
+package com.lidiabazhenova.webapp.controllers.product;
 
 import com.lidiabazhenova.webapp.exception.DataSourceException;
 import com.lidiabazhenova.webapp.model.Product;
-import com.lidiabazhenova.webapp.dao.ProductDao;
 import com.lidiabazhenova.webapp.service.ProductService;
 
 import javax.servlet.RequestDispatcher;
@@ -14,9 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(urlPatterns = "/add-product.do")
-public class AddProductServlet extends HttpServlet {
+public class AddProductsServlet extends HttpServlet {
 
-    public AddProductServlet() {
+    public AddProductsServlet() {
     }
 
     protected void doGet(HttpServletRequest request,
@@ -27,7 +26,8 @@ public class AddProductServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws ServletException, IOException {
-        final Product product = new Product.ProductBuilder().setProductName(request.getParameter("productName"))
+        final Product product = new Product.ProductBuilder()
+                .setProductName(request.getParameter("productName"))
                 .setProductUrl(request.getParameter("productUrl")).build();
 
         if (product.validateNotBlank()) {

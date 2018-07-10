@@ -8,7 +8,7 @@
 
         <form action="/add-product.do" method="post">
             <h4 class="text-info text-center">
-            Your new product:
+                Your new product:
             </h4>
             <c:if test="${errorMessage=='Empty Credentials!!'}">
                 <div class="alert alert-success alert-dismissible">
@@ -27,9 +27,7 @@
             </fieldset>
             <div class="list-add-form">
                 <div id="mybutton" class="group add-group">
-                    <button class="button add-button"><a
-                            href="/add-product.do">Add
-                        New Product</a></button>
+                    <input type="submit" class="btn btn-success" value="Add"/>
                 </div>
 
 
