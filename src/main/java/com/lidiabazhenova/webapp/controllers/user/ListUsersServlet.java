@@ -32,6 +32,16 @@ public class ListUsersServlet extends HttpServlet {
         RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/list-users.jsp");
         dis.forward(request, response);
     }
+
+//    protected void doPost(HttpServletRequest request,
+//                          HttpServletResponse response) throws ServletException, IOException {
+//        final User user = new User.UserBuilder()
+//                .setLogin(request.getParameter("login"))
+//                .setFirstName(request.getParameter("firstName"))
+//                .setLastName(request.getParameter("lastName"))
+//                .setPassword(request.getParameter("password"))
+//                .build();
+//    }
 }
 
 

@@ -33,7 +33,7 @@ public final class UserDao {
     private static final String INSERT_USER_QUERY = "INSERT INTO users(login, first_name, last_name, password) " +
             "VALUES(?, ?, ?, ?)";
 
-    private static final String UPDATE_USER_QUERY = "UPDATE users SET login = ?, password = ? WHERE id = ?";
+    private static final String UPDATE_USER_QUERY = "UPDATE users SET login = ?, first_name = ?, last_name = ?, password = ? WHERE id = ?";
 
     public List<User> getUsers() throws DataSourceException {
         Connection connection = null;
@@ -152,8 +152,10 @@ public final class UserDao {
             preparedStatement = connection.prepareStatement(UPDATE_USER_QUERY);
 
             preparedStatement.setString(1, user.getLogin());
-            preparedStatement.setString(2, user.getPassword());
-            preparedStatement.setLong(3, user.getId());
+            preparedStatement.setString(2, user.getFirstName());
+            preparedStatement.setString(3, user.getLastName());
+            preparedStatement.setString(4, user.getPassword());
+            preparedStatement.setLong(5, user.getUserId());
 
             preparedStatement.executeUpdate();
         } catch (final SQLException ex) {

@@ -38,6 +38,8 @@
                                 <td>${user.lastName}&nbsp;&nbsp;</td>
                                 <td>
                                     <a class="btn btn-danger"
+                                       href="/edit-user.do?userId=${user.userId}">Edit</a>
+                                    <a class="btn btn-danger"
                                        href="/delete-user.do?userId=${user.userId}">Delete</a>
                                 </td>
                             </tr>
