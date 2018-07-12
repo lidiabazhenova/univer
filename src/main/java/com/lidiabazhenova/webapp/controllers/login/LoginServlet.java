@@ -1,5 +1,7 @@
 package com.lidiabazhenova.webapp.controllers.login;
 
+import com.lidiabazhenova.webapp.exception.DataSourceException;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +12,7 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/login.do")
 public class LoginServlet extends HttpServlet {
-    private LoginValidation userValidation = new LoginValidation();
+    private LoginService userValidation = new LoginService();
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
@@ -24,7 +26,12 @@ public class LoginServlet extends HttpServlet {
                           HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
-        boolean isValidUser = userValidation.validateUser(name, password);
+        boolean isValidUser = false;
+        try {
+            isValidUser = userValidation.loginCheck(name, password);
+        } catch (DataSourceException e) {
+            e.printStackTrace();
+        }
 
         if (isValidUser) {
             request.getSession().setAttribute("username", name);

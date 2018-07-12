@@ -2,7 +2,7 @@
 
 <div class="container margin-header-center">
 
-    <H1 class="text-center header-center">Welcome, ${productname}</H1>
+    <H1 class="text-center header-center">Welcome, ${username}</H1>
 
     <div class="container-fluid table-container">
 
