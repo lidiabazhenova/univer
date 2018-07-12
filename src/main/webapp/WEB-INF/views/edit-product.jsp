@@ -52,4 +52,4 @@
 </div>
 </div>
 
-<%@include file="../common/form-page-end.jspf" %>
+<%@include file="../common/form-page-end" %>

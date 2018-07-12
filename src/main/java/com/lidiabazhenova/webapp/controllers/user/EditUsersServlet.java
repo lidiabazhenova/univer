@@ -44,21 +44,15 @@ public class EditUsersServlet extends HttpServlet {
                 .setPassword(request.getParameter("password"))
                 .build();
 
-        if (user.validateNotBlank()) {
-            try {
-                UserService.getInstance().updateUser(newUser);
-                request.setAttribute("users", UserService.getInstance().getUsers());
-                response.sendRedirect("/list-users.do");
-            } catch (DataSourceException e) {
-                e.printStackTrace();
-            }
-        } else {
-            request.setAttribute("errorMessage", "Empty Credentials!!");
-            RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views//edit-user.jsp");
-            dis.forward(request, response);
-            return;
+        try {
+            UserService.getInstance().updateUser(newUser);
+            request.setAttribute("users", UserService.getInstance().getUsers());
+            response.sendRedirect("/list-users.do");
+        } catch (DataSourceException e) {
+            e.printStackTrace();
         }
     }
 }
+
 
 

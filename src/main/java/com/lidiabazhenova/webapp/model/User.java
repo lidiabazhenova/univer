@@ -105,16 +105,5 @@ public class User extends AbstractModel {
             return new User(this);
         }
     }
-
-    //TODO validateRequiredFields;
-
-    public boolean validateNotBlank() {
-        if ((StringUtils.isNotBlank(login))
-                & (StringUtils.isNotBlank(password))
-                & (StringUtils.isNotBlank(firstName))
-                & (StringUtils.isNotBlank(lastName))) {
-            return true;
-        } else return false;
-    }
 }
 

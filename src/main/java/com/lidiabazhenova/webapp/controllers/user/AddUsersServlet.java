@@ -33,19 +33,13 @@ public class AddUsersServlet extends HttpServlet {
                 .setPassword(request.getParameter("password"))
                 .build();
 
-        if (user.validateNotBlank()) {
-            try {
-                UserService.getInstance().addUser(user);
-                request.setAttribute("users", UserService.getInstance().getUsers());
-                response.sendRedirect("/list-users.do");
-            } catch (DataSourceException e) {
-                e.printStackTrace();
-            }
-        } else {
-            request.setAttribute("errorMessage", "Empty Credentials!!");
-            RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views//add-user.jsp");
-            dis.forward(request, response);
-            return;
+
+        try {
+            UserService.getInstance().addUser(user);
+            request.setAttribute("users", UserService.getInstance().getUsers());
+            response.sendRedirect("/list-users.do");
+        } catch (DataSourceException e) {
+            e.printStackTrace();
         }
     }
 }
