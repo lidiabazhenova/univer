@@ -27,8 +27,11 @@ public class AddProductsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws ServletException, IOException {
         final Product product = new Product.ProductBuilder()
+                .setProductUrl(request.getParameter("productUrl"))
                 .setProductName(request.getParameter("productName"))
-                .setProductUrl(request.getParameter("productUrl")).build();
+                .setProductPrice(Double.parseDouble(request.getParameter("productPrice")))
+                .setProductQuantity(Double.parseDouble(request.getParameter("productQuantity")))
+                .build();
 
         if (product.validateNotBlank()) {
             try {

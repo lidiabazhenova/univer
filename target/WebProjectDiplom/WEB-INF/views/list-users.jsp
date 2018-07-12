@@ -32,10 +32,10 @@
                         <tbody>
                         <c:forEach items="${users}" var="user">
                             <tr>
-                                <td class=".tbody">${user.id}</td>
+                                <td>${user.id}</td>
                                 <td>${user.login}</td>
                                 <td>${user.firstName}</td>
-                                <td>${user.lastName}&nbsp;&nbsp;</td>
+                                <td>${user.lastName}</td>
                                 <td>
                                     <a class="btn btn-danger"
                                        href="/edit-user.do?userId=${user.userId}">Edit</a>
