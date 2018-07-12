@@ -33,7 +33,7 @@ public class AddProductsServlet extends HttpServlet {
         if (product.validateNotBlank()) {
             try {
                 ProductService.getInstance().addProduct(product);
-                request.setAttribute("products", ProductService.getInstance().retrieveProducts());
+                request.setAttribute("products", ProductService.getInstance().getProducts());
                 response.sendRedirect("/list-products.do");
             } catch (DataSourceException e) {
                 e.printStackTrace();

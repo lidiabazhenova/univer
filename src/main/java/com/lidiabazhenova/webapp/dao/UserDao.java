@@ -47,7 +47,7 @@ public final class UserDao {
 
             final List<User> users = new ArrayList<>();
             while (resultSet.next()) {
-                users.add(populateUserFromResultSet(resultSet));
+                users.add(populateUsersFromResultSet(resultSet));
             }
 
             return users;
@@ -71,7 +71,7 @@ public final class UserDao {
             resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
-                return populateUserFromResultSet(resultSet);
+                return populateUsersFromResultSet(resultSet);
             } else {
                 return null;
             }
@@ -95,7 +95,7 @@ public final class UserDao {
             resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
-                return populateUserFromResultSet(resultSet);
+                return populateUsersFromResultSet(resultSet);
             } else {
                 return null;
             }
@@ -165,7 +165,7 @@ public final class UserDao {
         }
     }
 
-    private User populateUserFromResultSet(final ResultSet resultSet) throws SQLException {
+    private User populateUsersFromResultSet(final ResultSet resultSet) throws SQLException {
         final User user = new User.UserBuilder()
         .setUserId(resultSet.getLong("id"))
         .setLogin(resultSet.getString("login"))

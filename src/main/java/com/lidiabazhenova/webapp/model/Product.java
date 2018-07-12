@@ -9,13 +9,16 @@ public class Product {
     private long productId;
     private String productUrl;
     private String productName;
+    private double productPrice;
+    private double productQuantity;
 
 
     public Product(ProductBuilder productBuilder) {
         this.productId = productBuilder.productId;
         this.productUrl = productBuilder.productUrl;
         this.productName = productBuilder.productName;
-
+        this.productPrice = productBuilder.productPrice;
+        this.productQuantity = productBuilder.productQuantity;
     }
 
     public long getProductId() {
@@ -28,6 +31,14 @@ public class Product {
 
     public String getProductName() {
         return productName;
+    }
+
+    public double getProductPrice() {
+        return productPrice;
+    }
+
+    public double getProductQuantity() {
+        return productQuantity;
     }
 
     @Override
@@ -49,6 +60,8 @@ public class Product {
         sb.append("productId=").append(productId);
         sb.append(", productUrl='").append(productUrl).append('\'');
         sb.append(", productName='").append(productName).append('\'');
+        sb.append(", productPrice=").append(productPrice);
+        sb.append(", productQuantity =").append(productQuantity);
         sb.append('}');
         return sb.toString();
     }
@@ -57,6 +70,8 @@ public class Product {
         private long productId;
         private String productUrl;
         private String productName;
+        private double productPrice;
+        private double productQuantity;
 
         public ProductBuilder setProductId(long id) {
             this.productId = id;
@@ -73,6 +88,16 @@ public class Product {
             return this;
         }
 
+        public ProductBuilder setProductPrice(double productPrice) {
+            this.productPrice = productPrice;
+            return this;
+        }
+
+        public ProductBuilder setProductQuantity(double productQuantity) {
+            this.productQuantity = productQuantity;
+            return this;
+        }
+
         public Product build() {
             return new Product(this);
         }
@@ -81,7 +106,7 @@ public class Product {
     //TODO validateRequiredFields;
 
     public boolean validateNotBlank() {
-        if ((StringUtils.isNotBlank(productUrl)) & (StringUtils.isNotBlank(productName))) {
+        if ((StringUtils.isNotBlank(productUrl))) {
             return true;
         } else return false;
     }

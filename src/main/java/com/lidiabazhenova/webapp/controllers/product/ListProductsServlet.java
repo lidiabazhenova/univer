@@ -25,7 +25,7 @@ public class ListProductsServlet extends HttpServlet {
                          HttpServletResponse response) throws ServletException, IOException {
         List<Product> products = null;
         try {
-            products = ProductService.getInstance().retrieveProducts();
+            products = ProductService.getInstance().getProducts();
         } catch (DataSourceException e) {
             e.printStackTrace();
         }

@@ -1,9 +1,7 @@
 package com.lidiabazhenova.webapp.controllers.user;
 
 import com.lidiabazhenova.webapp.exception.DataSourceException;
-import com.lidiabazhenova.webapp.model.Product;
 import com.lidiabazhenova.webapp.model.User;
-import com.lidiabazhenova.webapp.service.ProductService;
 import com.lidiabazhenova.webapp.service.UserService;
 
 import javax.servlet.RequestDispatcher;
@@ -37,7 +35,7 @@ public class AddUsersServlet extends HttpServlet {
 
         if (user.validateNotBlank()) {
             try {
-                UserService.getInstance().insertUser(user);
+                UserService.getInstance().addUser(user);
                 request.setAttribute("users", UserService.getInstance().getUsers());
                 response.sendRedirect("/list-users.do");
             } catch (DataSourceException e) {

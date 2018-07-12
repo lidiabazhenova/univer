@@ -7,21 +7,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d3bc901-74d5-4b6c-8b22-ca1c5ba51d86" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/EditProductsServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/user/EditUsersServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit-user.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/controllers/product/DeleteUsersServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/controllers/product/DeleteUsersServlet.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/DeleteUsersServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/user/DeleteUsersServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom.war" afterPath="$PROJECT_DIR$/target/WebProjectDiplom.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/filter/CharacterSetFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit-product.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/controllers/product/AddProductsServlet.class" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/controllers/product/AddProductsServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/controllers/product/ListProductsServlet.class" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/controllers/product/ListProductsServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/controllers/user/AddUsersServlet.class" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/controllers/user/AddUsersServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/dao/ProductDao.class" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/dao/ProductDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/dao/UserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/model/Product$ProductBuilder.class" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/model/Product$ProductBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/model/Product.class" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/model/Product.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/service/ProductService.class" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/service/ProductService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/service/UserService.class" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/controllers/product/AddProductsServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/controllers/product/AddProductsServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/controllers/product/ListProductsServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/controllers/product/ListProductsServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/controllers/user/AddUsersServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/controllers/user/AddUsersServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/dao/ProductDao.class" afterPath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/dao/ProductDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/dao/UserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/model/Product$ProductBuilder.class" afterPath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/model/Product$ProductBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/model/Product.class" afterPath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/model/Product.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/service/ProductService.class" afterPath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/service/ProductService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/com/lidiabazhenova/webapp/service/UserService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/user/ListUsersServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/user/ListUsersServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/AddProductsServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/AddProductsServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/EditProductsServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/EditProductsServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/ListProductsServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/ListProductsServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/user/AddUsersServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/user/AddUsersServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/dao/ProductDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/dao/ProductDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-users.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-users.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/views/list-users.jsp" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/views/list-users.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/views/list-users.jsp" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/views/list-users.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/list-users.jsp" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/views/list-users.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/model/Product.java" afterPath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/model/Product.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/ProductService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/sql/init database.sql" afterPath="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/sql/init database.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/header.jspf" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/header.jspf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit-user.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit-user.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-products.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-products.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/views/edit-user.jsp" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/views/edit-user.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/views/list-products.jsp" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/views/list-products.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/sql/init database.sql" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/classes/com/lidiabazhenova/webapp/sql/init database.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/views/edit-user.jsp" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/views/edit-user.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/views/list-products.jsp" afterPath="$PROJECT_DIR$/target/WebProjectDiplom/WEB-INF/views/list-products.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/edit-user.jsp" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/views/edit-user.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/list-products.jsp" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/views/list-products.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/web.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,14 +64,34 @@
     <favorites_list name="WebProjectDiplom" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.3153153">
+    <splitter split-orientation="horizontal" split-proportion="0.38333333">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="EditUsersServlet.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="edit-user.jsp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit-user.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="335">
+                  <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="header.jspf" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/common/header.jspf">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="21">
+                  <caret line="1" column="69" lean-forward="false" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="EditUsersServlet.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/user/EditUsersServlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="98">
-                  <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+                <state relative-caret-position="177">
+                  <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -51,10 +100,29 @@
           <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/UserService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="644">
-                  <caret line="51" column="36" lean-forward="true" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+                <state relative-caret-position="46">
+                  <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#505#506#0" expanded="true" />
+                    <element signature="e#543#544#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/dao/UserDao.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="441">
+                  <caret line="165" column="5" lean-forward="true" selection-start-line="146" selection-start-column="4" selection-end-line="165" selection-end-column="5" />
+                  <folding>
+                    <marker date="1531311216583" expanded="true" signature="645:664" ph="SELECT * FRO... users" />
+                    <marker date="1531311216583" expanded="true" signature="718:750" ph="SELECT * FRO... users" />
+                    <marker date="1531311216583" expanded="true" signature="813:848" ph="SELECT * FRO... users" />
+                    <marker date="1531311216583" expanded="true" signature="905:935" ph="DELETE FROM " />
+                    <marker date="1531311216583" expanded="true" signature="992:1085" ph="INSERT INTO users... " />
+                    <marker date="1531311216583" expanded="true" signature="1142:1226" ph="UPDATE users... " />
                   </folding>
                 </state>
               </provider>
@@ -67,18 +135,97 @@
           <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/model/Product.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="174">
-                  <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+                <state relative-caret-position="-159">
+                  <caret line="75" column="40" lean-forward="false" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+                  <folding>
+                    <element signature="e#670#671#0" expanded="true" />
+                    <element signature="e#702#703#0" expanded="true" />
+                    <element signature="e#739#740#0" expanded="true" />
+                    <element signature="e#772#773#0" expanded="true" />
+                    <element signature="e#810#811#0" expanded="true" />
+                    <element signature="e#844#845#0" expanded="true" />
+                    <element signature="e#883#884#0" expanded="true" />
+                    <element signature="e#918#919#0" expanded="true" />
+                    <element signature="e#960#961#0" expanded="true" />
+                    <element signature="e#998#999#0" expanded="true" />
+                    <element signature="e#1303#1304#0" expanded="true" />
+                    <element signature="e#1349#1350#0" expanded="true" />
+                    <marker date="1531377458786" expanded="false" signature="2815:2830" ph=" { " />
+                    <marker date="1531377458786" expanded="false" signature="2855:2865" ph=" }" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="EditProductsServlet.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/EditProductsServlet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="146">
+                  <caret line="38" column="45" lean-forward="false" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="EditProductsServlet.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/EditProductsServlet.java">
+          <file leaf-file-name="edit-product.jsp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit-product.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="172">
+                  <caret line="29" column="39" lean-forward="false" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+                  <folding>
+                    <element signature="e#212#239#0#HTML" expanded="true" />
+                    <element signature="e#1023#1042#0#HTML" expanded="true" />
+                    <element signature="e#1271#1290#0#HTML" expanded="true" />
+                    <element signature="e#1660#1679#0#HTML" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ProductDao.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/dao/ProductDao.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="432">
+                  <caret line="141" column="50" lean-forward="true" selection-start-line="141" selection-start-column="50" selection-end-line="141" selection-end-column="50" />
+                  <folding>
+                    <marker date="1531377458738" expanded="true" signature="659:681" ph="SELECT * FRO... products" />
+                    <marker date="1531377458738" expanded="true" signature="737:772" ph="SELECT * FRO... products" />
+                    <marker date="1531377458738" expanded="true" signature="831:864" ph="DELETE FROM " />
+                    <marker date="1531377458738" expanded="true" signature="923:990" ph="INSERT INTO products... " />
+                    <marker date="1531377458738" expanded="true" signature="1049:1124" ph="UPDATE produ... " />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ListProductsServlet.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/ListProductsServlet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="462">
+                  <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ProductService.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/ProductService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="432">
+                  <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+                  <folding>
+                    <element signature="e#455#456#0" expanded="true" />
+                    <element signature="e#493#494#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="list-products.jsp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-products.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="273">
+                  <caret line="42" column="90" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="42" selection-end-column="90" />
                   <folding />
                 </state>
               </provider>
@@ -99,8 +246,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>foo</find>
-      <find>back</find>
       <find>button</find>
       <find>login</find>
       <find>login-form</find>
@@ -129,12 +274,15 @@
       <find>category</find>
       <find>build</find>
       <find>delete</find>
+      <find>sum</find>
+      <find>user</find>
     </findStrings>
     <replaceStrings>
       <replace>/list-todos.do</replace>
-      <replace>product</replace>
       <replace>Product</replace>
       <replace>url</replace>
+      <replace>quantity</replace>
+      <replace>product</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\projects\univer\Diplom\WebProjectDiplom</dir>
@@ -151,13 +299,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/dao/connection/ConnectionUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/exception/DataSourceException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/deleteProductServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/ListProductServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/AddProductServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/ProductService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/DeleteProductServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/navigation-bottom.jspf" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/example.html" />
@@ -172,24 +315,18 @@
         <option value="$PROJECT_DIR$/src/main/webapp/css/example.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/loginstyles.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/mainstyles.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/header.jspf" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/footer.jspf" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/model/ShoppingList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/model/AbstractModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/util/DateUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/dao/ProductDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/ListProductServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/ListProductsServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/example.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/navigation.jspf" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/styles.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-products.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-product.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/sql/init database.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/DeleteUsersServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/model/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/filter/LoginRequeredFilter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-user.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/user/AddUsersServlet.java" />
@@ -198,10 +335,21 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/user/DeleteUsersServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-users.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/user/ListUsersServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit-user.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/user/EditUsersServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/ProductService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit-user.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/model/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/EditProductsServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/dao/ProductDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/sql/init database.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/filter/Filter.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/filter/CharacterSetFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/common/header.jspf" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-products.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit-product.jsp" />
       </list>
     </option>
   </component>
@@ -297,16 +445,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebProjectDiplom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebProjectDiplom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
               <item name="product" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -316,26 +454,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebProjectDiplom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebProjectDiplom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebProjectDiplom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebProjectDiplom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WebProjectDiplom" type="b2602c69:ProjectViewProjectNode" />
@@ -795,15 +914,16 @@
       <workItem from="1527061741767" duration="768000" />
       <workItem from="1531164238679" duration="36124000" />
       <workItem from="1531291650589" duration="5607000" />
-      <workItem from="1531298571193" duration="11117000" />
+      <workItem from="1531298571193" duration="25293000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314223000" />
+    <option name="totallyTimeSpent" value="328399000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -825,9 +945,9 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30482456" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24342105" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.190625" sideWeight="0.49561402" order="1" side_tool="false" content_ui="combo" x="568" y="60" width="319" height="624" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18645833" sideWeight="0.49561402" order="1" side_tool="false" content_ui="combo" x="568" y="60" width="319" height="624" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -895,27 +1015,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/exception/DataSourceException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/login/LoginValidation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/sun/reflect/NativeConstructorAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/sun/reflect/DelegatingConstructorAccessorImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1012,14 +1111,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/common/navigation.jspf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
@@ -1051,13 +1142,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/sql/init database.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
@@ -1069,14 +1153,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/ProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1112,34 +1188,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-product.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="45" lean-forward="false" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/common/header.jspf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="37" lean-forward="false" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/DeleteProductsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-products.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="58" lean-forward="true" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -1152,14 +1204,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/ListProductsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/user/DeleteUsersServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -1168,26 +1212,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-users.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-user.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="557">
           <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit-user.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="37" column="93" lean-forward="false" selection-start-line="37" selection-start-column="93" selection-end-line="37" selection-end-column="93" />
           <folding />
         </state>
       </provider>
@@ -1202,38 +1230,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/dao/ProductDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
-          <folding>
-            <marker date="1531212546043" expanded="true" signature="659:681" ph="SELECT * FRO... products" />
-            <marker date="1531212546043" expanded="true" signature="740:773" ph="DELETE FROM " />
-            <marker date="1531212546043" expanded="true" signature="832:876" ph="INSERT INTO products... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/filter/LoginRequeredFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="157" column="58" lean-forward="true" selection-start-line="157" selection-start-column="58" selection-end-line="157" selection-end-column="58" />
-          <folding>
-            <marker date="1531309190830" expanded="true" signature="645:664" ph="SELECT * FRO... users" />
-            <marker date="1531309190830" expanded="true" signature="718:750" ph="SELECT * FRO... users" />
-            <marker date="1531309190830" expanded="true" signature="813:848" ph="SELECT * FRO... users" />
-            <marker date="1531309190830" expanded="true" signature="905:935" ph="DELETE FROM " />
-            <marker date="1531309190830" expanded="true" signature="992:1085" ph="INSERT INTO users... " />
-            <marker date="1531309190830" expanded="true" signature="1142:1226" ph="UPDATE users... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1245,37 +1246,191 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="165" column="5" lean-forward="true" selection-start-line="146" selection-start-column="4" selection-end-line="165" selection-end-column="5" />
+          <folding>
+            <marker date="1531311216583" expanded="true" signature="645:664" ph="SELECT * FRO... users" />
+            <marker date="1531311216583" expanded="true" signature="718:750" ph="SELECT * FRO... users" />
+            <marker date="1531311216583" expanded="true" signature="813:848" ph="SELECT * FRO... users" />
+            <marker date="1531311216583" expanded="true" signature="905:935" ph="DELETE FROM " />
+            <marker date="1531311216583" expanded="true" signature="992:1085" ph="INSERT INTO users... " />
+            <marker date="1531311216583" expanded="true" signature="1142:1226" ph="UPDATE users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-product.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="34" column="15" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="34" selection-end-column="15" />
+          <folding>
+            <element signature="e#1020#1039#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="51" column="36" lean-forward="true" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+        <state relative-caret-position="46">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-users.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Double.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="536" column="25" lean-forward="false" selection-start-line="536" selection-start-column="25" selection-end-line="536" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/sql/init database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/user/EditUsersServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/filter/CharacterSetFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/user/EditUsersServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/model/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state relative-caret-position="273">
+          <caret line="13" column="73" lean-forward="false" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/EditProductsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="146">
+          <caret line="38" column="45" lean-forward="false" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/service/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+          <folding>
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/model/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-159">
+          <caret line="75" column="40" lean-forward="false" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+          <folding>
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1303#1304#0" expanded="true" />
+            <element signature="e#1349#1350#0" expanded="true" />
+            <marker date="1531377458786" expanded="false" signature="2815:2830" ph=" { " />
+            <marker date="1531377458786" expanded="false" signature="2855:2865" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit-user.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/common/header.jspf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="69" lean-forward="false" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/controllers/product/ListProductsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lidiabazhenova/webapp/dao/ProductDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="141" column="50" lean-forward="true" selection-start-line="141" selection-start-column="50" selection-end-line="141" selection-end-column="50" />
+          <folding>
+            <marker date="1531377458738" expanded="true" signature="659:681" ph="SELECT * FRO... products" />
+            <marker date="1531377458738" expanded="true" signature="737:772" ph="SELECT * FRO... products" />
+            <marker date="1531377458738" expanded="true" signature="831:864" ph="DELETE FROM " />
+            <marker date="1531377458738" expanded="true" signature="923:990" ph="INSERT INTO products... " />
+            <marker date="1531377458738" expanded="true" signature="1049:1124" ph="UPDATE produ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-products.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="42" column="90" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="42" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit-product.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="29" column="39" lean-forward="false" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+          <folding>
+            <element signature="e#212#239#0#HTML" expanded="true" />
+            <element signature="e#1023#1042#0#HTML" expanded="true" />
+            <element signature="e#1271#1290#0#HTML" expanded="true" />
+            <element signature="e#1660#1679#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

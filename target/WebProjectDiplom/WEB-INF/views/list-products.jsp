@@ -2,7 +2,7 @@
 
 <div class="container margin-header-center">
 
-    <H1 class="text-center header-center">Welcome, ${username}</H1>
+    <H1 class="text-center header-center">Welcome, ${productname}</H1>
 
     <div class="container-fluid table-container">
 
@@ -23,6 +23,8 @@
                         <tr>
                             <th>URL</th>
                             <th>Products</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -30,9 +32,20 @@
                         <tbody>
                         <c:forEach items="${products}" var="product">
                             <tr>
-                                <td class=".tbody">${product.productUrl}</td>
+                                <td>${product.productUrl}</td>
                                 <td>${product.productName}</td>
-                                <td>&nbsp;&nbsp;
+                                <td>
+                                    <fmt:formatNumber type="number" maxFractionDigits="2"
+                                                      value="${product.productPrice}"/>
+                                </td>
+                                <td>
+                                    <fmt:formatNumber type="number" maxFractionDigits="0"
+                                                      value="${product.productQuantity}"/>
+                                </td>
+
+                                <td>
+                                    <a class="btn btn-danger"
+                                       href="/edit-product.do?productId=${product.productId}">Edit</a>
                                     <a class="btn btn-danger"
                                        href="/delete-product.do?productId=${product.productId}">Delete</a>
                                 </td>

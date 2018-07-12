@@ -2,7 +2,7 @@
 
 <div class="container margin-header-center">
 
-    <H1 class="text-center header-center" style="margin-top: 70px">Addition new user</H1>
+    <H1 class="text-center header-center" style="margin-top: 70px">Edit user</H1>
 
     <div class="container" style="margin-bottom: 70px">
 

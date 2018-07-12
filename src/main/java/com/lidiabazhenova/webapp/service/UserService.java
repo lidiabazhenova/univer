@@ -44,7 +44,7 @@ public final class UserService {
         UserDao.getInstance().deleteUser(id);
     }
 
-    public void insertUser(final User user) throws DataSourceException {
+    public void addUser(final User user) throws DataSourceException {
         UserDao.getInstance().insertUser(user);
     }
 

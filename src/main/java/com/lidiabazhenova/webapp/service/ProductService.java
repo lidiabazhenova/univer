@@ -17,8 +17,12 @@ public class ProductService {
         return HOLDER_INSTANCE;
     }
 
-    public List<Product> retrieveProducts() throws DataSourceException {
+    public List<Product> getProducts() throws DataSourceException {
         return Collections.unmodifiableList(ProductDao.getInstance().getProducts());
+    }
+
+    public Product getProduct(final long id) throws DataSourceException {
+        return ProductDao.getInstance().getProduct(id);
     }
 
     public void addProduct(final Product product) throws DataSourceException {
@@ -27,5 +31,9 @@ public class ProductService {
 
     public void deleteProduct(final Long id) throws DataSourceException {
         ProductDao.getInstance().deleteProduct(id);
+    }
+
+    public void updateProduct(final Product product) throws DataSourceException {
+        ProductDao.getInstance().updateProduct(product);
     }
 }
