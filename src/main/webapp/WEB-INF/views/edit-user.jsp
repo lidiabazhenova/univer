@@ -9,8 +9,6 @@
 
         <form id="form" action="/edit-user.do" method="post" onsubmit="return checkForm(this);">
 
-            <%-- --%>
-
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Login:</H4></label>
                 <input type="text" name="login" id="login" class="form-control" value="${user.login}"/><br/>

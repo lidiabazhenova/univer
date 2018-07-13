@@ -33,13 +33,15 @@
                 <label><H4 style="color: #fff">Repeat password:</H4></label>
                 <input type="password" name="repeatPassword" id="repeatPassword" class="form-control"/><br/>
             </fieldset>
+
             <div class="list-add-form">
                 <div id="mybutton" class="group add-group">
                     <input type="submit" class="btn btn-success" value="Add"/>
                 </div>
-
             </div>
+
         </form>
+        <div><img src="/img/animation.gif"></div>
     </div>
 </div>
 

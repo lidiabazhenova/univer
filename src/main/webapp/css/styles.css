@@ -2,11 +2,16 @@
 General
 ================================= */
 
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     color: #6a6f8c;
     background: #c8c8c8;
     font: 600 16px/18px 'Open Sans', sans-serif;
+    min-height: 100%;
 }
 
 .clearfix:after, .clearfix:before {
@@ -27,7 +32,7 @@ a {
 
 *, :after, :before {
     box-sizing: border-box;
-    
+
 }
 
 .my-btn {
@@ -40,14 +45,18 @@ a {
 }
 
 .bg-foundation {
-    background: url(../img/bg.jpg) no-repeat;
+    //*background: url(../img/bg.JPG);*/
     background-size: cover;
+    height: 100%;
 }
 
 .foundation {
     background: rgba(40, 57, 101, .9);
-    height: 100%;
+    min-height: 100%;
 
+}
+.white-list {
+    height: 100%;
 }
 
 /* ================================
@@ -112,11 +121,6 @@ Buttons
 
 }
 
-.list-add-form .group {
-
-    /*margin-top: -70px;*/
-}
-
 
 /* ================================
 Table
@@ -126,7 +130,7 @@ table {
     width: 100%;
     height: 320px;;
     border-collapse: collapse;
-    overflow: auto;
+    overflow-scrolling: auto;
     background-color: white;
 }
 
@@ -139,6 +143,10 @@ table, th, td {
 .table-responsive thead, caption {
     width: 100%;
     padding: 5px 20px 5px 5px;
+}
+
+.table-responsive{
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
 }
 
 .tbody {
@@ -154,21 +162,17 @@ table, th, td {
 .margin-header-center {
     margin-top: 50px;
     margin-bottom: 70px;
-    height: 100%;
+    min-height: 100%;
 }
 
 .table-container {
     background-color: white;
     margin-bottom: 0px;
     position: relative;
+    min-height: 100%;
 }
 
 
-/*@media screen and (max-width: 767px) {*/
-    /*table caption {*/
-        /*border-bottom: 1px solid #ddd;*/
-    /*}*/
-/*}*/
 
 /* ================================
 Footer

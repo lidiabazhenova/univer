@@ -103,10 +103,10 @@ public class Product {
         }
     }
 
-    //TODO validateRequiredFields;
+    //TODO validateFormatFields;
 
     public boolean validateNotBlank() {
-        if ((StringUtils.isNotBlank(productUrl))) {
+        if ((StringUtils.isNotBlank(productUrl))&&(StringUtils.isNotBlank(String.valueOf(productPrice)))&&(StringUtils.isNotBlank(String.valueOf(productQuantity)))) {
             return true;
         } else return false;
     }

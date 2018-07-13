@@ -6,12 +6,11 @@
 
     <div class="container-fluid table-container">
 
-        <div class="row">
+        <div class="white-list">
 
             <div class="col-xs-12" style="margin-bottom: 15px">
 
-                <div class="table-responsive"
-                     style="box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);">
+                <div class="table-responsive">
 
                     <h4 class="text-info text-center">
                         Your purchasing list:
@@ -32,6 +31,7 @@
                         <tbody>
                         <c:forEach items="${products}" var="product">
                             <tr>
+
                                 <td>${product.productUrl}</td>
                                 <td>${product.productName}</td>
                                 <td>
@@ -42,7 +42,6 @@
                                     <fmt:formatNumber type="number" maxFractionDigits="0"
                                                       value="${product.productQuantity}"/>
                                 </td>
-
                                 <td>
                                     <a class="btn btn-danger"
                                        href="/edit-product.do?productId=${product.productId}">Edit</a>

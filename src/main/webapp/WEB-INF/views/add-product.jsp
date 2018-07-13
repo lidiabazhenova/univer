@@ -1,4 +1,6 @@
 <%@include file="../common/form-page-begin.jspf" %>
+<%@include file="../common/scriptproduct.jspf" %>
+
 
 <div class="container margin-header-center">
 
@@ -6,30 +8,32 @@
 
     <div class="container" style="margin-bottom: 70px">
 
-        <form action="/add-product.do" method="post">
+        <form id="form" action="/add-product.do" method="post" onsubmit="return checkForm(this);">
             <h4 class="text-info text-center">
                 Your new product:
             </h4>
-            <c:if test="${errorMessage=='Empty Credentials!!'}">
-                <div class="alert alert-success alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>${errorMessage}</strong>
-                </div>
-            </c:if>
 
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">URL:</H4></label>
-                <input type="text" name="productUrl" class="form-control"/><br/>
+                <input type="text" name="productUrl" id="productUrl" class="form-control"/><br/>
             </fieldset>
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Product:</H4></label>
-                <input type="text" name="productName" class="form-control"/><br/>
+                <input type="text" name="productName" id="productName" class="form-control"/><br/>
             </fieldset>
+            <fieldset class="form-group">
+                <label><H4 style="color: #fff">Price:</H4></label>
+                <input type="text" name="productPrice" id="productPrice" class="form-control"/><br/>
+            </fieldset>
+            <fieldset class="form-group">
+                <label><H4 style="color: #fff">Quantity:</H4></label>
+                <input type="text" name="productQuantity" id="productQuantity" class="form-control"/><br/>
+            </fieldset>
+
             <div class="list-add-form">
                 <div id="mybutton" class="group add-group">
                     <input type="submit" class="btn btn-success" value="Add"/>
                 </div>
-
 
             </div>
         </form>
