@@ -8,7 +8,7 @@
 
     <div class="container" style="margin-bottom: 70px">
 
-        <form id="form" action="/add-product.do" method="post" onsubmit="return checkForm(this);">
+        <form id="formproduct" action="/add-product.do" method="post" onsubmit="return checkForm(this);">
             <h4 class="text-info text-center">
                 Your new product:
             </h4>
@@ -34,7 +34,6 @@
                 <div id="mybutton" class="group add-group">
                     <input type="submit" class="btn btn-success" value="Add"/>
                 </div>
-
             </div>
         </form>
         <div><img src="/img/animation.gif"></div>

@@ -8,7 +8,7 @@
 
     <div class="container" style="margin-bottom: 70px">
 
-        <form id="form" action="/add-user.do" method="post" onsubmit="return checkForm(this);">
+        <form id="formuser" action="/add-user.do" method="post" onsubmit="return checkForm(this);">
             <h4 class="text-info text-center">
                 Your new user:
             </h4>
@@ -39,10 +39,6 @@
                     <input type="submit" class="btn btn-success" value="Add"/>
                 </div>
             </div>
-
         </form>
-        <div><img src="/img/animation.gif"></div>
-    </div>
-</div>
 
 <%@include file="../common/form-page-end" %>

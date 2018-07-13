@@ -45,9 +45,9 @@ a {
 }
 
 .bg-foundation {
-    //*background: url(../img/bg.JPG);*/
+    background: url(../img/bg.JPG);
     background-size: cover;
-    height: 100%;
+    min-height: 100%;
 }
 
 .foundation {
