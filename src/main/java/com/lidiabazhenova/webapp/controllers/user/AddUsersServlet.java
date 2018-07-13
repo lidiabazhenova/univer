@@ -33,7 +33,6 @@ public class AddUsersServlet extends HttpServlet {
                 .setPassword(request.getParameter("password"))
                 .build();
 
-
         try {
             UserService.getInstance().addUser(user);
             request.setAttribute("users", UserService.getInstance().getUsers());

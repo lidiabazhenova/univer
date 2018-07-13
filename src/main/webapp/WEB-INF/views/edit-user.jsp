@@ -1,22 +1,15 @@
 <%@include file="../common/form-page-begin.jspf" %>
-<%@include file="../common/scriptedituser.jspf" %>
+<%@include file="../common/scriptuser.jspf" %>
 
 <div class="container margin-header-center">
 
-    <H1 class="text-center header-center" style="margin-top: 70px">Edit user</H1>
+    <H1 class="text-center header-center" style="margin-top: 70px">Edit ${user.login}:</H1>
 
     <div class="container" style="margin-bottom: 70px">
 
-        <form action="/edit-user.do" method="post">
-            <h4 class="text-info text-center">
-                Edit ${user.login}:
-            </h4>
-            <c:if test="${errorMessage=='Empty Credentials!!'}">
-                <div class="alert alert-success alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>${errorMessage}</strong>
-                </div>
-            </c:if>
+        <form id="form" action="/edit-user.do" method="post" onsubmit="return checkForm(this);">
+
+            <%-- --%>
 
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Login:</H4></label>
@@ -40,7 +33,7 @@
             </fieldset>
             <div class="list-add-form">
                 <div id="mybutton" class="group add-group">
-                    <input type="submit" class="btn btn-success" value="Confirm" method="post"/>
+                    <input type="submit" class="btn btn-success" value="Confirm"/>
                 </div>
 
             </div>

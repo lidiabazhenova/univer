@@ -1,5 +1,5 @@
 <%@include file="../common/form-page-begin.jspf" %>
-<%@include file="../common/scriptadduser.jspf" %>
+<%@include file="../common/scriptuser.jspf" %>
 
 
 <div class="container margin-header-center">
