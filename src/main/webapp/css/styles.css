@@ -24,6 +24,24 @@ body {
     display: block
 }
 
+.bg-foundation {
+    background: url(../img/bg.JPG);
+    background-size: cover;
+}
+
+.foundation {
+    background: rgba(40, 57, 101, .9);
+}
+
+.table-container {
+    background-color: white;
+    margin-bottom: 0px;
+    position: relative;
+}
+
+.white-list {
+    /*min-height: 100%;*/
+}
 
 a {
     color: inherit;
@@ -42,21 +60,6 @@ a {
 
     background: rgba(255, 255, 255, .1);
     background: #1161ee;
-}
-
-.bg-foundation {
-    background: url(../img/bg.JPG);
-    background-size: cover;
-    min-height: 100%;
-}
-
-.foundation {
-    background: rgba(40, 57, 101, .9);
-    min-height: 100%;
-
-}
-.white-list {
-    height: 100%;
 }
 
 /* ================================
@@ -103,7 +106,6 @@ nav.navbar {
 Buttons
 ================================= */
 
-
 .add-group {
     width: 100%;
     min-height: 90px;
@@ -120,7 +122,6 @@ Buttons
     width: 100%;
 
 }
-
 
 /* ================================
 Table
@@ -145,7 +146,7 @@ table, th, td {
     padding: 5px 20px 5px 5px;
 }
 
-.table-responsive{
+.table-responsive {
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
 }
 
@@ -165,15 +166,6 @@ table, th, td {
     min-height: 100%;
 }
 
-.table-container {
-    background-color: white;
-    margin-bottom: 0px;
-    position: relative;
-    min-height: 100%;
-}
-
-
-
 /* ================================
 Footer
 ================================= */
@@ -187,7 +179,6 @@ Footer
     height: 70px;
     line-height: 60px;
 }
-
 
 /* ================================
 Login form
@@ -232,7 +223,7 @@ Login form
 .login-html .tab,
 .login-form .group .label,
 .login-form .group .button,
-.list-add-form .group .button{
+.list-add-form .group .button {
     text-transform: uppercase;
 }
 
@@ -259,10 +250,10 @@ Login form
 }
 
 /*.list-add-form {*/
-    /*min-height: 45px;*/
-    /*position: relative;*/
-    /*perspective: 1000px;*/
-    /*transform-style: preserve-3d;*/
+/*min-height: 45px;*/
+/*position: relative;*/
+/*perspective: 1000px;*/
+/*transform-style: preserve-3d;*/
 /*}*/
 
 .login-form .group {
@@ -280,7 +271,7 @@ Login form
 
 .login-form .group .input,
 .login-form .group .button,
-.list-add-form .group .button{
+.list-add-form .group .button {
     border: none;
     padding: 15px 20px;
     border-radius: 25px;
@@ -296,8 +287,9 @@ Login form
     color: #aaa;
     font-size: 12px;
 }
+
 .login-form .group .button,
-.list-add-form .group .button{
+.list-add-form .group .button {
     background: #1161ee;
 }
 

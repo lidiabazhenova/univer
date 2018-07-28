@@ -1,7 +1,7 @@
 <script type="text/javascript">
 
     function checkForm(formproduct) {
-        if (formproduct.productUrl.value = "") {
+        if (formproduct.productUrl.value == "") {
             alert("Error: Url cannot be blank!");
             formproduct.productUrl.focus();
             return false;
