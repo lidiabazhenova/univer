@@ -19,11 +19,13 @@ public class DeleteProductsServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
+        final long orderId =Long.valueOf(request.getParameter("orderId"));
+
         final Product product = new Product.ProductBuilder()
                 .setProductId(Long.valueOf(request.getParameter("productId"))).build();
         try {
             ProductService.getInstance().deleteProduct(product.getProductId());
-            response.sendRedirect("/list-products.do");
+            response.sendRedirect("/list-products.do?orderId=" + orderId);
         } catch (DataSourceException e) {
             e.printStackTrace();
         }

@@ -8,6 +8,7 @@
     <div class="container" style="margin-bottom: 70px">
 
         <form id="form" action="/edit-product.do" method="post" onsubmit="return checkForm(this);">
+            <input type="hidden" name="orderId" id="orderId" value="${orderId}"/>
             <h4 class="text-info text-center">
                 Edit:
             </h4>

@@ -8,13 +8,11 @@
     <div class="container" style="margin-bottom: 70px">
 
         <form id="formproduct" action="/add-product.do" method="post" onsubmit="return checkForm(this);">
-            <h4 class="text-info text-center">
-                Your new product:
-            </h4>
+            <input type="hidden" name="orderId" id="orderId" value="${order.orderId}"/>
 
-            <fieldset class="form-group">
-                <input type="hidden" name="orderId" id="orderId" class="form-control" value="${order.orderId}"/><br/>
-            </fieldset>
+            <h4 class="text-info text-center">
+                Your new product to order : ${order.orderTitle}
+            </h4>
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">URL:</H4></label>
                 <input type="text" name="productUrl" id="productUrl" class="form-control"/><br/>

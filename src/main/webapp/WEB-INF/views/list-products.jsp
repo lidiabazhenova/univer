@@ -10,9 +10,9 @@
 
                 <div class="table-responsive">
 
-                        <h4 class="text-info text-center">
-                            Your purchasing list "${order.orderTitle}"
-                        </h4>
+                    <h4 class="text-info text-center">
+                        Your purchasing list "${order.orderTitle}"
+                    </h4>
 
                     <table class="table-responsive">
 
@@ -41,9 +41,9 @@
                                 </td>
                                 <td>
                                     <a class="btn btn-danger"
-                                       href="/edit-product.do?productId=${product.productId}">Edit</a>
+                                       href="/edit-product.do?productId=${product.productId}&orderId=${order.orderId}">Edit</a>
                                     <a class="btn btn-danger"
-                                       href="/delete-product.do?productId=${product.productId}">Delete</a>
+                                       href="/delete-product.do?productId=${product.productId}&orderId=${order.orderId}">Delete</a>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -60,10 +60,9 @@
 
     <div class="list-add-form">
         <div id="mybutton" class="group add-group">
-            <button class="button add-button"><a href="/add-product.do?orderId=${order.orderId}">Add New Product</a></button>
+            <button class="button add-button"><a href="/add-product.do?orderId=${order.orderId}">Add New Product</a>
+            </button>
         </div>
-
-
     </div>
 
 <%@include file="../common/form-page-end" %>

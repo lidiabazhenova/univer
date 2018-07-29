@@ -22,8 +22,10 @@ public class EditProductsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
         try {
+            final long orderId =Long.valueOf(request.getParameter("orderId"));
             product = ProductService.getInstance().getProduct(Long.valueOf(request.getParameter("productId")));
 
+            request.setAttribute("orderId", orderId);
             request.setAttribute("product", product);
         } catch (DataSourceException e) {
             e.printStackTrace();
@@ -34,6 +36,7 @@ public class EditProductsServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws ServletException, IOException {
+        final long orderId =Long.valueOf(request.getParameter("orderId"));
 
         final Product newProduct = new Product.ProductBuilder()
                 .setProductId(product.getProductId())
@@ -46,11 +49,9 @@ public class EditProductsServlet extends HttpServlet {
         try {
             ProductService.getInstance().updateProduct(newProduct);
             request.setAttribute("products", ProductService.getInstance().getProducts());
-            response.sendRedirect("/list-products.do");
+            response.sendRedirect("/list-products.do?orderId=" + orderId);
         } catch (DataSourceException e) {
             e.printStackTrace();
         }
     }
 }
-
-

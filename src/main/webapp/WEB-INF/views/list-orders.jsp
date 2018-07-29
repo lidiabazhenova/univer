@@ -37,6 +37,10 @@
                                        href="/delete-order.do?orderId=${order.orderId}">Delete</a>
                                     <a class="btn btn-danger"
                                        href="/list-products.do?orderId=${order.orderId}">View Details</a>
+                                    <a class="btn btn-danger"
+                                       href="/list-products.do?orderId=${order.orderId}">Run</a>
+                                    <a class="btn btn-danger"
+                                       href="/list-products.do?orderId=${order.orderId}">Order History</a>
                                 </td>
                             </tr>
                         </c:forEach>
