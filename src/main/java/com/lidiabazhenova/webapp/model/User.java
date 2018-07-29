@@ -1,7 +1,5 @@
 package com.lidiabazhenova.webapp.model;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.Objects;
 
 public class User extends AbstractModel {

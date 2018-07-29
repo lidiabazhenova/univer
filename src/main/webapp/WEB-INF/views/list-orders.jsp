@@ -11,7 +11,7 @@
                 <div class="table-responsive">
 
                     <h4 class="text-info text-center">
-                        List of users:
+                        Your orders list:
                     </h4>
 
                     <table class="table-responsive">
@@ -19,25 +19,24 @@
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Users</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
+                            <th>Title</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
 
                         <tbody>
-                        <c:forEach items="${users}" var="user">
+                        <c:forEach items="${orders}" var="order">
                             <tr>
-                                <td>${user.id}</td>
-                                <td>${user.login}</td>
-                                <td>${user.firstName}</td>
-                                <td>${user.lastName}</td>
+                                <td>${order.orderId}</td>
+                                <td>${order.orderTitle}</td>
+
                                 <td>
                                     <a class="btn btn-danger"
-                                       href="/edit-user.do?userId=${user.userId}">Edit</a>
+                                       href="/edit-order.do?orderId=${order.orderId}">Edit</a>
                                     <a class="btn btn-danger"
-                                       href="/delete-user.do?userId=${user.userId}">Delete</a>
+                                       href="/delete-order.do?orderId=${order.orderId}">Delete</a>
+                                    <a class="btn btn-danger"
+                                       href="/list-products.do?orderId=${order.orderId}">View Details</a>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -55,12 +54,11 @@
     <div class="list-add-form">
         <div id="mybutton" class="group add-group">
             <button class="button add-button"><a
-                    href="/add-user.do">Add
-                New User</a></button>
+                    href="/add-order.do">Add
+                New Order</a></button>
         </div>
 
 
     </div>
 
-    <%@include file="../common/form-page-end" %>
-
+<%@include file="../common/form-page-end" %>

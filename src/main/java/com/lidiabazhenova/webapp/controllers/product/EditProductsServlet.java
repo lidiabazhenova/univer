@@ -43,19 +43,12 @@ public class EditProductsServlet extends HttpServlet {
                 .setProductQuantity(Double.parseDouble(request.getParameter("productQuantity")))
                 .build();
 
-        if (product.validateNotBlank()) {
-            try {
-                ProductService.getInstance().updateProduct(newProduct);
-                request.setAttribute("products", ProductService.getInstance().getProducts());
-                response.sendRedirect("/list-products.do");
-            } catch (DataSourceException e) {
-                e.printStackTrace();
-            }
-        } else {
-            request.setAttribute("errorMessage", "Empty Credentials!!");
-            RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views//edit-product.jsp");
-            dis.forward(request, response);
-            return;
+        try {
+            ProductService.getInstance().updateProduct(newProduct);
+            request.setAttribute("products", ProductService.getInstance().getProducts());
+            response.sendRedirect("/list-products.do");
+        } catch (DataSourceException e) {
+            e.printStackTrace();
         }
     }
 }

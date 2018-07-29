@@ -2,8 +2,6 @@
 
 <div class="container margin-header-center">
 
-    <H1 class="text-center header-center">Welcome, ${username}</H1>
-
     <div class="container-fluid table-container">
 
         <div class="white-list">
@@ -12,9 +10,9 @@
 
                 <div class="table-responsive">
 
-                    <h4 class="text-info text-center">
-                        Your purchasing list:
-                    </h4>
+                        <h4 class="text-info text-center">
+                            Your purchasing list "${order.orderTitle}"
+                        </h4>
 
                     <table class="table-responsive">
 
@@ -31,7 +29,6 @@
                         <tbody>
                         <c:forEach items="${products}" var="product">
                             <tr>
-
                                 <td>${product.productUrl}</td>
                                 <td>${product.productName}</td>
                                 <td>
@@ -63,9 +60,7 @@
 
     <div class="list-add-form">
         <div id="mybutton" class="group add-group">
-            <button class="button add-button"><a
-                    href="/add-product.do">Add
-                New Product</a></button>
+            <button class="button add-button"><a href="/add-product.do?orderId=${order.orderId}">Add New Product</a></button>
         </div>
 
 

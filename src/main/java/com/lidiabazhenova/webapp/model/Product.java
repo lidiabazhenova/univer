@@ -1,24 +1,27 @@
 package com.lidiabazhenova.webapp.model;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.Objects;
 
 public class Product {
 
+    private long orderId;
     private long productId;
     private String productUrl;
     private String productName;
     private double productPrice;
     private double productQuantity;
 
-
     public Product(ProductBuilder productBuilder) {
+        this.orderId = productBuilder.orderId;
         this.productId = productBuilder.productId;
         this.productUrl = productBuilder.productUrl;
         this.productName = productBuilder.productName;
         this.productPrice = productBuilder.productPrice;
         this.productQuantity = productBuilder.productQuantity;
+    }
+
+    public long getOrderId() {
+        return orderId;
     }
 
     public long getProductId() {
@@ -57,6 +60,7 @@ public class Product {
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Product{");
+        sb.append("orderId=").append(orderId);
         sb.append("productId=").append(productId);
         sb.append(", productUrl='").append(productUrl).append('\'');
         sb.append(", productName='").append(productName).append('\'');
@@ -67,11 +71,17 @@ public class Product {
     }
 
     public static class ProductBuilder {
+        private long orderId;
         private long productId;
         private String productUrl;
         private String productName;
         private double productPrice;
         private double productQuantity;
+
+        public ProductBuilder setOrderId(long orderId) {
+            this.orderId = orderId;
+            return this;
+        }
 
         public ProductBuilder setProductId(long id) {
             this.productId = id;
@@ -102,13 +112,4 @@ public class Product {
             return new Product(this);
         }
     }
-
-    //TODO validateFormatFields;
-
-    public boolean validateNotBlank() {
-        if ((StringUtils.isNotBlank(productUrl))&&(StringUtils.isNotBlank(String.valueOf(productPrice)))&&(StringUtils.isNotBlank(String.valueOf(productQuantity)))) {
-            return true;
-        } else return false;
-    }
-
 }

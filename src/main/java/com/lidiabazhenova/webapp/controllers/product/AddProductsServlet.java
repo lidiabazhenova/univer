@@ -3,6 +3,7 @@ package com.lidiabazhenova.webapp.controllers.product;
 import com.lidiabazhenova.webapp.exception.DataSourceException;
 import com.lidiabazhenova.webapp.model.Product;
 import com.lidiabazhenova.webapp.service.ProductService;
+import org.apache.commons.lang3.math.NumberUtils;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -26,28 +27,22 @@ public class AddProductsServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws ServletException, IOException {
+
         final Product product = new Product.ProductBuilder()
                 .setProductUrl(request.getParameter("productUrl"))
                 .setProductName(request.getParameter("productName"))
                 .setProductPrice(Double.parseDouble(request.getParameter("productPrice")))
                 .setProductQuantity(Double.parseDouble(request.getParameter("productQuantity")))
                 .build();
-
-        if (product.validateNotBlank()) {
-            try {
-                ProductService.getInstance().addProduct(product);
-                request.setAttribute("products", ProductService.getInstance().getProducts());
-                response.sendRedirect("/list-products.do");
-            } catch (DataSourceException e) {
-                e.printStackTrace();
-            }
-        } else {
-            request.setAttribute("errorMessage", "Empty Credentials!!");
-            RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views//add-product.jsp");
-            dis.forward(request, response);
-            return;
+        try {
+            ProductService.getInstance().addProduct(product);
+            request.setAttribute("products", ProductService.getInstance().getProducts());
+            response.sendRedirect("/list-products.do");
+        } catch (DataSourceException e) {
+            e.printStackTrace();
         }
     }
 }
+
 
 

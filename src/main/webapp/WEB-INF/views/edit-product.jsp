@@ -1,4 +1,5 @@
 <%@include file="../common/form-page-begin.jspf" %>
+<%@include file="../common/scriptproduct.jspf" %>
 
 <div class="container margin-header-center">
 
@@ -6,7 +7,7 @@
 
     <div class="container" style="margin-bottom: 70px">
 
-        <form action="/edit-product.do" method="post">
+        <form id="form" action="/edit-product.do" method="post" onsubmit="return checkForm(this);">
             <h4 class="text-info text-center">
                 Edit:
             </h4>
@@ -19,21 +20,21 @@
 
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">URL:</H4></label>
-                <input type="text" name="productUrl" class="form-control" value="${product.productUrl}"/><br/>
+                <input type="text" name="productUrl" id="productUrl" class="form-control" value="${product.productUrl}"/><br/>
             </fieldset>
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Product:</H4></label>
-                <input type="text" name="productName" class="form-control" value="${product.productName}"/><br/>
+                <input type="text" name="productName" id="productName" class="form-control" value="${product.productName}"/><br/>
             </fieldset>
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Price:</H4></label>
-                <input type="text" name="productPrice" class="form-control"
+                <input type="text" name="productPrice" id="productPrice" class="form-control"
                        value='<fmt:formatNumber type="number" maxFractionDigits="2"
                                                       value="${product.productPrice}"/>'/><br/>
             </fieldset>
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Quantity:</H4></label>
-                <input type="text" name="productName" class="form-control"
+                <input type="text" name="productQuantity" id="productQuantity" class="form-control"
                        value='<fmt:formatNumber type="number" maxFractionDigits="0"
                                                       value="${product.productQuantity}"/>'/><br/>
             </fieldset>

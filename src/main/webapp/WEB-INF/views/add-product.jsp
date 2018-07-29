@@ -1,7 +1,6 @@
 <%@include file="../common/form-page-begin.jspf" %>
 <%@include file="../common/scriptproduct.jspf" %>
 
-
 <div class="container margin-header-center">
 
     <H1 class="text-center header-center" style="margin-top: 70px">Addition new product in list</H1>
@@ -13,6 +12,9 @@
                 Your new product:
             </h4>
 
+            <fieldset class="form-group">
+                <input type="hidden" name="orderId" id="orderId" class="form-control" value="${order.orderId}"/><br/>
+            </fieldset>
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">URL:</H4></label>
                 <input type="text" name="productUrl" id="productUrl" class="form-control"/><br/>

@@ -16,12 +16,8 @@
         </div>
         <div class="navigation collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li class=""><a href="/list-products.do">Home</a></li>
+                <li class=""><a href="/list-orders.do">Orders</a></li>
                 <li><a href="/list-users.do">Users</a></li>
-                <li><a href="/list-products.do">Service</a></li>
-                <li><a href="http://www.oz.by">Links</a></li>
-                <li><a href="/example.do">Example</a></li>
-                <li class="current"><a href="#contact">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
             <li><a href="/logout.do">Logout</a>

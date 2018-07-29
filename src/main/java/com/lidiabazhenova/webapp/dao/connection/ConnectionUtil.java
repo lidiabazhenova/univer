@@ -20,7 +20,7 @@ public final class ConnectionUtil {
     }
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(DATABASE_URL,USER, PASSWORD);
+        return DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
     }
 
     public static void close(final PreparedStatement statement, final Connection conn) {
@@ -33,7 +33,7 @@ public final class ConnectionUtil {
         }
 
         try {
-            if(conn != null) {
+            if (conn != null) {
                 conn.close();
             }
         } catch (final SQLException ex) {

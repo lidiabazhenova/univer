@@ -15,25 +15,20 @@ public final class UserDao {
 
     public static final UserDao HOLDER_INSTANCE = new UserDao();
 
+    private static final String ALL_USERS_QUERY = "SELECT * FROM users";
+    private static final String GET_USER_QUERY = "SELECT * FROM users WHERE id = ?";
+    private static final String GET_USER_BY_LOGIN_QUERY = "SELECT * FROM users WHERE login = ?";
+    private static final String DELETE_USER_QUERY = "DELETE FROM users WHERE id = ?";
+    private static final String INSERT_USER_QUERY = "INSERT INTO users(login, first_name, last_name, password) " +
+            "VALUES(?, ?, ?, ?)";
+    private static final String UPDATE_USER_QUERY = "UPDATE users SET login = ?, first_name = ?, last_name = ?, password = ? WHERE id = ?";
+
     private UserDao() {
     }
 
     public static UserDao getInstance() {
         return HOLDER_INSTANCE;
     }
-
-    private static final String ALL_USERS_QUERY = "SELECT * FROM users";
-
-    private static final String GET_USER_QUERY = "SELECT * FROM users WHERE id = ?";
-
-    private static final String GET_USER_BY_LOGIN_QUERY = "SELECT * FROM users WHERE login = ?";
-
-    private static final String DELETE_USER_QUERY = "DELETE FROM users WHERE id = ?";
-
-    private static final String INSERT_USER_QUERY = "INSERT INTO users(login, first_name, last_name, password) " +
-            "VALUES(?, ?, ?, ?)";
-
-    private static final String UPDATE_USER_QUERY = "UPDATE users SET login = ?, first_name = ?, last_name = ?, password = ? WHERE id = ?";
 
     public List<User> getUsers() throws DataSourceException {
         Connection connection = null;
@@ -167,11 +162,11 @@ public final class UserDao {
 
     private User populateUsersFromResultSet(final ResultSet resultSet) throws SQLException {
         final User user = new User.UserBuilder()
-        .setUserId(resultSet.getLong("id"))
-        .setLogin(resultSet.getString("login"))
-        .setFirstName(resultSet.getString("first_name"))
-        .setLastName(resultSet.getString("last_name"))
-        .setPassword(resultSet.getString("password")).build();
+                .setUserId(resultSet.getLong("id"))
+                .setLogin(resultSet.getString("login"))
+                .setFirstName(resultSet.getString("first_name"))
+                .setLastName(resultSet.getString("last_name"))
+                .setPassword(resultSet.getString("password")).build();
 
         return user;
     }

@@ -2,24 +2,43 @@
 
     function checkForm(formproduct) {
         if (formproduct.productUrl.value == "") {
-            alert("Error: Url cannot be blank!");
+            alert("Error: productUrl cannot be blank!");
             formproduct.productUrl.focus();
+
             return false;
         }
 
         if (formproduct.productPrice.value == "") {
-            alert("Error: Price cannot be blank!");
+            alert("Error: productPrice cannot be blank!");
             formproduct.productPrice.focus();
+
             return false;
         }
 
-        if (formproduct.productQantity.value == "") {
-            alert("Error: Quantity cannot be blank!");
-            formproduct.productQantity.focus();
+        re = /^[0-9]+(\.[0-9]+)?$/;
+        if (!re.test(formproduct.productPrice.value)) {
+            alert("Please input price with numeric characters with dot only");
+            formproduct.productPrice.focus();
+
             return false;
         }
 
-        alert("You added a product: " + formproduct.productName.value);
+        if (formproduct.productQuantity.value == "") {
+            alert("Error: productQuantity cannot be blank!");
+            formproduct.productQuantity.focus();
+
+            return false;
+        }
+
+        re = /^[0-9]+$/;
+        if (!re.test(formproduct.productQuantity.value)) {
+            alert("Please input quantity with numeric characters only");
+            formproduct.productQuantity.focus();
+
+            return false;
+        }
+        alert("You entered : " + formproduct.productName.value);
+
         return true;
     }
 

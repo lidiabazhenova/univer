@@ -1,9 +1,7 @@
 package com.lidiabazhenova.webapp.controllers.user;
 
 import com.lidiabazhenova.webapp.exception.DataSourceException;
-import com.lidiabazhenova.webapp.model.Product;
 import com.lidiabazhenova.webapp.model.User;
-import com.lidiabazhenova.webapp.service.ProductService;
 import com.lidiabazhenova.webapp.service.UserService;
 
 import javax.servlet.ServletException;

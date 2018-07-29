@@ -1,8 +1,8 @@
-package com.lidiabazhenova.webapp.controllers.user;
+package com.lidiabazhenova.webapp.controllers.order;
 
 import com.lidiabazhenova.webapp.exception.DataSourceException;
-import com.lidiabazhenova.webapp.model.User;
-import com.lidiabazhenova.webapp.service.UserService;
+import com.lidiabazhenova.webapp.model.Order;
+import com.lidiabazhenova.webapp.service.OrderService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,23 +13,23 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(urlPatterns = "/list-users.do")
-public class ListUsersServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/list-orders.do")
+public class ListOrdersServlet extends HttpServlet {
 
 
-    public ListUsersServlet() throws DataSourceException {
+    public ListOrdersServlet() throws DataSourceException {
     }
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
-        List<User> users = null;
+        List<Order> orders = null;
         try {
-            users = UserService.getInstance().getUsers();
+            orders = OrderService.getInstance().getOrders();
         } catch (DataSourceException e) {
             e.printStackTrace();
         }
-        request.setAttribute("users", users);
-        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/list-users.jsp");
+        request.setAttribute("orders", orders);
+        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/list-orders.jsp");
         dis.forward(request, response);
     }
 }

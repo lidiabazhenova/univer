@@ -26,6 +26,7 @@ public class AddUsersServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws ServletException, IOException {
+
         final User user = new User.UserBuilder()
                 .setLogin(request.getParameter("login"))
                 .setFirstName(request.getParameter("firstName"))

@@ -21,6 +21,10 @@ public class ProductService {
         return Collections.unmodifiableList(ProductDao.getInstance().getProducts());
     }
 
+    public List<Product> getProductsByOrderId(final long id) throws DataSourceException {
+        return Collections.unmodifiableList(ProductDao.getInstance().getProductsByOrderId(id));
+    }
+
     public Product getProduct(final long id) throws DataSourceException {
         return ProductDao.getInstance().getProduct(id);
     }
