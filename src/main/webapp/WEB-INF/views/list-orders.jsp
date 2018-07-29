@@ -38,7 +38,7 @@
                                     <a class="btn btn-danger"
                                        href="/list-products.do?orderId=${order.orderId}">View Details</a>
                                     <a class="btn btn-danger"
-                                       href="/list-products.do?orderId=${order.orderId}">Run</a>
+                                       href="/buy-products.do?orderId=${order.orderId}">Run</a>
                                     <a class="btn btn-danger"
                                        href="/list-products.do?orderId=${order.orderId}">Order History</a>
                                 </td>
