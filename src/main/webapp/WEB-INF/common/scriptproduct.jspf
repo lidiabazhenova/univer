@@ -37,8 +37,6 @@
 
             return false;
         }
-        alert("You entered : " + formproduct.productName.value);
-
         return true;
     }
 

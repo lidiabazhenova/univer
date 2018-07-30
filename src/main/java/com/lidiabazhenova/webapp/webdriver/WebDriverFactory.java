@@ -11,14 +11,9 @@ import java.util.concurrent.TimeUnit;
 
 public final class WebDriverFactory {
 
-    private static boolean isInitialized;
     private static WebDriver driver;
 
     public static WebDriver getInstance() throws Exception {
-        if (isInitialized) {
-            return driver;
-        }
-
         Properties properties = new Properties();
         properties.load(WebDriverSelenium.class.getClassLoader().getResourceAsStream("data.properties"));
         String browserName = properties.getProperty("browser");
@@ -38,8 +33,6 @@ public final class WebDriverFactory {
         }
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
-        isInitialized = true;
 
         return driver;
     }

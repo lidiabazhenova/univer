@@ -34,7 +34,7 @@ public class AddOrderServlet extends HttpServlet {
         try {
             OrderService.getInstance().addOrder(order);
             request.setAttribute("orders", OrderService.getInstance().getOrders());
-            response.sendRedirect("/list-orders.do");
+            response.sendRedirect("/list-orders.do?orderId=" + order.getOrderTitle());
         } catch (DataSourceException e) {
             e.printStackTrace();
         }

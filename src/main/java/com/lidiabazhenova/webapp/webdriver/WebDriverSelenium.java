@@ -1,63 +1,188 @@
 package com.lidiabazhenova.webapp.webdriver;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import com.lidiabazhenova.webapp.model.Product;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class WebDriverSelenium {
-    static WebDriverWait wait;
 
-    public void runSeleniumRobot() throws Exception {
+    private static final String SCRIPT_CLICK = "arguments[0].click()";
+
+    public static StringBuilder runSeleniumWebdriver(final List<Product> products) throws Exception {
+        final StringBuilder description = new StringBuilder();
+
         WebDriver driver = WebDriverFactory.getInstance();
-
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
         driver.get("https://oz.by");
 
-        driver.findElement(By.xpath("//a[@class=\"top-panel__userbar__auth\"]")).click();
-        driver.findElement(By.xpath("//a[@id=\"loginFormLoginEmailLink\"]")).click();
-        driver.findElement(By.xpath(".//*[@id='loginForm']//input[@name=\"cl_email\"]")).sendKeys("testselenium@tut.by");
-        driver.findElement(By.xpath("//input[@name=\"cl_psw\"]")).sendKeys("testselenium");
-        driver.findElement(By.xpath("//*[@id='loginForm']/button[@value=\"login\"]")).click();
-
-        wait = (new WebDriverWait(driver, 6));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='top-panel__userbar__user__name__inner']")));
-        driver.get("https://oz.by/stationery/more10571950.html?sbtoken=88b118047983de3f728d85deb9507f4b");
-
-        WebElement buttonPutInBasket = driver.findElement(By.cssSelector("div.b-product__content span.i-button__text"));
-        if (buttonPutInBasket.getText().equals("Уже в корзине")) {
-            System.out.println("Уже в корзине");
-        } else if (buttonPutInBasket.getText().equals("Положить в корзину")) {
-            buttonPutInBasket.click();
+        if (!doLogin(driver, description)) {
+            return description;
+        }
+        if (!cleanBasket(driver, description)) {
+            return description;
+        }
+        if (!orderProducts(products, driver, description)) {
+            return description;
+        }
+        if (!goToBasketAndApplyQuantities(products, driver, description)) {
+            return description;
+        }
+        if (!doCheckout(driver, description)) {
+            return description;
         }
 
-        WebElement buttonGoToBasket = driver.findElement(By.xpath(".//a/u[contains(text(), \"Корзина\")]"));
+        // TODO : uncomment after implementation and tests
+        // driver.quit();
 
-        wait = (new
-
-                WebDriverWait(driver, 6));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//span[@class='top-panel__userbar__cart__count']")));
-        buttonGoToBasket.click();
-
-        wait = (new
-
-                WebDriverWait(driver, 6));
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='checkout-block-submit']")));
-        driver.findElement(By.xpath(".//*[@id='checkout-block-submit']")).
-
-                click();
-
-        driver.findElement(By.xpath("//*[@id='enter-phone']//input")).
-
-                sendKeys("333333333");
+        return description;
     }
-    private void tearDown() throws Exception {
-        if (WebDriverFactory.getInstance() != null) {
-            WebDriverFactory.getInstance().quit();
+
+    private static boolean doLogin(final WebDriver driver, final StringBuilder description) {
+        try {
+            final WebElement openUserAuthPanelButton = driver.findElement(By.xpath("//a[@class=\"top-panel__userbar__auth\"]"));
+            clickElement(openUserAuthPanelButton, driver);
+
+            final WebElement loginFormButton = driver.findElement(By.xpath("//a[@id=\"loginFormLoginEmailLink\"]"));
+            clickElement(loginFormButton, driver);
+
+            final WebElement emailInput = driver.findElement(By.xpath(".//*[@id='loginForm']//input[@name=\"cl_email\"]"));
+            // TODO : move email to properties
+            emailInput.sendKeys("testselenium@tut.by");
+
+            final WebElement passwordInput = driver.findElement(By.xpath("//input[@name=\"cl_psw\"]"));
+            // TODO : move password to properties
+            passwordInput.sendKeys("testselenium");
+
+            final WebElement loginButton = driver.findElement(By.xpath("//*[@id='loginForm']/button[@value=\"login\"]"));
+            clickElement(loginButton, driver);
+
+            description.append("Логин прошел успешно\r\n");
+
+        } catch (final Exception ex) {
+            ex.printStackTrace();
+            description.append("Ошибка при логине\r\n");
+            return false;
+        }
+
+        return true;
+    }
+
+    private static boolean cleanBasket(final WebDriver driver, final StringBuilder description) {
+        try {
+            WebDriverWait wait = (new WebDriverWait(driver, 6));
+
+            final By userbarLocator = By.xpath("//*[@class='top-panel__userbar__user__name__inner']");
+            wait.until(ExpectedConditions.visibilityOfElementLocated(userbarLocator));
+
+            WebElement countItemsInBasket = driver.findElement(By.xpath("//a[u[contains(text(), 'Корзина')]]/span"));
+            WebElement buttonGoToBasket = driver.findElement(By.xpath("//a[u[contains(text(), 'Корзина')]]"));
+
+            if (countItemsInBasket.isDisplayed()) {
+                System.out.println("Очистить корзину");
+                clickElement(buttonGoToBasket, driver);
+
+                final WebElement selectAllCheckbox = driver.findElement(By.cssSelector(".goods-table__row.goods-table__row_footer .i-checkbox__faux"));
+                clickElement(selectAllCheckbox, driver);
+
+                wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.deal-form_footer-processing")));
+                WebElement buttonDelete = driver.findElement(By.xpath("//button[contains(text(), 'Удалить')]"));
+                clickElement(buttonDelete, driver);
+
+                WebElement buttonDeleteConfirm = driver.findElement(By.cssSelector(".remove-yes"));
+                clickElement(buttonDeleteConfirm, driver);
+            }
+
+            description.append("Очистка корзины прошла успешно\r\n");
+
+        } catch (final Exception ex) {
+            ex.printStackTrace();
+            description.append("Ошибка при очистке корзины\r\n");
+            return false;
+        }
+
+        return true;
+    }
+
+    private static boolean orderProducts(final List<Product> products, final WebDriver driver, final StringBuilder description) {
+        try {
+            for (final Product product : products) {
+                driver.get(product.getProductUrl());
+                WebElement buttonPutInBasket = driver.findElement(By.cssSelector("div.b-product__content span.i-button__text"));
+                clickElement(buttonPutInBasket, driver);
+                // TODO: check price of the product in database and on page
+                // if different then add error to description(name of the product) and return false
+            }
+
+            description.append("Добавление в корзину прошло успешно\r\n");
+
+        } catch (final Exception ex) {
+            ex.printStackTrace();
+            description.append("Ошибка при добавлении в корзину\r\n");
+            return false;
+        }
+
+        return true;
+    }
+
+    private static boolean goToBasketAndApplyQuantities(final List<Product> products, final WebDriver driver, final StringBuilder description) {
+        try {
+            WebDriverWait wait = (new WebDriverWait(driver, 6));
+
+            wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//div//span[@class='top-panel__userbar__cart__count']")));
+            WebElement buttonGoToBasket = driver.findElement(By.xpath("//a[u[contains(text(), 'Корзина')]]"));
+            clickElement(buttonGoToBasket, driver);
+
+            // TODO : apply quantities by list
+            // find list of elements with quantities from page
+            // iterate through elements and apply quantity from products list
+
+            description.append("Обновлении количества в корзине прошло успешно\r\n");
+
+        } catch (final Exception ex) {
+            ex.printStackTrace();
+            description.append("Ошибка при обновлении количества в корзине\r\n");
+            return false;
+        }
+
+        return true;
+    }
+
+    private static boolean doCheckout(final WebDriver driver, final StringBuilder description) {
+        try {
+            WebDriverWait wait = (new WebDriverWait(driver, 6));
+
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='checkout-block-submit']")));
+            final WebElement checkoutButton = driver.findElement(By.xpath(".//*[@id='checkout-block-submit']"));
+            clickElement(checkoutButton, driver);
+
+            final WebElement phoneInput = driver.findElement(By.xpath("//*[@id='enter-phone']//input"));
+            phoneInput.sendKeys("333333333");
+
+            // TODO : feel rest of the fields: address, email and etc.
+
+            description.append("Чекуат прошел успешно\r\n");
+
+        } catch (final Exception ex) {
+            ex.printStackTrace();
+            description.append("Ошибка при чекауте\r\n");
+            return false;
+        }
+
+        return true;
+    }
+
+    private static void clickElement(final WebElement element, WebDriver driver) {
+        try {
+            element.click();
+        } catch (final WebDriverException ex) {
+            JavascriptExecutor je = (JavascriptExecutor) driver;
+            je.executeScript(SCRIPT_CLICK, element);
         }
     }
 }

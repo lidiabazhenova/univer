@@ -16,9 +16,8 @@ public class OrderDao {
 
     private static final String ALL_ORDERS_QUERY = "SELECT * FROM orders";
     private static final String GET_ORDER_QUERY = "SELECT * FROM orders WHERE order_id = ?";
-    private static final String GET_ORDER_TITLE_QUERY = "SELECT order_title FROM orders WHERE order_id=?";
     private static final String DELETE_ORDER_QUERY = "DELETE FROM orders WHERE order_id  = ?";
-    private static final String INSERT_ORDER_QUERY = "INSERT INTO orders(order_id , order_title) VALUES(?, ?)";
+    private static final String INSERT_ORDER_QUERY = "INSERT INTO orders(order_title) VALUES(?)";
     private static final String UPDATE_ORDER_QUERY = "UPDATE orders SET order_title = ? WHERE order_id = ?";
 
     private OrderDao() {
@@ -83,9 +82,7 @@ public class OrderDao {
         try {
             connection = ConnectionUtil.getConnection();
             preparedStatement = connection.prepareStatement(INSERT_ORDER_QUERY);
-
-            preparedStatement.setLong(1, order.getOrderId());
-            preparedStatement.setString(2, order.getOrderTitle());
+            preparedStatement.setString(1, order.getOrderTitle());
 
             preparedStatement.executeUpdate();
         } catch (final SQLException ex) {

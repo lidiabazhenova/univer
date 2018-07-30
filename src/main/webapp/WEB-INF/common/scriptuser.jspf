@@ -55,9 +55,6 @@
 
             return false;
         }
-
-        alert("You entered a valid password: " + formuser.password.value);
-
         return true;
     }
 
