@@ -1,6 +1,7 @@
 package com.lidiabazhenova.webapp.webdriver;
 
 import com.lidiabazhenova.webapp.model.Product;
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -86,7 +87,8 @@ public class WebDriverSelenium {
                 System.out.println("Очистить корзину");
                 clickElement(buttonGoToBasket, driver);
 
-                final WebElement selectAllCheckbox = driver.findElement(By.cssSelector(".goods-table__row.goods-table__row_footer .i-checkbox__faux"));
+                final WebElement selectAllCheckbox = driver.findElement(
+                        By.cssSelector(".goods-table__row.goods-table__row_footer .i-checkbox__faux"));
                 clickElement(selectAllCheckbox, driver);
 
                 wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.deal-form_footer-processing")));
@@ -112,9 +114,19 @@ public class WebDriverSelenium {
         try {
             for (final Product product : products) {
                 driver.get(product.getProductUrl());
+                Double priceInDateBase = product.getProductPrice();
+                String priceFromPage =
+                        StringUtils.removeEnd(driver.findElement(By.cssSelector(
+                                "div.b-product_has-gallery .b-product-control__text_main")).getText(), "руб.");
+                priceFromPage = priceFromPage.replace(",", ".");
+
+                final Double price = Double.valueOf(priceFromPage);
+                if (priceInDateBase.equals(price)){
                 WebElement buttonPutInBasket = driver.findElement(By.cssSelector("div.b-product__content span.i-button__text"));
-                clickElement(buttonPutInBasket, driver);
-                // TODO: check price of the product in database and on page
+                clickElement(buttonPutInBasket, driver);}
+                else {description.append("Цена на продукт").append(product.getProductName()).append("изменилась");
+                return false;}
+                // TODO: check price of the product in database and on page +
                 // if different then add error to description(name of the product) and return false
             }
 

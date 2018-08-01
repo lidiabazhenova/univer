@@ -32,7 +32,7 @@
 
                                 <td>
                                     <a class="btn btn-danger"
-                                       href="/edit-order.do?orderId=${order.orderId}">Edit</a>
+                                       href="/edit-order.do?orderId=${order.orderId}">Edit order name</a>
                                     <a class="btn btn-danger"
                                        href="/delete-order.do?orderId=${order.orderId}">Delete</a>
                                     <a class="btn btn-danger"

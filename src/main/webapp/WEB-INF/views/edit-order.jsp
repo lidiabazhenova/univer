@@ -3,7 +3,7 @@
 
 <div class="container margin-header-center">
 
-    <H1 class="text-center header-center" style="margin-top: 70px">Edit order</H1>
+    <H1 class="text-center header-center" style="margin-top: 70px">Edit order name:</H1>
 
     <div class="container" style="margin-bottom: 70px">
 
