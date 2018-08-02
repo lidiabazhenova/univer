@@ -25,11 +25,11 @@ public class ListProductsServlet extends HttpServlet {
                          HttpServletResponse response) throws ServletException, IOException {
         List<Product> products = null;
         Order order = null;
+
         try {
             Long orderId = Long.valueOf(request.getParameter("orderId"));
             products = ProductService.getInstance().getProductsByOrderId(orderId);
             order = OrderService.getInstance().getOrder(orderId);
-            System.out.println(order.getOrderTitle());
         } catch (DataSourceException e) {
             e.printStackTrace();
         }

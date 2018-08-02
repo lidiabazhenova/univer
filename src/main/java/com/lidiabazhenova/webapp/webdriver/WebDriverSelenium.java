@@ -124,10 +124,10 @@ public class WebDriverSelenium {
                 if (priceInDateBase.equals(price)){
                 WebElement buttonPutInBasket = driver.findElement(By.cssSelector("div.b-product__content span.i-button__text"));
                 clickElement(buttonPutInBasket, driver);}
-                else {description.append("Цена на продукт").append(product.getProductName()).append("изменилась");
+                else {description.append("Цена на продукт ").append(product.getProductName()).append(" изменилась");
                 return false;}
                 // TODO: check price of the product in database and on page +
-                // if different then add error to description(name of the product) and return false
+                // TODO: if different then add error to description(name of the product) and return false
             }
 
             description.append("Добавление в корзину прошло успешно\r\n");
@@ -154,7 +154,7 @@ public class WebDriverSelenium {
             // find list of elements with quantities from page
             // iterate through elements and apply quantity from products list
 
-            description.append("Обновлении количества в корзине прошло успешно\r\n");
+            description.append("\r\nОбновление количества в корзине прошло успешно\r\n");
 
         } catch (final Exception ex) {
             ex.printStackTrace();

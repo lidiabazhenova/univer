@@ -180,7 +180,7 @@ public class ProductDao {
 
     private Product populateProductsFromResultSet(final ResultSet resultSet) throws SQLException {
         final Product product = new Product.ProductBuilder()
-                .setProductId(resultSet.getLong("order_id"))
+                .setOrderId(resultSet.getLong("order_id"))
                 .setProductId(resultSet.getLong("product_id"))
                 .setProductUrl(resultSet.getString("url"))
                 .setProductName(resultSet.getString("name"))
@@ -189,5 +189,4 @@ public class ProductDao {
                 .build();
         return product;
     }
-
 }

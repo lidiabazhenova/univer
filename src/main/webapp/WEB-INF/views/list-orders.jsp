@@ -32,7 +32,7 @@
 
                                 <td>
                                     <a class="btn btn-danger"
-                                       href="/edit-order.do?orderId=${order.orderId}">Edit order name</a>
+                                       href="/edit-order.do?orderId=${order.orderId}">Edit</a>
                                     <a class="btn btn-danger"
                                        href="/delete-order.do?orderId=${order.orderId}">Delete</a>
                                     <a class="btn btn-danger"
@@ -40,7 +40,7 @@
                                     <a class="btn btn-danger"
                                        href="/buy-products.do?orderId=${order.orderId}">Run</a>
                                     <a class="btn btn-danger"
-                                       href="/list-products.do?orderId=${order.orderId}">Order History</a>
+                                       href="/history.do?orderId=${order.orderId}">Order History</a>
                                 </td>
                             </tr>
                         </c:forEach>

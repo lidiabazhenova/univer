@@ -24,7 +24,7 @@ public class AddProductsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
         try {
-            final long orderId =Long.valueOf(request.getParameter("orderId"));
+            final long orderId = Long.valueOf(request.getParameter("orderId"));
             Order order = OrderService.getInstance().getOrder(orderId);
 
             request.setAttribute("order", order);
