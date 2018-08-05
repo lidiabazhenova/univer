@@ -1,22 +1,18 @@
-package com.lidiabazhenova.webapp.controllers.webdriver;
+package com.lidiabazhenova.webapp.controllers.buyproduct;
 
 import com.lidiabazhenova.webapp.exception.DataSourceException;
 import com.lidiabazhenova.webapp.model.History;
-import com.lidiabazhenova.webapp.model.Order;
 import com.lidiabazhenova.webapp.model.Product;
 import com.lidiabazhenova.webapp.service.HistoryService;
-import com.lidiabazhenova.webapp.service.OrderService;
 import com.lidiabazhenova.webapp.service.ProductService;
 import com.lidiabazhenova.webapp.webdriver.WebDriverSelenium;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
