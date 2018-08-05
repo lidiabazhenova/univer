@@ -18,21 +18,25 @@ public class WebDriverSelenium {
 
         WebDriver driver = WebDriverFactory.getInstance();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-
+        //TODO: add to properties
         driver.get("https://oz.by");
 
         if (!doLogin(driver, description)) {
             return description;
         }
+
         if (!cleanBasket(driver, description)) {
             return description;
         }
+
         if (!orderProducts(products, driver, description)) {
             return description;
         }
+
         if (!goToBasketAndApplyQuantities(products, driver, description)) {
             return description;
         }
+
         if (!doCheckout(driver, description)) {
             return description;
         }
@@ -44,6 +48,7 @@ public class WebDriverSelenium {
     }
 
     private static boolean doLogin(final WebDriver driver, final StringBuilder description) {
+
         try {
             final WebElement openUserAuthPanelButton = driver.findElement(By.xpath("//a[@class=\"top-panel__userbar__auth\"]"));
             clickElement(openUserAuthPanelButton, driver);
@@ -67,6 +72,7 @@ public class WebDriverSelenium {
         } catch (final Exception ex) {
             ex.printStackTrace();
             description.append("Ошибка при логине\r\n");
+
             return false;
         }
 
@@ -98,12 +104,12 @@ public class WebDriverSelenium {
                 WebElement buttonDeleteConfirm = driver.findElement(By.cssSelector(".remove-yes"));
                 clickElement(buttonDeleteConfirm, driver);
             }
-
             description.append("Очистка корзины прошла успешно\r\n");
 
         } catch (final Exception ex) {
             ex.printStackTrace();
             description.append("Ошибка при очистке корзины\r\n");
+
             return false;
         }
 
@@ -121,20 +127,22 @@ public class WebDriverSelenium {
                 priceFromPage = priceFromPage.replace(",", ".");
 
                 final Double price = Double.valueOf(priceFromPage);
-                if (priceInDateBase.equals(price)){
-                WebElement buttonPutInBasket = driver.findElement(By.cssSelector("div.b-product__content span.i-button__text"));
-                clickElement(buttonPutInBasket, driver);}
-                else {description.append("Цена на продукт ").append(product.getProductName()).append(" изменилась");
-                return false;}
-                // TODO: check price of the product in database and on page +
-                // TODO: if different then add error to description(name of the product) and return false
-            }
 
+                if (priceInDateBase.equals(price)) {
+                    WebElement buttonPutInBasket = driver.findElement(By.cssSelector("div.b-product__content span.i-button__text"));
+                    clickElement(buttonPutInBasket, driver);
+                } else {
+                    description.append("Цена на продукт ").append(product.getProductName()).append(" изменилась");
+
+                    return false;
+                }
+            }
             description.append("Добавление в корзину прошло успешно\r\n");
 
         } catch (final Exception ex) {
             ex.printStackTrace();
             description.append("Ошибка при добавлении в корзину\r\n");
+
             return false;
         }
 
@@ -155,7 +163,6 @@ public class WebDriverSelenium {
             // iterate through elements and apply quantity from products list
 
             description.append("\r\nОбновление количества в корзине прошло успешно\r\n");
-
         } catch (final Exception ex) {
             ex.printStackTrace();
             description.append("Ошибка при обновлении количества в корзине\r\n");

@@ -34,8 +34,6 @@ public class BuyProductsServlet extends HttpServlet {
             history.setDescription(result.toString());
             history.setDate(new Date());
             HistoryService.getInstance().addHistory(history);
-            // TODO : save to database+
-
         } catch (Exception e) {
             e.printStackTrace();
         }
