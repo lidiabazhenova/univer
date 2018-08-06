@@ -9,7 +9,7 @@ public class Product {
     private String productUrl;
     private String productName;
     private double productPrice;
-    private double productQuantity;
+    private int productQuantity;
 
     public Product(ProductBuilder productBuilder) {
         this.orderId = productBuilder.orderId;
@@ -40,7 +40,7 @@ public class Product {
         return productPrice;
     }
 
-    public double getProductQuantity() {
+    public int getProductQuantity() {
         return productQuantity;
     }
 
@@ -76,7 +76,7 @@ public class Product {
         private String productUrl;
         private String productName;
         private double productPrice;
-        private double productQuantity;
+        private int productQuantity;
 
         public ProductBuilder setOrderId(long orderId) {
             this.orderId = orderId;
@@ -103,7 +103,7 @@ public class Product {
             return this;
         }
 
-        public ProductBuilder setProductQuantity(double productQuantity) {
+        public ProductBuilder setProductQuantity(int productQuantity) {
             this.productQuantity = productQuantity;
             return this;
         }

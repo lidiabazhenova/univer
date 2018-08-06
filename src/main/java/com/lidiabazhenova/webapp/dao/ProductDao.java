@@ -185,7 +185,7 @@ public class ProductDao {
                 .setProductUrl(resultSet.getString("url"))
                 .setProductName(resultSet.getString("name"))
                 .setProductPrice(resultSet.getDouble("price"))
-                .setProductQuantity(resultSet.getDouble("quantity"))
+                .setProductQuantity(resultSet.getInt("quantity"))
                 .build();
         return product;
     }

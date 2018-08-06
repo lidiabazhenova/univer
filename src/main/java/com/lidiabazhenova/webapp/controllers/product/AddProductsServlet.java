@@ -44,7 +44,7 @@ public class AddProductsServlet extends HttpServlet {
                 .setProductUrl(request.getParameter("productUrl"))
                 .setProductName(request.getParameter("productName"))
                 .setProductPrice(Double.parseDouble(request.getParameter("productPrice")))
-                .setProductQuantity(Double.parseDouble(request.getParameter("productQuantity")))
+                .setProductQuantity(Integer.parseInt(request.getParameter("productQuantity")))
                 .build();
 
         try {
