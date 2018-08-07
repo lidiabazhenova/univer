@@ -14,6 +14,7 @@ public class WebDriverSelenium {
 
     private static final String SCRIPT_CLICK = "arguments[0].click()";
 
+
     public static StringBuilder runSeleniumWebdriver(final List<Product> products) throws Exception {
         final StringBuilder description = new StringBuilder();
 
@@ -26,9 +27,9 @@ public class WebDriverSelenium {
             return description;
         }
 
-//        if (!cleanBasket(driver, description)) {
-//            return description;
-//        }
+        if (!cleanBasket(driver, description)) {
+            return description;
+        }
 
         if (!orderProducts(products, driver, description)) {
             return description;
@@ -154,75 +155,149 @@ public class WebDriverSelenium {
                                                         final StringBuilder description) {
         try {
             WebDriverWait wait = (new WebDriverWait(driver, 4));
-
             wait.until(ExpectedConditions.visibilityOfElementLocated(
                     By.xpath("//div//span[@class='top-panel__userbar__cart__count']")));
             WebElement buttonGoToBasket = driver.findElement(By.xpath("//a[u[contains(text(), 'Корзина')]]"));
             clickElement(buttonGoToBasket, driver);
-            final WebElement selectAllCheckbox = driver.findElement(
-                    By.cssSelector(".goods-table__row.goods-table__row_footer .i-checkbox__faux"));
-            Thread.sleep(5000);
 
             // TODO : apply quantities by list
-            // find list of elements with quantities from page
-            // iterate through elements and apply quantity from products list
-            List<WebElement> itemsInBasketList = driver.findElements(By.cssSelector(".goods-table-cell__line.goods-table-cell__line_title"));
 
             final String spanAmountXpath = "//li[@class='i-amount-select__item' and @data-value='%s']/span";
             final String inputAmountXpath
                     = "//a[contains(@href,'%s')]//ancestor::tr//input[contains(@class, 'i-amount-select__key')]";
 
-            for (Product product: products) {
-                String inputAmount = null;
-                String itemAttribute;
+            for (final Product product : products) {
+                String productUrl = product.getProductUrl();
+                System.out.println(productUrl);
+                WebElement inputQuantity;
+                try {
+                    wait.until(ExpectedConditions.elementToBeClickable(By
+                            .xpath(String.format(inputAmountXpath, product.getProductUrl()))));
+                    System.out.println(String.format(inputAmountXpath, product.getProductUrl()));
+                    final int productQuantity = product.getProductQuantity();
+                    inputQuantity = driver.findElement(By
+                            .xpath(String.format(inputAmountXpath, product.getProductUrl())));
 
-                for (WebElement item : itemsInBasketList) {
-                    String productUrl = product.getProductUrl();
-                    itemAttribute = item.getAttribute("href");
-                    if (productUrl.contains(itemAttribute)) {
-                        inputAmount = String.format(inputAmountXpath, itemAttribute);
-                        continue;
-                    }
-                }
-                //System.out.println(inputAmount);
 
-                int productQuantity = product.getProductQuantity();
-                WebElement inputAmountField = driver.findElement(By.xpath(inputAmount));
-                inputAmountField.click();
+                    ((JavascriptExecutor) driver).executeScript("var inputs = document.querySelectorAll(\".i-amount-select__key\");\n" +
+                            "for(var i = 0; i < inputs.length; i++){\n" +
+                            "  inputs[i].removeAttribute('readOnly', 0);\n" +
+                            "}");
+                    inputQuantity.clear();
+//                    inputQuantity.sendKeys("23");
+                    inputQuantity.sendKeys(Integer.toString(productQuantity));
 
-                if (productQuantity != 0 && productQuantity <= 9) {
-                    driver.findElement(By.xpath(String.format(spanAmountXpath, String.valueOf(productQuantity)))).click();
-                } else {
                     Actions actions = new Actions(driver);
                     actions.click(driver.findElement(By.xpath(String.format(spanAmountXpath, "10"))))
                             .sendKeys(String.valueOf(productQuantity))
                             .build().perform();
 
                     JavascriptExecutor js = (JavascriptExecutor) driver;
-                    WebElement inputQuantity = driver.findElement(By.cssSelector(".i-amount-select__key"));
+                    inputQuantity = driver.findElement(By.cssSelector(".i-amount-select__key"));
+                    js.executeScript(SCRIPT_CLICK, inputQuantity);
+                } catch (org.openqa.selenium.StaleElementReferenceException ex) {
+                    JavascriptExecutor js = (JavascriptExecutor) driver;
+                    inputQuantity = driver.findElement(By.cssSelector(".i-amount-select__key"));
                     js.executeScript(SCRIPT_CLICK, inputQuantity);
                 }
-                }
-
-                description.append("\r\nОбновление количества в корзине прошло успешно\r\n");
-
-            } catch(
-            final Exception ex)
-
-            {
-                ex.printStackTrace();
-                description.append("Ошибка при обновлении количества в корзине\r\n");
-                return false;
             }
 
-            //check amount if ()
-            return true;
+            description.append("\r\nОбновление количества в корзине прошло успешно\r\n");
+
+        } catch (final Exception ex)
+
+        {
+            ex.printStackTrace();
+            description.append("Ошибка при обновлении количества в корзине\r\n");
+            return false;
         }
+
+        //check amount if ()
+        return true;
+    }
+
+//    private static boolean goToBasketAndApplyQuantities(final List<Product> products, final WebDriver driver,
+//                                                        final StringBuilder description) {
+//        try {
+//            WebDriverWait wait = (new WebDriverWait(driver, 4));
+//
+//            wait.until(ExpectedConditions.visibilityOfElementLocated(
+//                    By.xpath("//div//span[@class='top-panel__userbar__cart__count']")));
+//            WebElement buttonGoToBasket = driver.findElement(By.xpath("//a[u[contains(text(), 'Корзина')]]"));
+//            clickElement(buttonGoToBasket, driver);
+//
+////            Thread.sleep(5000);
+//
+//            // TODO : apply quantities by list
+//
+//            final String spanAmountXpath = "//li[@class='i-amount-select__item' and @data-value='%s']/span";
+//            final String inputAmountXpath
+//                    = "//a[contains(@href,'%s')]//ancestor::tr//input[contains(@class, 'i-amount-select__key')]";
+//
+//            for (final Product product : products) {
+//                String productUrl = product.getProductUrl();
+//                System.out.println(productUrl);
+//                try {
+//                    wait.until(ExpectedConditions.elementToBeClickable(By
+//                            .xpath(String.format(inputAmountXpath, product.getProductUrl()))));
+//
+//                    WebElement inputProductAmount = driver.findElement(By
+//                            .xpath(String.format(inputAmountXpath, product.getProductUrl())));
+//                    //inputProductAmount.click();
+//                    inputProductAmount.sendKeys("95");
+//                    //webdriver.executeScript("document.getElementById('elementID').setAttribute('value', 'new value for element')");
+//                } catch (org.openqa.selenium.StaleElementReferenceException ex) {
+//                    WebElement inputProductAmount = driver.findElement(By
+//                            .xpath(String.format(inputAmountXpath, product.getProductUrl())));
+//                    //inputProductAmount.click();
+//                    inputProductAmount.sendKeys("95");
+//                }
+////                final int productQuantity = product.getProductQuantity();
+////                if (productQuantity != 0 && productQuantity <= 10) {
+////                    driver.findElement(By.xpath(String.format(spanAmountXpath, String.valueOf(productQuantity))))
+////                            .click();
+////                } else {
+//                    //WebElement inputQuantity;
+////                    Actions actions = new Actions(driver);
+////                    actions.click(driver.findElement(By.xpath(String.format(spanAmountXpath, productQuantity))))
+////                            .sendKeys(String.valueOf(productQuantity))
+////                            .build().perform();
+////                    try {
+////                        // inputQuantity = 99;
+////
+////                        inputQuantity = driver.findElement(By.cssSelector(".i-amount-select__key"));
+////                        Thread.sleep(5000);
+////                       inputQuantity.sendKeys(Integer.toString(productQuantity));
+////                        JavascriptExecutor js = (JavascriptExecutor) driver;
+////                        js.executeScript(SCRIPT_CLICK, inputQuantity);
+////                    } catch (org.openqa.selenium.StaleElementReferenceException ex) {
+////                        inputQuantity = driver.findElement(By.cssSelector(".i-amount-select__key"));
+////                        JavascriptExecutor js = (JavascriptExecutor) driver;
+////                        js.executeScript(SCRIPT_CLICK, inputQuantity);
+////                    }
+//                }
+////            }
+//
+//            description.append("\r\nОбновление количества в корзине прошло успешно\r\n");
+//
+//        } catch (
+//                final Exception ex)
+//
+//        {
+//            ex.printStackTrace();
+//            description.append("Ошибка при обновлении количества в корзине\r\n");
+//            return false;
+//        }
+//
+//        //check amount if ()
+//        return true;
+//    }
+
 
     private static boolean doCheckout(final WebDriver driver, final StringBuilder description) {
         try {
             WebDriverWait wait = (new WebDriverWait(driver, 6));
-
+            //TODO:delete wait
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='checkout-block-submit']")));
             final WebElement checkoutButton = driver.findElement(By.xpath(".//*[@id='checkout-block-submit']"));
             clickElement(checkoutButton, driver);
