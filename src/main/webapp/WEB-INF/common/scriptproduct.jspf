@@ -30,13 +30,15 @@
             return false;
         }
 
-        re = /^[0-9]+$/;
+        re = /^[1-9][0-9]?$/;
         if (!re.test(formproduct.productQuantity.value)) {
             alert("Please input quantity with numeric characters only");
             formproduct.productQuantity.focus();
 
             return false;
         }
+
+
         return true;
     }
 

@@ -82,7 +82,7 @@ public class HistoryDao {
             preparedStatement = connection.prepareStatement(INSERT_HISTORY_QUERY);
             preparedStatement.setLong(1, history.getOrderId());
             preparedStatement.setString(2, history.getDescription());
-            preparedStatement.setDate(3, new java.sql.Date(history.getDate().getTime()));
+            preparedStatement.setTimestamp(3, new java.sql.Timestamp(history.getDate().getTime()));
             preparedStatement.executeUpdate();
         } catch (final SQLException ex) {
             throw new DataSourceException(ex);
@@ -92,7 +92,6 @@ public class HistoryDao {
     }
 
     private History populateHistoryFromResultSet(final ResultSet resultSet) throws SQLException, ParseException {
-        // DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:SS", Locale.ENGLISH);
         final History history = new History();
         history.setDescription(resultSet.getString("description"));
         history.setOrderId(resultSet.getLong("order_id"));

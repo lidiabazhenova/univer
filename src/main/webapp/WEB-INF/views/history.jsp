@@ -27,7 +27,10 @@
                         <c:forEach items="${history}" var="history">
                             <tr>
                                 <td>${history.description}</td>
-                                <td>${history.date}</td>
+                                <td>
+                                    <fmt:formatDate type="both" dateStyle="long" timeStyle="long"
+                                                    value="${history.date}" />
+                                </td>
                             </tr>
                         </c:forEach>
                         </tbody>
