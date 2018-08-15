@@ -19,19 +19,6 @@ public final class UserService {
         return HOLDER_INSTANCE;
     }
 
-    public boolean authenticate(final String login, final String password) throws DataSourceException, NoSuchAlgorithmException {
-        final User user = UserDao.getInstance().getUserByLogin(login);
-        if (user == null) {
-            return false;
-        }
-
-        if (!user.getPassword().equals(MD5Util.hash(password))) {
-            return false;
-        }
-
-        return true;
-    }
-
     public List<User> getUsers() throws DataSourceException {
         return UserDao.getInstance().getUsers();
     }

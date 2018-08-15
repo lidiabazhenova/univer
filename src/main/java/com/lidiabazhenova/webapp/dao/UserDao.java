@@ -17,7 +17,6 @@ public final class UserDao {
 
     private static final String ALL_USERS_QUERY = "SELECT * FROM users";
     private static final String GET_USER_QUERY = "SELECT * FROM users WHERE id = ?";
-    private static final String GET_USER_BY_LOGIN_QUERY = "SELECT * FROM users WHERE login = ?";
     private static final String DELETE_USER_QUERY = "DELETE FROM users WHERE id = ?";
     private static final String INSERT_USER_QUERY = "INSERT INTO users(login, first_name, last_name, password) " +
             "VALUES(?, ?, ?, ?)";
@@ -63,30 +62,6 @@ public final class UserDao {
             connection = ConnectionUtil.getConnection();
             preparedStatement = connection.prepareStatement(GET_USER_QUERY);
             preparedStatement.setLong(1, id);
-            resultSet = preparedStatement.executeQuery();
-
-            if (resultSet.next()) {
-                return populateUsersFromResultSet(resultSet);
-            } else {
-                return null;
-            }
-
-        } catch (final SQLException ex) {
-            throw new DataSourceException(ex);
-        } finally {
-            ConnectionUtil.close(resultSet, preparedStatement, connection);
-        }
-    }
-
-    public User getUserByLogin(final String login) throws DataSourceException {
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
-
-        try {
-            connection = ConnectionUtil.getConnection();
-            preparedStatement = connection.prepareStatement(GET_USER_BY_LOGIN_QUERY);
-            preparedStatement.setString(1, login);
             resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
