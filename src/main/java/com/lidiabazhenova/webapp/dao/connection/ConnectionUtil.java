@@ -15,7 +15,7 @@ public final class ConnectionUtil {
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
-            // TODO : logger
+            e.printStackTrace();
         }
     }
 
@@ -29,7 +29,7 @@ public final class ConnectionUtil {
                 statement.close();
             }
         } catch (final SQLException ex) {
-            // TODO : logger
+            ex.printStackTrace();
         }
 
         try {
@@ -37,7 +37,7 @@ public final class ConnectionUtil {
                 conn.close();
             }
         } catch (final SQLException ex) {
-            // TODO : logger
+            ex.printStackTrace();
         }
     }
 
@@ -48,7 +48,7 @@ public final class ConnectionUtil {
                 resultSet.close();
             }
         } catch (final SQLException ex) {
-            // TODO : logger
+            ex.printStackTrace();
         }
 
         close(statement, conn);

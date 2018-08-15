@@ -13,9 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(urlPatterns = "/add-order.do")
-public class AddOrderServlet extends HttpServlet {
+public class AddOrdersServlet extends HttpServlet {
 
-    public AddOrderServlet() {
+    public AddOrdersServlet() {
     }
 
     protected void doGet(HttpServletRequest request,

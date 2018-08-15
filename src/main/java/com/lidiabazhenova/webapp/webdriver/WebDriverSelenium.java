@@ -5,6 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.math.BigDecimal;
@@ -44,8 +45,7 @@ public class WebDriverSelenium {
             return description;
         }
 
-        // TODO : uncomment after implementation and tests
-        // driver.quit();
+        //driver.quit();
 
         return description;
     }
@@ -165,8 +165,6 @@ public class WebDriverSelenium {
             WebElement buttonGoToBasket = driver.findElement(By.xpath("//a[u[contains(text(), 'Корзина')]]"));
             clickElement(buttonGoToBasket, driver);
 
-            // TODO : apply quantities by list
-
             final String spanAmountXpath = "//li[@class='i-amount-select__item' and @data-value='%s']/span";
             final String inputAmountXpath
                     = "//a[contains(@href,'%s')]//ancestor::tr//input[contains(@class, 'i-amount-select__key')]";
@@ -191,38 +189,21 @@ public class WebDriverSelenium {
                             .xpath(String.format(inputAmountXpath, product.getProductUrl())));
                     clickElement(inputProductAmount, driver);
                     final WebElement spanNoReadOnly = driver.findElement(By.xpath(String.format(spanAmountXpath, "10")));
-//                    clickElement(spanNoReadOnly, driver);
-//                    wait.until(ExpectedConditions.attributeContains(inputProductAmount, "value", "10"));
-//                    inputProductAmount.sendKeys("10");
-//                    try {
-//                        wait.until(ExpectedConditions.attributeContains(inputProductAmount, "value", "10"));
-//                    } catch (org.openqa.selenium.StaleElementReferenceException ex) {
-//                        inputProductAmount = driver.findElement(By
-//                                .xpath(String.format(inputAmountXpath, product.getProductUrl())));
-//                        wait.until(ExpectedConditions.attributeContains(inputProductAmount, "value", "10"));
-//
-//                    }
 
                     Actions actions = new Actions(driver);
                     actions.click(spanNoReadOnly)
                             .sendKeys(String.valueOf(productQuantity))
                             .build().perform();
+                    try {
+                        wait.until(ExpectedConditions.attributeContains(inputProductAmount, "value", Integer.toString(productQuantity)));
+                    } catch (org.openqa.selenium.StaleElementReferenceException ex) {
+                        inputProductAmount = driver.findElement(By
+                                .xpath(String.format(inputAmountXpath, product.getProductUrl())));
+                        wait.until(ExpectedConditions.attributeContains(inputProductAmount, "value", Integer.toString(productQuantity)));
 
-//                    try {
-//                        wait.until(ExpectedConditions.attributeContains(inputProductAmount, "value", "10"));
-//                        inputProductAmount = driver.findElement(By
-//                                .xpath(String.format(inputAmountXpath, product.getProductUrl())));
-//                        inputProductAmount.sendKeys(Integer.toString(productQuantity));
-//                    } catch (org.openqa.selenium.StaleElementReferenceException ex) {
-//                        wait.until(ExpectedConditions.attributeContains(inputProductAmount, "value", "10"));
-//                        inputProductAmount = driver.findElement(By
-//                                .xpath(String.format(inputAmountXpath, product.getProductUrl())));
-//                        inputProductAmount.sendKeys(Integer.toString(productQuantity));
-//                    }
-                    wait.until(ExpectedConditions.attributeContains(inputProductAmount, "value", Integer.toString(productQuantity)));
+                    }
                 }
             }
-
             description.append("\r\nОбновление количества в корзине прошло успешно\r\n");
 
         } catch (
@@ -234,20 +215,50 @@ public class WebDriverSelenium {
             return false;
         }
 
-        //check amount if ()
         return true;
     }
 
     private static boolean doCheckout(final WebDriver driver, final StringBuilder description) {
         try {
             WebDriverWait wait = (new WebDriverWait(driver, 6));
-            //TODO:delete wait
+
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='checkout-block-submit']")));
             final WebElement checkoutButton = driver.findElement(By.xpath(".//*[@id='checkout-block-submit']"));
             clickElement(checkoutButton, driver);
 
             final WebElement phoneInput = driver.findElement(By.xpath("//*[@id='enter-phone']//input"));
             phoneInput.sendKeys("333333333");
+
+            WebElement selectDeliveryLink = driver.findElement(By.id("select-delivery-link"));
+            clickElement(selectDeliveryLink, driver);
+
+            Select selectCityDropdown = new Select(driver.findElement(By.name("current-city")));
+            selectCityDropdown.selectByVisibleText("Витебск, Витебская область");
+
+            final WebElement deliveryOption = driver.findElement(
+                    By.xpath("//div[@class='i-context-box-list__line' and contains(text(), 'Самовывоз в Витебске')]"));
+            clickElement(deliveryOption, driver);
+
+            final WebElement deliveryApply = driver.findElement(By.name("delivery-apply"));
+            clickElement(deliveryApply, driver);
+
+            WebElement selectDeliverySpan = driver.findElement(By.xpath("(//*[@id='select-delivery-link']//span)[1]"));
+            try {
+                wait.until(ExpectedConditions.attributeContains(selectDeliverySpan, "value", "Самовывоз в Витебске"));
+            } catch (org.openqa.selenium.StaleElementReferenceException ex) {
+
+                selectDeliverySpan = driver.findElement(By.xpath("(//*[@id='select-delivery-link']//span)[1]"));
+                wait.until(ExpectedConditions.textToBePresentInElement(selectDeliverySpan, "Самовывоз в Витебске"));
+            }
+
+            WebElement selectPaymentLink = driver.findElement(By.id("select-payment-link"));
+            clickElement(selectPaymentLink, driver);
+
+            final WebElement paymentByCash = driver.findElement(By.xpath("(//div[@class='i-context-box-list__line'])[1]"));
+            clickElement(paymentByCash, driver);
+
+            final WebElement paymentApply = driver.findElement(By.name("payment-apply"));
+            clickElement(paymentApply, driver);
 
             // TODO : feel rest of the fields: address, email and etc.
 
