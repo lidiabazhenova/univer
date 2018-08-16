@@ -41,14 +41,13 @@ public class HistoryServlet extends HttpServlet {
             request.setAttribute("history", historyList);
             order = OrderService.getInstance().getOrder(orderId);
             request.setAttribute("order", order);
+            RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/history.jsp");
+            dis.forward(request, response);
         } catch (DataSourceException e) {
             e.printStackTrace();
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
-        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/history.jsp");
-        dis.forward(request, response);
     }
 }
 

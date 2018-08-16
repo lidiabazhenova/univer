@@ -27,19 +27,19 @@ public class LoginServlet extends HttpServlet {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
         boolean isValidUser = false;
+
         try {
             isValidUser = userValidation.loginCheck(name, password);
+            if (isValidUser) {
+                request.getSession().setAttribute("username", name);
+                response.sendRedirect("/list-orders.do");
+            } else {
+                request.setAttribute("errorMessage", "Invalid Credentials!!");
+                RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/login.jsp");
+                dis.forward(request, response);
+            }
         } catch (DataSourceException e) {
             e.printStackTrace();
-        }
-
-        if (isValidUser) {
-            request.getSession().setAttribute("username", name);
-            response.sendRedirect("/list-orders.do");
-        } else {
-            request.setAttribute("errorMessage", "Invalid Credentials!!");
-            RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/login.jsp");
-            dis.forward(request, response);
         }
     }
 }

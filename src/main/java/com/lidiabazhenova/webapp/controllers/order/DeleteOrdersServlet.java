@@ -27,7 +27,6 @@ public class DeleteOrdersServlet extends HttpServlet {
         } catch (DataSourceException e) {
             e.printStackTrace();
         }
-
     }
 }
 

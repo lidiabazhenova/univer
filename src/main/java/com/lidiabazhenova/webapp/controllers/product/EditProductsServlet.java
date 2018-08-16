@@ -22,21 +22,20 @@ public class EditProductsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
         try {
-            final long orderId =Long.valueOf(request.getParameter("orderId"));
+            final long orderId = Long.valueOf(request.getParameter("orderId"));
             product = ProductService.getInstance().getProduct(Long.valueOf(request.getParameter("productId")));
-
             request.setAttribute("orderId", orderId);
             request.setAttribute("product", product);
+            RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/edit-product.jsp");
+            dis.forward(request, response);
         } catch (DataSourceException e) {
             e.printStackTrace();
         }
-        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/edit-product.jsp");
-        dis.forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws ServletException, IOException {
-        final long orderId =Long.valueOf(request.getParameter("orderId"));
+        final long orderId = Long.valueOf(request.getParameter("orderId"));
 
         final Product newProduct = new Product.ProductBuilder()
                 .setProductId(product.getProductId())

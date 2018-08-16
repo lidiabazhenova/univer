@@ -30,13 +30,13 @@ public class ListProductsServlet extends HttpServlet {
             Long orderId = Long.valueOf(request.getParameter("orderId"));
             products = ProductService.getInstance().getProductsByOrderId(orderId);
             order = OrderService.getInstance().getOrder(orderId);
+            request.setAttribute("products", products);
+            request.setAttribute("order", order);
+            RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/list-products.jsp");
+            dis.forward(request, response);
         } catch (DataSourceException e) {
             e.printStackTrace();
         }
-        request.setAttribute("products", products);
-        request.setAttribute("order", order);
-        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/list-products.jsp");
-        dis.forward(request, response);
     }
 }
 

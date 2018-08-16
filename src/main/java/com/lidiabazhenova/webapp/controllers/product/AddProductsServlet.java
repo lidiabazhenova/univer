@@ -26,14 +26,12 @@ public class AddProductsServlet extends HttpServlet {
         try {
             final long orderId = Long.valueOf(request.getParameter("orderId"));
             Order order = OrderService.getInstance().getOrder(orderId);
-
             request.setAttribute("order", order);
+            RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/add-product.jsp");
+            dis.forward(request, response);
         } catch (DataSourceException e) {
             e.printStackTrace();
         }
-
-        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/add-product.jsp");
-        dis.forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request,

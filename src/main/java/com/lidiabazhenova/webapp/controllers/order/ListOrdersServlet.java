@@ -25,12 +25,12 @@ public class ListOrdersServlet extends HttpServlet {
         List<Order> orders = null;
         try {
             orders = OrderService.getInstance().getOrders();
+            request.setAttribute("orders", orders);
+            RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/list-orders.jsp");
+            dis.forward(request, response);
         } catch (DataSourceException e) {
             e.printStackTrace();
         }
-        request.setAttribute("orders", orders);
-        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/list-orders.jsp");
-        dis.forward(request, response);
     }
 }
 

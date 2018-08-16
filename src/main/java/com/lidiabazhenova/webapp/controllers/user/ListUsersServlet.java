@@ -16,7 +16,6 @@ import java.util.List;
 @WebServlet(urlPatterns = "/list-users.do")
 public class ListUsersServlet extends HttpServlet {
 
-
     public ListUsersServlet() throws DataSourceException {
     }
 
@@ -25,12 +24,12 @@ public class ListUsersServlet extends HttpServlet {
         List<User> users = null;
         try {
             users = UserService.getInstance().getUsers();
+            request.setAttribute("users", users);
+            RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/list-users.jsp");
+            dis.forward(request, response);
         } catch (DataSourceException e) {
             e.printStackTrace();
         }
-        request.setAttribute("users", users);
-        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/list-users.jsp");
-        dis.forward(request, response);
     }
 }
 

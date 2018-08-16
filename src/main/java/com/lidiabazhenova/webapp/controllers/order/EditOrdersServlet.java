@@ -23,13 +23,12 @@ public class EditOrdersServlet extends HttpServlet {
                          HttpServletResponse response) throws ServletException, IOException {
         try {
             order = OrderService.getInstance().getOrder(Long.valueOf(request.getParameter("orderId")));
-
             request.setAttribute("order", order);
+            RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/edit-order.jsp");
+            dis.forward(request, response);
         } catch (DataSourceException e) {
             e.printStackTrace();
         }
-        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/edit-order.jsp");
-        dis.forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request,

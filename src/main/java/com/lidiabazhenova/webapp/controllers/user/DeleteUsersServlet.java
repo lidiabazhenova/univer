@@ -27,7 +27,6 @@ public class DeleteUsersServlet extends HttpServlet {
         } catch (DataSourceException e) {
             e.printStackTrace();
         }
-
     }
 }
 

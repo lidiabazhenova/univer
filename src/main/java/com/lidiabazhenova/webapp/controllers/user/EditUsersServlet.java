@@ -23,13 +23,12 @@ public class EditUsersServlet extends HttpServlet {
                          HttpServletResponse response) throws ServletException, IOException {
         try {
             user = UserService.getInstance().getUser(Long.valueOf(request.getParameter("userId")));
-
             request.setAttribute("user", user);
+            RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/edit-user.jsp");
+            dis.forward(request, response);
         } catch (DataSourceException e) {
             e.printStackTrace();
         }
-        RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/edit-user.jsp");
-        dis.forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request,
