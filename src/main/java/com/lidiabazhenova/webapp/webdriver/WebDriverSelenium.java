@@ -260,8 +260,6 @@ public class WebDriverSelenium {
             final WebElement paymentApply = driver.findElement(By.name("payment-apply"));
             clickElement(paymentApply, driver);
 
-            // TODO : feel rest of the fields: address, email and etc.
-
             description.append("Чекуат прошел успешно\r\n");
 
         } catch (final Exception ex) {

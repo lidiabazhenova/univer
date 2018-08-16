@@ -22,10 +22,6 @@ public class HistoryService {
         return Collections.unmodifiableList(HistoryDao.getInstance().getHistoryByOrderId(id));
     }
 
-    public List<History> getHistory(final long id) throws DataSourceException, ParseException {
-        return Collections.unmodifiableList(HistoryDao.getInstance().getHistory());
-    }
-
     public void addHistory(final History history) throws DataSourceException {
         HistoryDao.getInstance().insertHistory(history);
     }
