@@ -1,6 +1,9 @@
 package com.lidiabazhenova.webapp.controllers.login;
 
 import com.lidiabazhenova.webapp.exception.DataSourceException;
+import com.lidiabazhenova.webapp.dao.LoginDao;
+import com.lidiabazhenova.webapp.service.LoginService;
+import com.lidiabazhenova.webapp.service.UserService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,7 +15,9 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/login.do")
 public class LoginServlet extends HttpServlet {
-    private LoginService userValidation = new LoginService();
+
+    public LoginServlet() {
+    }
 
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
@@ -29,7 +34,7 @@ public class LoginServlet extends HttpServlet {
         boolean isValidUser = false;
 
         try {
-            isValidUser = userValidation.loginCheck(name, password);
+            isValidUser = LoginService.getInstance().userValidation(name, password);
             if (isValidUser) {
                 request.getSession().setAttribute("username", name);
                 response.sendRedirect("/list-orders.do");

@@ -3,9 +3,7 @@ package com.lidiabazhenova.webapp.service;
 import com.lidiabazhenova.webapp.dao.UserDao;
 import com.lidiabazhenova.webapp.exception.DataSourceException;
 import com.lidiabazhenova.webapp.model.User;
-import com.lidiabazhenova.webapp.util.MD5Util;
 
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 public final class UserService {

@@ -1,4 +1,4 @@
-package com.lidiabazhenova.webapp.controllers.login;
+package com.lidiabazhenova.webapp.dao;
 
 import com.lidiabazhenova.webapp.dao.connection.ConnectionUtil;
 import com.lidiabazhenova.webapp.exception.DataSourceException;
@@ -8,9 +8,18 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class LoginService {
+public class LoginDao {
+
+    public static final LoginDao HOLDER_INSTANCE = new LoginDao();
 
     public static final String GET_PASSWORD_BY_LOGIN = "SELECT login, password FROM users";
+
+    public LoginDao() {
+    }
+
+    public static LoginDao getInstance() {
+        return HOLDER_INSTANCE;
+    }
 
     public boolean loginCheck(String username, String password) throws DataSourceException {
 
