@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet {
                           HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
-        boolean isValidUser = false;
+        boolean isValidUser;
 
         try {
             isValidUser = LoginService.getInstance().userValidation(name, password);
