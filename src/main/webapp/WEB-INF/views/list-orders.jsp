@@ -11,14 +11,14 @@
                 <div class="table-responsive">
 
                     <h4 class="text-info text-center">
-                        Your orders list:
+                        Ваши заказа:
                     </h4>
 
                     <table class="table-responsive">
 
                         <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>Номер</th>
                             <th>Title</th>
                             <th>Actions</th>
                         </tr>

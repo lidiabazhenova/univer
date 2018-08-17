@@ -39,7 +39,7 @@ public class LoginServlet extends HttpServlet {
                 request.getSession().setAttribute("username", name);
                 response.sendRedirect("/list-orders.do");
             } else {
-                request.setAttribute("errorMessage", "Invalid Credentials!!");
+                request.setAttribute("errorMessage", "Заполните форму Правильно!!");
                 RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/views/login.jsp");
                 dis.forward(request, response);
             }
