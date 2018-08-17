@@ -39,4 +39,4 @@
     </div>
 </div>
 
-<%@include file="../common/form-page-end" %>
+<%@include file="../common/form-page-end.jspf" %>
