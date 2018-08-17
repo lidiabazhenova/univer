@@ -176,8 +176,9 @@ public class WebDriverSelenium {
                 inputProductAmount.click();
                 if (productQuantity != 0 && productQuantity <= 10) {
                     final WebElement span = driver.findElement(By.xpath(String.format(spanAmountXpath, String.valueOf(productQuantity))));
-                    clickElement(span, driver);
+
                     try {
+                        clickElement(span, driver);
                         wait.until(ExpectedConditions.attributeContains(inputProductAmount, "value", Integer.toString(productQuantity)));
                     } catch (org.openqa.selenium.StaleElementReferenceException ex) {
                         inputProductAmount = driver.findElement(By
@@ -229,8 +230,11 @@ public class WebDriverSelenium {
             final WebElement phoneInput = driver.findElement(By.xpath("//*[@id='enter-phone']//input"));
             phoneInput.sendKeys("333333333");
 
-            WebElement selectDeliveryLink = driver.findElement(By.id("select-delivery-link"));
+            WebElement selectDeliveryLink = driver.findElement(By.xpath("//*[@id='select-delivery-link']//a"));
             clickElement(selectDeliveryLink, driver);
+
+            wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.cssSelector(".deal-form-main__input_active")));
 
             Select selectCityDropdown = new Select(driver.findElement(By.name("current-city")));
             selectCityDropdown.selectByVisibleText("Витебск, Витебская область");
