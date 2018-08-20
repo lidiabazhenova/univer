@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class HistoryDao {
@@ -18,6 +19,7 @@ public class HistoryDao {
     private static final String ALL_HISTORY_QUERY = "SELECT * FROM history";
     private static final String GET_HISTORY_BY_ORDER_ID_QUERY = "SELECT * FROM history WHERE order_id = ?";
     private static final String INSERT_HISTORY_QUERY = "INSERT INTO history(order_id, description, date) VALUES(?, ?, ?)";
+    private static final String DELETE_HISTORY_BY_ORDER_ID_QUERY = "DELETE FROM history WHERE order_id = ?";
 
     private HistoryDao() {
     }
@@ -74,6 +76,23 @@ public class HistoryDao {
         }
     }
 
+    public void deleteHistoryByOrderId(final long id) throws DataSourceException {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            connection = ConnectionUtil.getConnection();
+            preparedStatement = connection.prepareStatement(DELETE_HISTORY_BY_ORDER_ID_QUERY);
+
+            preparedStatement.setLong(1, id);
+
+            preparedStatement.executeUpdate();
+        } catch (final SQLException ex) {
+            throw new DataSourceException(ex);
+        } finally {
+            ConnectionUtil.close(preparedStatement, connection);
+        }
+    }
+
     public void insertHistory(final History history) throws DataSourceException {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
@@ -95,7 +114,7 @@ public class HistoryDao {
         final History history = new History();
         history.setDescription(resultSet.getString("description"));
         history.setOrderId(resultSet.getLong("order_id"));
-        history.setDate(resultSet.getDate("date"));
+        history.setDate(new Date(resultSet.getTimestamp("date").getTime()));
         return history;
     }
 }

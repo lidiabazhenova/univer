@@ -1,3 +1,5 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%@include file="../common/form-page-begin.jspf" %>
 
 <div class="container margin-header-center">
@@ -28,7 +30,7 @@
                             <tr>
                                 <td>${history.description}</td>
                                 <td>
-                                    <fmt:formatDate type="both" dateStyle="long" timeStyle="long"
+                                    <fmt:formatDate type="both" dateStyle="short" timeStyle="short"
                                                     value="${history.date}" />
                                 </td>
                             </tr>

@@ -1,5 +1,6 @@
 package com.lidiabazhenova.webapp.service;
 
+import com.lidiabazhenova.webapp.dao.HistoryDao;
 import com.lidiabazhenova.webapp.dao.OrderDao;
 import com.lidiabazhenova.webapp.dao.ProductDao;
 import com.lidiabazhenova.webapp.exception.DataSourceException;
@@ -32,6 +33,7 @@ public class OrderService {
 
     public void deleteOrder(final Long id) throws DataSourceException {
         ProductDao.getInstance().deleteProductsByOrderId(id);
+        HistoryDao.getInstance().deleteHistoryByOrderId(id);
         OrderDao.getInstance().deleteOrder(id);
     }
 

@@ -21,31 +21,39 @@ public class WebDriverSelenium {
         final StringBuilder description = new StringBuilder();
 
         WebDriver driver = WebDriverFactory.getInstance();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        //TODO: add to properties
-        driver.get("https://oz.by");
+        try {
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            //TODO: add to properties
+            driver.get("https://oz.by");
 
-        if (!doLogin(driver, description)) {
-            return description;
+            if (!doLogin(driver, description)) {
+                driver.quit();
+                return description;
+            }
+
+            if (!cleanBasket(driver, description)) {
+                driver.quit();
+                return description;
+            }
+
+            if (!orderProducts(products, driver, description)) {
+                driver.quit();
+                return description;
+            }
+
+            if (!goToBasketAndApplyQuantities(products, driver, description)) {
+                driver.quit();
+                return description;
+            }
+
+            if (!doCheckout(driver, description)) {
+                driver.quit();
+                return description;
+            }
+
+        } finally {
+            driver.quit();
         }
-
-        if (!cleanBasket(driver, description)) {
-            return description;
-        }
-
-        if (!orderProducts(products, driver, description)) {
-            return description;
-        }
-
-        if (!goToBasketAndApplyQuantities(products, driver, description)) {
-            return description;
-        }
-
-        if (!doCheckout(driver, description)) {
-            return description;
-        }
-
-        //driver.quit();
 
         return description;
     }

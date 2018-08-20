@@ -1,6 +1,7 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%@include file="../common/form-page-begin.jspf" %>
 <%@include file="../common/scriptuser.jspf" %>
-
 
 <div class="container margin-header-center">
 
