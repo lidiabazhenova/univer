@@ -44,7 +44,7 @@
 
             <div class="list-add-form">
                 <div id="mybutton" class="group add-group">
-                    <input type="submit" class="button add-button" value="Confirm"/>
+                    <input type="submit" class="button add-button" value="Сохранить изменения"/>
                 </div>
 
 
