@@ -182,8 +182,8 @@ public class WebDriverSelenium {
                 inputProductAmount.click();
                 if (productQuantity != 0 && productQuantity <= 10) {
                     final WebElement span = driver.findElement(By.xpath(String.format(spanAmountXpath, String.valueOf(productQuantity))));
-                        clickElement(span, driver);
-                        wait.until(ExpectedConditions.invisibilityOfElementLocated(indicatorLoading));
+                    clickElement(span, driver);
+                    wait.until(ExpectedConditions.invisibilityOfElementLocated(indicatorLoading));
                 } else {
                     inputProductAmount = driver.findElement(By
                             .xpath(String.format(inputAmountXpath, product.getProductUrl())));
