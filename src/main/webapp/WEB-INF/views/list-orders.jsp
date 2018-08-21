@@ -12,7 +12,7 @@
                 <div class="table-responsive">
 
                     <h4 class="text-info text-center">
-                        Ваши заказа:
+                        Ваши заказы:
                     </h4>
 
                     <table class="table-responsive">
@@ -20,8 +20,8 @@
                         <thead>
                         <tr>
                             <th>Номер</th>
-                            <th>Title</th>
-                            <th>Actions</th>
+                            <th>Название заказа</th>
+                            <th>Действия</th>
                         </tr>
                         </thead>
 
@@ -33,15 +33,15 @@
 
                                 <td>
                                     <a class="btn btn-danger"
-                                       href="/edit-order.do?orderId=${order.orderId}">Edit</a>
+                                       href="/edit-order.do?orderId=${order.orderId}">Редактировать</a>
                                     <a class="btn btn-danger"
-                                       href="/delete-order.do?orderId=${order.orderId}">Delete</a>
+                                       href="/delete-order.do?orderId=${order.orderId}">Удалить</a>
                                     <a class="btn btn-danger"
-                                       href="/list-products.do?orderId=${order.orderId}">View Details</a>
+                                       href="/list-products.do?orderId=${order.orderId}">Просмотреть детали</a>
                                     <a class="btn btn-danger"
-                                       href="/buy-products.do?orderId=${order.orderId}">Run</a>
+                                       href="/buy-products.do?orderId=${order.orderId}">Оформить</a>
                                     <a class="btn btn-danger"
-                                       href="/history.do?orderId=${order.orderId}">Order History</a>
+                                       href="/history.do?orderId=${order.orderId}">История заказа</a>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -56,14 +56,12 @@
 
     </div>
 
-    <div class="list-add-form">
-        <div id="mybutton" class="group add-group">
-            <button class="button add-button"><a
-                    href="/add-order.do">Add
-                New Order</a></button>
+    <form action="/add-order.do" method="get">
+        <div class="list-add-form">
+            <div id="mybutton" class="group add-group">
+                <input type="submit" class="button add-button" value="Добавить новый заказ"/>
+            </div>
         </div>
-
-
-    </div>
+    </form>
 
 <%@include file="../common/form-page-end.jspf" %>

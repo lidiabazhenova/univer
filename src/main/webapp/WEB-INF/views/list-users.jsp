@@ -13,7 +13,7 @@
                 <div class="table-responsive">
 
                     <h4 class="text-info text-center">
-                        List of users:
+                        Пользователи приложения:
                     </h4>
 
                     <table class="table-responsive">
@@ -21,10 +21,10 @@
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Users</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Actions</th>
+                            <th>Пользователь</th>
+                            <th>Имя</th>
+                            <th>Фамилия</th>
+                            <th>Действия</th>
                         </tr>
                         </thead>
 
@@ -37,9 +37,9 @@
                                 <td>${user.lastName}</td>
                                 <td>
                                     <a class="btn btn-danger"
-                                       href="/edit-user.do?userId=${user.userId}">Edit</a>
+                                       href="/edit-user.do?userId=${user.userId}">Редактировать</a>
                                     <a class="btn btn-danger"
-                                       href="/delete-user.do?userId=${user.userId}">Delete</a>
+                                       href="/delete-user.do?userId=${user.userId}">Удалить</a>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -54,15 +54,13 @@
 
     </div>
 
+    <form action="/add-user.do" method="get">
     <div class="list-add-form">
         <div id="mybutton" class="group add-group">
-            <button class="button add-button"><a
-                    href="/add-user.do">Add
-                New User</a></button>
+            <input type="submit" class="button add-button" value="Добавить нового пользователя"/>
         </div>
-
-
     </div>
+    </form>
 
     <%@include file="../common/form-page-end.jspf" %>
 

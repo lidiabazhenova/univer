@@ -13,15 +13,15 @@
                 <div class="table-responsive">
 
                     <h4 class="text-info text-center">
-                        History for "${order.orderTitle}"
+                        История для заказа "${order.orderTitle}"
                     </h4>
 
                     <table class="table-responsive">
 
                         <thead>
                         <tr>
-                            <th>Description</th>
-                            <th>Date</th>
+                            <th>Описание</th>
+                            <th>Дата и время</th>
                         </tr>
                         </thead>
 

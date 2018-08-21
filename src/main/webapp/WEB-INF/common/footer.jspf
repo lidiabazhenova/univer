@@ -2,10 +2,17 @@
 
 <!-- Footer -->
 <footer class="footer">
-    <div class="container">
-        <span class="text-muted">Place sticky footer content here.</span>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 lidiabazhenova@gmail.com
     </div>
+    <!-- Copyright -->
 </footer>
 
-<script src="webjars/js/bootstrap.min.js"></script>
+<%--<footer class="page-footer font-small blue">--%>
+
+
+
+<%--</footer>--%>
+
+<%--<script src="webjars/js/bootstrap.min.js"></script>--%>
 

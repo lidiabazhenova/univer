@@ -12,16 +12,16 @@
             </button>
 
             <!-- Logo text or image -->
-            <a class="navbar-brand" href="#">Automation</a>
+            <a class="navbar-brand" href="#">Автоматизация закупок oz.by</a>
 
         </div>
         <div class="navigation collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li class=""><a href="/list-orders.do">Orders</a></li>
-                <li><a href="/list-users.do">Users</a></li>
+                <li class=""><a href="/list-orders.do">Заказы</a></li>
+                <li><a href="/list-users.do">Пользователи</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-            <li><a href="/logout.do">Logout</a>
+            <li><a href="/logout.do">Выйти</a>
             </li>
             </ul>
         </div>

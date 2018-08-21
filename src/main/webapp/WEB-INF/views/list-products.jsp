@@ -13,7 +13,7 @@
                 <div class="table-responsive">
 
                     <h4 class="text-info text-center">
-                        Your purchasing list "${order.orderTitle}"
+                        Ваш лист покупок "${order.orderTitle}"
                     </h4>
 
                     <table class="table-responsive">
@@ -21,10 +21,10 @@
                         <thead>
                         <tr>
                             <th>URL</th>
-                            <th>Products</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Actions</th>
+                            <th>Продукт</th>
+                            <th>Цена</th>
+                            <th>Количество</th>
+                            <th>Действия</th>
                         </tr>
                         </thead>
 
@@ -43,9 +43,9 @@
                                 </td>
                                 <td>
                                     <a class="btn btn-danger"
-                                       href="/edit-product.do?productId=${product.productId}&orderId=${order.orderId}">Edit</a>
+                                       href="/edit-product.do?productId=${product.productId}&orderId=${order.orderId}">Редактировать</a>
                                     <a class="btn btn-danger"
-                                       href="/delete-product.do?productId=${product.productId}&orderId=${order.orderId}">Delete</a>
+                                       href="/delete-product.do?productId=${product.productId}&orderId=${order.orderId}">Удалить</a>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -60,11 +60,14 @@
 
     </div>
 
+    <form action="/add-product.do" method="get">
     <div class="list-add-form">
         <div id="mybutton" class="group add-group">
-            <button class="button add-button"><a href="/add-product.do?orderId=${order.orderId}">Add New Product</a>
-            </button>
+            <input type="hidden" name="orderId" value="${order.orderId}" />
+            <input type="submit" class="button add-button" value="Добавить новый продукт"/>
         </div>
     </div>
+    </form>
+    </form>
 
 <%@include file="../common/form-page-end.jspf" %>
