@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class WebDriverSelenium {
 
     private static final String SCRIPT_CLICK = "arguments[0].click()";
+    private static final By indicatorLoading = By.cssSelector(".deal-form_footer-processing");
 
 
     public static StringBuilder runSeleniumWebdriver(final List<Product> products) throws Exception {
@@ -23,7 +24,7 @@ public class WebDriverSelenium {
         WebDriver driver = WebDriverFactory.getInstance();
         try {
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-            //TODO: add to properties
+
             driver.get("https://oz.by");
 
             if (!doLogin(driver, description)) {
@@ -68,11 +69,9 @@ public class WebDriverSelenium {
             clickElement(loginFormButton, driver);
 
             final WebElement emailInput = driver.findElement(By.xpath(".//*[@id='loginForm']//input[@name=\"cl_email\"]"));
-            // TODO : move email to properties
             emailInput.sendKeys("testselenium@tut.by");
 
             final WebElement passwordInput = driver.findElement(By.xpath("//input[@name=\"cl_psw\"]"));
-            // TODO : move password to properties
             passwordInput.sendKeys("testselenium");
 
             final WebElement loginButton = driver.findElement(By.xpath("//*[@id='loginForm']/button[@value=\"login\"]"));
@@ -92,7 +91,7 @@ public class WebDriverSelenium {
 
     private static boolean cleanBasket(final WebDriver driver, final StringBuilder description) {
         try {
-            WebDriverWait wait = (new WebDriverWait(driver, 6));
+            WebDriverWait wait = (new WebDriverWait(driver, 4));
 
             final By userbarLocator = By.xpath("//*[@class='top-panel__userbar__user__name__inner']");
             wait.until(ExpectedConditions.visibilityOfElementLocated(userbarLocator));
@@ -101,14 +100,13 @@ public class WebDriverSelenium {
             WebElement buttonGoToBasket = driver.findElement(By.xpath("//a[u[contains(text(), 'Корзина')]]"));
 
             if (countItemsInBasket.isDisplayed()) {
-                System.out.println("Очистить корзину");
                 clickElement(buttonGoToBasket, driver);
 
                 final WebElement selectAllCheckbox = driver.findElement(
                         By.cssSelector(".goods-table__row.goods-table__row_footer .i-checkbox__faux"));
                 clickElement(selectAllCheckbox, driver);
 
-                wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.deal-form_footer-processing")));
+                wait.until(ExpectedConditions.invisibilityOfElementLocated(indicatorLoading));
                 WebElement buttonDelete = driver.findElement(By.xpath("//button[contains(text(), 'Удалить')]"));
                 clickElement(buttonDelete, driver);
 
@@ -184,15 +182,8 @@ public class WebDriverSelenium {
                 inputProductAmount.click();
                 if (productQuantity != 0 && productQuantity <= 10) {
                     final WebElement span = driver.findElement(By.xpath(String.format(spanAmountXpath, String.valueOf(productQuantity))));
-
-                    try {
                         clickElement(span, driver);
-                        wait.until(ExpectedConditions.attributeContains(inputProductAmount, "value", Integer.toString(productQuantity)));
-                    } catch (org.openqa.selenium.StaleElementReferenceException ex) {
-                        inputProductAmount = driver.findElement(By
-                                .xpath(String.format(inputAmountXpath, product.getProductUrl())));
-                        wait.until(ExpectedConditions.attributeContains(inputProductAmount, "value", Integer.toString(productQuantity)));
-                    }
+                        wait.until(ExpectedConditions.invisibilityOfElementLocated(indicatorLoading));
                 } else {
                     inputProductAmount = driver.findElement(By
                             .xpath(String.format(inputAmountXpath, product.getProductUrl())));
