@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="../common/form-page-begin.jspf" %>
-<%@include file="../common/scriptproduct.jspf" %>
+<%@include file="../common/scriptorder.jspf" %>
 
 <div class="container margin-header-center">
 
@@ -9,7 +9,7 @@
 
     <div class="container" style="margin-bottom: 70px">
 
-        <form id="formproduct" action="/add-order.do" method="post" onsubmit="return checkForm(this);">
+        <form id="formorder" action="/add-order.do" method="post" onsubmit="return checkForm(this);">
 
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Название заказа:</H4></label>

@@ -1,0 +1,16 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<script type="text/javascript">
+
+    function checkForm(formproduct) {
+        if (formorder.orderTitle.value == "") {
+            alert("Ошибка: Название заказа не может быть пустым!");
+            formproduct.orderTitle.focus();
+
+            return false;
+        }
+
+        return true;
+    }
+
+</script>
