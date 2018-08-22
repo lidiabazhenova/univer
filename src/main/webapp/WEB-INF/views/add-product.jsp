@@ -17,7 +17,7 @@
             </h4>
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">URL-продукта:</H4></label>
-                <input type="text" name="productUrl" id="productUrl" class="form-control"/><br/>
+                <input type="text" name="productUrl" id="productUrl" class="form-control" autofocus/><br/>
             </fieldset>
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Название продукта:</H4></label>

@@ -11,7 +11,7 @@
 
         <form id="form" action="/edit-product.do" method="post" onsubmit="return checkForm(this);">
             <input type="hidden" name="orderId" id="orderId" value="${orderId}"/>
-            
+
             <c:if test="${errorMessage=='Заполните поля!!'}">
                 <div class="alert alert-success alert-dismissible">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -21,7 +21,7 @@
 
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">URL-продукта:</H4></label>
-                <input type="text" name="productUrl" id="productUrl" class="form-control" value="${product.productUrl}"/><br/>
+                <input onfocus="this.select();"  type="text" name="productUrl" id="productUrl" class="form-control" value="${product.productUrl}"/><br/>
             </fieldset>
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Название продукта:</H4></label>
@@ -53,5 +53,12 @@
     </form>
 </div>
 </div>
+
+<script type="text/javascript">
+    function formfocus() {
+        document.getElementById('productUrl').focus();
+    }
+    window.onload = formfocus;
+</script>
 
 <%@include file="../common/form-page-end.jspf" %>

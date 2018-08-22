@@ -13,7 +13,7 @@
 
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Логин:</H4></label>
-                <input type="text" name="login" id="login" class="form-control" value="${user.login}"/><br/>
+                <input onfocus="this.select();"  type="text" name="login" id="login" class="form-control" value="${user.login}"/><br/>
             </fieldset>
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Имя:</H4></label>
@@ -40,5 +40,12 @@
         </form>
     </div>
 </div>
+
+<script type="text/javascript">
+    function formfocus() {
+        document.getElementById('login').focus();
+    }
+    window.onload = formfocus;
+</script>
 
 <%@include file="../common/form-page-end.jspf" %>

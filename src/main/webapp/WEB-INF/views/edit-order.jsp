@@ -8,7 +8,7 @@
 
     <div class="container" style="margin-bottom: 70px">
 
-        <form id="form" action="/edit-order.do" method="post" onsubmit="return checkForm(this);">
+        <form id="form" name="form" action="/edit-order.do" method="post" onsubmit="return checkForm(this);">
 
             <c:if test="${errorMessage=='Заполните поля!!'}">
                 <div class="alert alert-success alert-dismissible">
@@ -19,7 +19,7 @@
 
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Вы можете изменить название заказа:</H4></label>
-                <input type="text" name="orderTitle" id="orderTitle" class="form-control"
+                <input onfocus="this.select();" type="text" name="orderTitle" id="orderTitle" class="form-control"
                        value="${order.orderTitle}"/><br/>
             </fieldset>
 
@@ -34,5 +34,12 @@
     </form>
 </div>
 </div>
+
+<script type="text/javascript">
+    function formfocus() {
+        document.getElementById('orderTitle').focus();
+    }
+    window.onload = formfocus;
+</script>
 
 <%@include file="../common/form-page-end.jspf" %>
