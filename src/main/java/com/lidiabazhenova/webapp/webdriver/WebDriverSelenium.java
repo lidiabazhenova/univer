@@ -177,39 +177,38 @@ public class WebDriverSelenium {
 
             for (final Product product : products) {
                 final int productQuantity = product.getProductQuantity();
-                WebElement inputProductAmount = driver.findElement(By
-                        .xpath(String.format(inputAmountXpath, product.getProductUrl())));
-                inputProductAmount.click();
+                clickElement(driver.findElement(By.xpath(String.format(inputAmountXpath, product.getProductUrl()))), driver);
+                wait.until(ExpectedConditions.invisibilityOfElementLocated(indicatorLoading));
+
+                //JavascriptExecutor je = (JavascriptExecutor) driver;
+                //je.executeScript("arguments[0].setAttribute('value', '75')", driver.findElement(By.xpath(String.format(inputAmountXpath, product.getProductUrl()))));
+
                 if (productQuantity != 0 && productQuantity <= 10) {
-                    final WebElement span = driver.findElement(By.xpath(String.format(spanAmountXpath, String.valueOf(productQuantity))));
-                    clickElement(span, driver);
+                    clickElement(driver.findElement(By.xpath(String.format(spanAmountXpath, String.valueOf(productQuantity)))), driver);
                     wait.until(ExpectedConditions.invisibilityOfElementLocated(indicatorLoading));
+
                 } else {
-                    inputProductAmount = driver.findElement(By
-                            .xpath(String.format(inputAmountXpath, product.getProductUrl())));
-                    clickElement(inputProductAmount, driver);
                     final WebElement spanNoReadOnly = driver.findElement(By.xpath(String.format(spanAmountXpath, "10")));
+                    clickElement(spanNoReadOnly, driver);
+                    wait.until(ExpectedConditions.invisibilityOfElementLocated(indicatorLoading));
 
-                    Actions actions = new Actions(driver);
-                    actions.click(spanNoReadOnly)
-                            .sendKeys(String.valueOf(productQuantity))
-                            .build().perform();
-                    try {
-                        wait.until(ExpectedConditions.attributeContains(inputProductAmount, "value", Integer.toString(productQuantity)));
-                    } catch (org.openqa.selenium.StaleElementReferenceException ex) {
-                        inputProductAmount = driver.findElement(By
-                                .xpath(String.format(inputAmountXpath, product.getProductUrl())));
-                        wait.until(ExpectedConditions.attributeContains(inputProductAmount, "value", Integer.toString(productQuantity)));
+                    driver.findElement(By.xpath(String.format(inputAmountXpath, product.getProductUrl()))).clear();
 
-                    }
+                    final String[] digits = Integer.toString(productQuantity).split("(?!^)");
+                    driver.findElement(By.xpath(String.format(inputAmountXpath, product.getProductUrl()))).sendKeys(digits[0]);
+                    Thread.sleep(100);
+                    driver.findElement(By.xpath(String.format(inputAmountXpath, product.getProductUrl()))).sendKeys(digits[1]);
+
+                    wait.until(ExpectedConditions.invisibilityOfElementLocated(indicatorLoading));
+                    wait.until(ExpectedConditions.attributeContains(driver.findElement(By
+                            .xpath(String.format(inputAmountXpath, product.getProductUrl()))), "value", Integer.toString(productQuantity)));
                 }
             }
+
+
             description.append("\r\nОбновление количества в корзине прошло успешно\r\n");
 
-        } catch (
-                final Exception ex)
-
-        {
+        } catch (final Exception ex) {
             ex.printStackTrace();
             description.append("Ошибка при обновлении количества в корзине\r\n");
             return false;

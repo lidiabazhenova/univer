@@ -7,7 +7,7 @@
 
         <div class="white-list">
 
-            <div class="col-xs-12" style="margin-bottom: 15px">
+            <div class="col-xs-14" style="margin-bottom: 15px">
 
                 <div class="table-responsive">
 
@@ -39,7 +39,7 @@
                                     <a class="btn btn-danger"
                                        href="/list-products.do?orderId=${order.orderId}">Просмотреть детали</a>
                                     <a class="btn btn-danger"
-                                       href="/buy-products.do?orderId=${order.orderId}">Оформить</a>
+                                       href="/buy-products.do?orderId=${order.orderId}">Оформить заказ</a>
                                     <a class="btn btn-danger"
                                        href="/history.do?orderId=${order.orderId}">История заказа</a>
                                 </td>
