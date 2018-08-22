@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="../common/form-page-begin.jspf" %>
-<%@include file="../common/scriptproduct.jspf" %>
 
 <div class="container margin-header-center">
 
@@ -17,7 +16,7 @@
             </h4>
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">URL-продукта:</H4></label>
-                <input type="text" name="productUrl" id="productUrl" class="form-control" autofocus/><br/>
+                <input type="text" name="productUrl" id="productUrl" class="form-control"/><br/>
             </fieldset>
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Название продукта:</H4></label>
@@ -41,5 +40,8 @@
         <div><img src="/img/animation.gif"></div>
     </div>
 </div>
+
+<%@include file="../common/scriptproduct.jspf" %>
+<%@include file="../common/scriptproductfocus.jspf" %>
 
 <%@include file="../common/form-page-end.jspf" %>

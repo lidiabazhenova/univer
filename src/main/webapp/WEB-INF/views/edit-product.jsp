@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="../common/form-page-begin.jspf" %>
-<%@include file="../common/scriptproduct.jspf" %>
 
 <div class="container margin-header-center">
 
@@ -54,11 +53,7 @@
 </div>
 </div>
 
-<script type="text/javascript">
-    function formfocus() {
-        document.getElementById('productUrl').focus();
-    }
-    window.onload = formfocus;
-</script>
+<%@include file="../common/scriptproduct.jspf" %>
+<%@include file="../common/scriptproductfocus.jspf" %>
 
 <%@include file="../common/form-page-end.jspf" %>

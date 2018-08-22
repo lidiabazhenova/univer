@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="../common/form-page-begin.jspf" %>
-<%@include file="../common/scriptuser.jspf" %>
 
 <div class="container margin-header-center">
 
@@ -13,7 +12,7 @@
 
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Логин:</H4></label>
-                <input type="text" name="login" id="login" class="form-control" autofocus/><br/>
+                <input type="text" name="login" id="login" class="form-control"/><br/>
             </fieldset>
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Имя:</H4></label>
@@ -38,5 +37,11 @@
                 </div>
             </div>
         </form>
+
+    </div>
+</div>
+
+<%@include file="../common/scriptuser.jspf" %>
+<%@include file="../common/scriptuserfocus.jspf" %>
 
 <%@include file="../common/form-page-end.jspf" %>

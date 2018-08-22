@@ -13,7 +13,7 @@
 
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Название заказа:</H4></label>
-                <input type="text" name="orderTitle" id="orderTitle" class="form-control" autofocus/><br/>
+                <input type="text" name="orderTitle" id="orderTitle" class="form-control"/><br/>
             </fieldset>
 
             <div class="list-add-form">
@@ -26,4 +26,5 @@
     </div>
 </div>
 
+<%@include file="../common/scriptorderfocus.jspf" %>
 <%@include file="../common/form-page-end.jspf" %>

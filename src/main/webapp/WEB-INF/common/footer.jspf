@@ -1,18 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<!-- Footer -->
 <footer class="footer">
-    <!-- Copyright -->
+
     <div class="footer-copyright text-center py-3">© 2018 lidiabazhenova@gmail.com
     </div>
-    <!-- Copyright -->
+
 </footer>
 
-<%--<footer class="page-footer font-small blue">--%>
-
-
-
-<%--</footer>--%>
-
-<%--<script src="webjars/js/bootstrap.min.js"></script>--%>
 

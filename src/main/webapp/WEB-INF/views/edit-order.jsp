@@ -35,11 +35,6 @@
 </div>
 </div>
 
-<script type="text/javascript">
-    function formfocus() {
-        document.getElementById('orderTitle').focus();
-    }
-    window.onload = formfocus;
-</script>
+<%@include file="../common/scriptorderfocus.jspf" %>
 
 <%@include file="../common/form-page-end.jspf" %>

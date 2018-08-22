@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="../common/form-page-begin.jspf" %>
-<%@include file="../common/scriptuser.jspf" %>
 
 <div class="container margin-header-center">
 
@@ -9,7 +8,8 @@
 
     <div class="container" style="margin-bottom: 70px">
 
-        <form id="form" action="/edit-user.do" method="post" onsubmit="return checkForm(this);">
+        <form id="formuser" action="/edit-user.do" method="post" onsubmit="return checkForm(this);">
+            <input type="hidden" name="userId" id="userId" value="${user.userId}"/>
 
             <fieldset class="form-group">
                 <label><H4 style="color: #fff">Логин:</H4></label>
@@ -33,7 +33,7 @@
             </fieldset>
             <div class="list-add-form">
                 <div id="mybutton" class="group add-group">
-                    <input type="submit" class="btn btn-success" value="Сохранить изменения"/>
+                    <input type="submit" class="button add-button" value="Сохранить изменения"/>
                 </div>
 
             </div>
@@ -41,11 +41,7 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    function formfocus() {
-        document.getElementById('login').focus();
-    }
-    window.onload = formfocus;
-</script>
+<%@include file="../common/scriptuser.jspf" %>
+<%@include file="../common/scriptuserfocus.jspf" %>
 
 <%@include file="../common/form-page-end.jspf" %>
