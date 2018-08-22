@@ -11,9 +11,7 @@
 
         <form id="form" action="/edit-product.do" method="post" onsubmit="return checkForm(this);">
             <input type="hidden" name="orderId" id="orderId" value="${orderId}"/>
-            <h4 class="text-info text-center">
-                Edit:
-            </h4>
+            
             <c:if test="${errorMessage=='Заполните поля!!'}">
                 <div class="alert alert-success alert-dismissible">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

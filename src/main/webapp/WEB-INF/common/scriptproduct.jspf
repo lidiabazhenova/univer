@@ -10,6 +10,14 @@
             return false;
         }
 
+        re = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/;
+        if (!re.test(formproduct.productUrl.value)) {
+            alert("Ошибка: неверный формат Url-продукта!");
+            formproduct.productUrl.focus();
+
+            return false;
+        }
+
         if (formproduct.productPrice.value == "") {
             alert("Ошибка: цена продукта не может быть пустой!");
             formproduct.productPrice.focus();
@@ -34,7 +42,7 @@
 
         re = /^[1-9][0-9]?$/;
         if (!re.test(formproduct.productQuantity.value)) {
-            alert("Пожалуйста, введите количество, состоящую только из цифр");
+            alert("Пожалуйста, введите количество от 1 до 99, используя целые числа!");
             formproduct.productQuantity.focus();
 
             return false;
