@@ -16,6 +16,12 @@
             return false;
         }
 
+        if (formuser.password.value == "") {
+            alert("Ошибка: Пароль не может быть пустым!");
+            formuser.password.focus();
+            return false;
+        }
+
         if (formuser.password.value != "" && formuser.password.value == formuser.repeatPassword.value) {
             if (formuser.password.value.length < 6) {
                 alert("Ошибка: Пароль должен содержать как минимум 6 знаков!");

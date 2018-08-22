@@ -68,6 +68,5 @@
         </div>
     </div>
     </form>
-    </form>
 
 <%@include file="../common/form-page-end.jspf" %>

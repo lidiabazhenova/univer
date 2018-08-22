@@ -31,7 +31,7 @@
                         <tbody>
                         <c:forEach items="${users}" var="user">
                             <tr>
-                                <td>${user.id}</td>
+                                <td>${user.userId}</td>
                                 <td>${user.login}</td>
                                 <td>${user.firstName}</td>
                                 <td>${user.lastName}</td>
@@ -57,6 +57,7 @@
     <form action="/add-user.do" method="get">
     <div class="list-add-form">
         <div id="mybutton" class="group add-group">
+            <input type="hidden" name="userId" value="${user.userId}" />
             <input type="submit" class="button add-button" value="Добавить нового пользователя"/>
         </div>
     </div>
