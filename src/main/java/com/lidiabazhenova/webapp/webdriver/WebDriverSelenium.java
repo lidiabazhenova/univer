@@ -180,9 +180,6 @@ public class WebDriverSelenium {
                 clickElement(driver.findElement(By.xpath(String.format(inputAmountXpath, product.getProductUrl()))), driver);
                 wait.until(ExpectedConditions.invisibilityOfElementLocated(indicatorLoading));
 
-                //JavascriptExecutor je = (JavascriptExecutor) driver;
-                //je.executeScript("arguments[0].setAttribute('value', '75')", driver.findElement(By.xpath(String.format(inputAmountXpath, product.getProductUrl()))));
-
                 if (productQuantity != 0 && productQuantity <= 10) {
                     clickElement(driver.findElement(By.xpath(String.format(spanAmountXpath, String.valueOf(productQuantity)))), driver);
                     wait.until(ExpectedConditions.invisibilityOfElementLocated(indicatorLoading));

@@ -2,7 +2,7 @@ package com.lidiabazhenova.webapp.model;
 
 import java.util.Objects;
 
-public class Order {
+public class Order extends AbstractModel {
 
     private long orderId;
     private String orderTitle;
