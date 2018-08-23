@@ -35,28 +35,13 @@
                 return false;
             }
 
-            re = /[0-9]/;
+            re = /^\w+$/;
             if (!re.test(formuser.password.value)) {
-                alert("Ошибка: Пароль должен содержать как минимум одну цифру(0-9)!");
+                alert("Ошибка: Пароль должен состоять из букв латинского алфавита, цифр и знака _ !");
                 formuser.password.focus();
                 return false;
             }
 
-            re = /[a-z]/;
-            if (!re.test(formuser.password.value)) {
-                alert("Ошибка: Пароль должен содержать как минимум одну строчную букву(a-z)!");
-                formuser.password.focus();
-
-                return false;
-            }
-
-            re = /[A-Z]/;
-            if (!re.test(formuser.password.value)) {
-                alert("Ошибка: Пароль должен содержать как минимум одну прописную букву(A-Z)!");
-                formuser.password.focus();
-
-                return false;
-            }
         } else {
             alert("Проверьте, пожалуйста, что вы ввели и подтвердили свой пароль!");
             formuser.password.focus();
