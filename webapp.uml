@@ -3,883 +3,255 @@
   <ID>JAVA</ID>
   <OriginalElement>com.lidiabazhenova.webapp</OriginalElement>
   <nodes>
-    <node x="5415.01369040881" y="54.5">com.lidiabazhenova.webapp.model.User.UserBuilder</node>
-    <node x="2293.9924580267834" y="1025.5">com.lidiabazhenova.webapp.dao.HistoryDao</node>
-    <node x="3766.969843493139" y="1868.0">com.lidiabazhenova.webapp.controllers.order.ListOrdersServlet</node>
-    <node x="790.0115844045567" y="1868.0">com.lidiabazhenova.webapp.controllers.product.DeleteProductsServlet</node>
-    <node x="3304.9924580267834" y="1868.0">com.lidiabazhenova.webapp.controllers.login.LoginServlet</node>
-    <node x="4338.242458026783" y="520.5">com.lidiabazhenova.webapp.model.Order.OrderBuilder</node>
-    <node x="4466.969843493139" y="1868.0">com.lidiabazhenova.webapp.controllers.order.DeleteOrdersServlet</node>
-    <node x="5509.877655833128" y="1868.0">com.lidiabazhenova.webapp.controllers.user.EditUsersServlet</node>
-    <node x="3452.9924580267834" y="1426.5">com.lidiabazhenova.webapp.service.OrderService</node>
-    <node x="1393.7199177378902" y="1868.0">com.lidiabazhenova.webapp.controllers.product.AddProductsServlet</node>
-    <node x="3996.969843493139" y="1868.0">com.lidiabazhenova.webapp.controllers.order.AddOrdersServlet</node>
-    <node x="4718.969843493139" y="1868.0">com.lidiabazhenova.webapp.controllers.user.ListUsersServlet</node>
-    <node x="3652.4623015199218" y="998.0">com.lidiabazhenova.webapp.dao.OrderDao</node>
-    <node x="5734.877655833128" y="1868.0">com.lidiabazhenova.webapp.controllers.user.AddUsersServlet</node>
-    <node x="0.0" y="1868.0">com.lidiabazhenova.webapp.controllers.product.EditProductsServlet</node>
-    <node x="1282.3125000000002" y="1467.5">com.lidiabazhenova.webapp.service.HistoryService</node>
-    <node x="2654.3125" y="1868.0">com.lidiabazhenova.webapp.controllers.history.HistoryServlet</node>
-    <node x="2951.9924580267834" y="1025.0">com.lidiabazhenova.webapp.dao.LoginDao</node>
-    <node x="1412.15912469345" y="95.0">com.lidiabazhenova.webapp.model.AbstractModel</node>
-    <node x="0.0" y="1977.0">com.lidiabazhenova.webapp.filter.LoginRequeredFilter</node>
-    <node x="1028.0" y="1977.0">com.lidiabazhenova.webapp.controllers.logout.LogoutServlet</node>
-    <node x="4115.078968186588" y="54.0">com.lidiabazhenova.webapp.model.Order</node>
-    <node x="5295.449084404557" y="1426.5">com.lidiabazhenova.webapp.service.UserService</node>
-    <node x="323.894843493139" y="1080.0">com.lidiabazhenova.webapp.webdriver.WebDriverFactory</node>
-    <node x="3818.002326447836" y="548.0">com.lidiabazhenova.webapp.exception.DataSourceException</node>
-    <node x="478.5" y="1868.0">com.lidiabazhenova.webapp.controllers.buyproduct.BuyProductsServlet</node>
-    <node x="2809.9924580267834" y="521.0">com.lidiabazhenova.webapp.dao.connection.ConnectionUtil</node>
-    <node x="2411.3125" y="1868.0">com.lidiabazhenova.webapp.controllers.product.ListProductsServlet</node>
-    <node x="514.0" y="1977.0">com.lidiabazhenova.webapp.filter.CharacterSetFilter</node>
-    <node x="1865.9924580267832" y="971.0">com.lidiabazhenova.webapp.dao.ProductDao</node>
-    <node x="5366.524801519922" y="439.0">com.lidiabazhenova.webapp.model.User</node>
-    <node x="837.0926586627793" y="0.0">com.lidiabazhenova.webapp.model.Product</node>
-    <node x="1294.979166666667" y="521.0">com.lidiabazhenova.webapp.model.History</node>
-    <node x="3057.9924580267834" y="1467.0">com.lidiabazhenova.webapp.service.LoginService</node>
-    <node x="5072.125" y="1868.0">com.lidiabazhenova.webapp.controllers.user.DeleteUsersServlet</node>
-    <node x="4232.969843493139" y="1868.0">com.lidiabazhenova.webapp.controllers.order.EditOrdersServlet</node>
-    <node x="779.5625" y="1413.0">com.lidiabazhenova.webapp.service.ProductService</node>
-    <node x="4956.449084404557" y="998.0">com.lidiabazhenova.webapp.dao.UserDao</node>
-    <node x="894.949801519922" y="466.5">com.lidiabazhenova.webapp.model.Product.ProductBuilder</node>
-    <node x="160.89484349313898" y="1508.5">com.lidiabazhenova.webapp.webdriver.WebDriverSelenium</node>
+    <node x="1248.5525261324042" y="1112.0">com.lidiabazhenova.webapp.controllers.history</node>
+    <node x="1019.7036295005807" y="1112.0">com.lidiabazhenova.webapp.controllers.login</node>
+    <node x="731.085336817654" y="1112.0">com.lidiabazhenova.webapp.controllers.product</node>
+    <node x="1001.0" y="620.5">com.lidiabazhenova.webapp.dao</node>
+    <node x="1136.8857142857141" y="108.0">com.lidiabazhenova.webapp.model.Order</node>
+    <node x="143.08533681765402" y="593.0">com.lidiabazhenova.webapp.webdriver.WebDriverFactory</node>
+    <node x="1436.032955865273" y="1112.0">com.lidiabazhenova.webapp.controllers.order</node>
+    <node x="269.085336817654" y="1098.5">com.lidiabazhenova.webapp.controllers.buyproduct.BuyProductsServlet</node>
+    <node x="997.8702961672475" y="879.5">com.lidiabazhenova.webapp.service</node>
+    <node x="1419.9166666666665" y="27.0">com.lidiabazhenova.webapp.model.User</node>
+    <node x="1654.3400987224159" y="1112.0">com.lidiabazhenova.webapp.controllers.user</node>
+    <node x="564.1499999999999" y="0.0">com.lidiabazhenova.webapp.model.Product</node>
+    <node x="855.1499999999999" y="81.0">com.lidiabazhenova.webapp.model.History</node>
+    <node x="10.5" y="757.5">com.lidiabazhenova.webapp.webdriver.WebDriverSelenium</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="com.lidiabazhenova.webapp.controllers.user.DeleteUsersServlet" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="-83.625" y="-32.0" />
-      <point x="5100.0" y="1828.0" />
-      <point x="4872.949084404557" y="1828.0" />
-      <point x="4872.949084404557" y="891.0" />
-      <point x="4067.6339053952042" y="891.0" />
-      <point x="96.63157894736844" y="32.0" />
+    <edge source="com.lidiabazhenova.webapp.controllers.product" target="com.lidiabazhenova.webapp.service">
+      <point x="57.75" y="-18.5" />
+      <point x="865.835336817654" y="1078.5" />
+      <point x="1071.3702961672475" y="1078.5" />
+      <point x="0.0" y="18.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.HistoryDao" target="com.lidiabazhenova.webapp.dao.connection.ConnectionUtil">
-      <point x="44.25" y="-86.5" />
-      <point x="2515.2424580267834" y="831.0" />
-      <point x="2941.9924580267834" y="831.0" />
-      <point x="-88.0" y="59.0" />
+    <edge source="com.lidiabazhenova.webapp.controllers.user" target="com.lidiabazhenova.webapp.model.User">
+      <point x="0.0" y="-18.5" />
+      <point x="1718.8400987224159" y="573.0" />
+      <point x="1588.6166666666666" y="573.0" />
+      <point x="48.19999999999999" y="194.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.order.AddOrdersServlet" target="com.lidiabazhenova.webapp.model.Order">
-      <point x="27.0" y="-32.0" />
-      <point x="4131.969843493139" y="1848.0" />
-      <point x="4153.469843493139" y="1848.0" />
-      <point x="4153.469843493139" y="1333.0" />
-      <point x="4243.342458026783" y="1333.0" />
-      <point x="4243.342458026783" y="409.0" />
-      <point x="4235.578968186588" y="409.0" />
-      <point x="0.0" y="100.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.EditProductsServlet" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="45.40000000000009" y="-32.0" />
-      <point x="158.9000000000001" y="1848.0" />
-      <point x="136.17480151992186" y="1848.0" />
-      <point x="136.17480151992186" y="841.0" />
-      <point x="3826.054958026783" y="841.0" />
-      <point x="-144.9473684210526" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.order.EditOrdersServlet" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="-42.799999999999955" y="-32.0" />
-      <point x="4297.169843493139" y="1848.0" />
-      <point x="4291.550717115366" y="1848.0" />
-      <point x="4291.550717115366" y="1313.0" />
-      <point x="4221.342458026783" y="1313.0" />
-      <point x="4221.342458026783" y="931.0" />
-      <point x="4019.31811592152" y="931.0" />
-      <point x="48.31578947368416" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.HistoryDao" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="132.75" y="-86.5" />
-      <point x="2603.7424580267834" y="871.0" />
-      <point x="3874.370747500467" y="871.0" />
-      <point x="-96.63157894736844" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.ListProductsServlet" target="com.lidiabazhenova.webapp.service.ProductService">
-      <point x="-89.19999999999993" y="-32.0" />
-      <point x="2433.6125" y="1748.0" />
-      <point x="1124.5625" y="1748.0" />
-      <point x="161.0" y="127.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.ProductDao" target="com.lidiabazhenova.webapp.dao.ProductDao">
-      <point x="-147.20000000000005" y="141.0" />
-      <point x="1902.7924580267832" y="1273.0" />
-      <point x="1845.9924580267832" y="1273.0" />
-      <point x="1845.9924580267832" y="1206.0" />
-      <point x="-184.0" y="94.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.service.LoginService" target="com.lidiabazhenova.webapp.service.LoginService">
-      <point x="-41.75" y="73.5" />
-      <point x="3183.2424580267834" y="1644.0" />
-      <point x="3027.9924580267834" y="1644.0" />
-      <point x="3027.9924580267834" y="1540.5" />
-      <point x="-167.0" y="-0.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.UserDao" target="com.lidiabazhenova.webapp.dao.UserDao">
-      <point x="-34.75" y="114.0" />
-      <point x="5060.699084404557" y="1256.0" />
-      <point x="4926.449084404557" y="1256.0" />
-      <point x="4926.449084404557" y="1112.0" />
-      <point x="-139.0" y="-0.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.EditProductsServlet" target="com.lidiabazhenova.webapp.service.ProductService">
-      <point x="90.80000000000001" y="-32.0" />
-      <point x="204.30000000000018" y="1758.0" />
-      <point x="940.5625" y="1758.0" />
-      <point x="-23.0" y="127.5" />
+    <edge source="com.lidiabazhenova.webapp.model.History" target="com.lidiabazhenova.webapp.model.History">
+      <point x="-96.4" y="140.5" />
+      <point x="879.2499999999999" y="382.0" />
+      <point x="835.1499999999999" y="382.0" />
+      <point x="835.1499999999999" y="221.5" />
+      <point x="-120.5" y="-0.0" />
     </edge>
     <edge source="com.lidiabazhenova.webapp.controllers.buyproduct.BuyProductsServlet" target="com.lidiabazhenova.webapp.webdriver.WebDriverSelenium">
-      <point x="-56.25" y="-32.0" />
-      <point x="534.75" y="1738.0" />
-      <point x="375.394843493139" y="1738.0" />
-      <point x="0.0" y="32.0" />
+      <point x="-55.25" y="-32.0" />
+      <point x="434.835336817654" y="1068.5" />
+      <point x="325.0" y="1068.5" />
+      <point x="0.0" y="140.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.ListProductsServlet" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="44.60000000000002" y="-32.0" />
-      <point x="2567.4125000000004" y="1808.0" />
-      <point x="2723.0115844045567" y="1808.0" />
-      <point x="2723.0115844045567" y="891.0" />
-      <point x="3906.5812738162567" y="891.0" />
-      <point x="-64.42105263157896" y="32.0" />
+    <edge source="com.lidiabazhenova.webapp.dao" target="com.lidiabazhenova.webapp.dao">
+      <point x="16.0" y="18.5" />
+      <point x="1081.0" y="697.5" />
+      <point x="961.0" y="697.5" />
+      <point x="961.0" y="626.6666666666666" />
+      <point x="-64.0" y="-12.333333333333371" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.user.DeleteUsersServlet" target="com.lidiabazhenova.webapp.service.UserService">
-      <point x="83.625" y="-32.0" />
-      <point x="5267.25" y="1848.0" />
-      <point x="5486.377655833128" y="1848.0" />
-      <point x="42.42857142857133" y="114.0" />
+    <edge source="com.lidiabazhenova.webapp.controllers.buyproduct.BuyProductsServlet" target="com.lidiabazhenova.webapp.service">
+      <point x="165.75" y="-32.0" />
+      <point x="655.835336817654" y="1068.5" />
+      <point x="1055.0369628339142" y="1068.5" />
+      <point x="-16.333333333333314" y="18.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.AddProductsServlet" target="com.lidiabazhenova.webapp.model.Product.ProductBuilder">
-      <point x="-57.25" y="-32.0" />
-      <point x="1450.9699177378902" y="1768.0" />
-      <point x="1169.0625000000002" y="1768.0" />
-      <point x="1169.0625000000002" y="811.0" />
-      <point x="1034.949801519922" y="811.0" />
-      <point x="40.0" y="113.5" />
+    <edge source="com.lidiabazhenova.webapp.service" target="com.lidiabazhenova.webapp.service">
+      <point x="-65.33333333333333" y="18.5" />
+      <point x="1006.0369628339141" y="936.5" />
+      <point x="977.8702961672475" y="936.5" />
+      <point x="977.8702961672475" y="910.3333333333334" />
+      <point x="-73.5" y="12.333333333333343" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.buyproduct.BuyProductsServlet" target="com.lidiabazhenova.webapp.service.ProductService">
-      <point x="56.25" y="-32.0" />
-      <point x="647.25" y="1768.0" />
-      <point x="986.5625" y="1768.0" />
-      <point x="23.0" y="127.5" />
+    <edge source="com.lidiabazhenova.webapp.controllers.order" target="com.lidiabazhenova.webapp.model.Order">
+      <point x="0.0" y="-18.5" />
+      <point x="1505.032955865273" y="503.0" />
+      <point x="1326.242857142857" y="503.0" />
+      <point x="68.85714285714289" y="113.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.order.ListOrdersServlet" target="com.lidiabazhenova.webapp.model.Order">
-      <point x="70.0" y="-32.0" />
-      <point x="3941.969843493139" y="1848.0" />
-      <point x="4003.2424580267834" y="1848.0" />
-      <point x="4003.2424580267834" y="1323.0" />
-      <point x="4232.342458026783" y="1323.0" />
-      <point x="4232.342458026783" y="419.0" />
-      <point x="4219.512301519922" y="419.0" />
-      <point x="-16.066666666666606" y="100.5" />
+    <edge source="com.lidiabazhenova.webapp.service" target="com.lidiabazhenova.webapp.dao">
+      <point x="0.0" y="-18.5" />
+      <point x="1071.3702961672475" y="717.5" />
+      <point x="1113.0" y="717.5" />
+      <point x="48.0" y="18.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.service.OrderService" target="com.lidiabazhenova.webapp.service.OrderService">
-      <point x="-137.70000000000005" y="114.0" />
-      <point x="3468.292458026783" y="1674.5" />
-      <point x="3432.9924580267834" y="1674.5" />
-      <point x="3432.9924580267834" y="1616.5" />
-      <point x="-153.0" y="76.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.service.LoginService" target="com.lidiabazhenova.webapp.dao.LoginDao">
-      <point x="0.0" y="-73.5" />
-      <point x="117.0" y="87.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.history.HistoryServlet" target="com.lidiabazhenova.webapp.service.HistoryService">
-      <point x="-76.40000000000009" y="-32.0" />
-      <point x="2673.4125000000004" y="1728.0" />
-      <point x="1600.9125000000001" y="1728.0" />
-      <point x="141.5999999999999" y="73.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.ListProductsServlet" target="com.lidiabazhenova.webapp.service.OrderService">
-      <point x="89.20000000000005" y="-32.0" />
-      <point x="2612.0125000000003" y="1838.0" />
-      <point x="3590.6924580267832" y="1838.0" />
-      <point x="-15.299999999999955" y="114.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.order.DeleteOrdersServlet" target="com.lidiabazhenova.webapp.model.Order">
-      <point x="87.0" y="-32.0" />
-      <point x="4669.969843493139" y="1848.0" />
-      <point x="4677.4507171153655" y="1848.0" />
-      <point x="4677.4507171153655" y="1383.0" />
-      <point x="4883.949084404557" y="1383.0" />
-      <point x="4883.949084404557" y="359.0" />
-      <point x="4348.045634853255" y="359.0" />
-      <point x="112.4666666666667" y="100.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.model.Order.OrderBuilder" target="com.lidiabazhenova.webapp.model.Order">
-      <point x="-21.625" y="-59.5" />
-      <point x="4403.117458026783" y="409.0" />
-      <point x="4267.712301519921" y="409.0" />
-      <point x="32.133333333333326" y="100.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.service.HistoryService" target="com.lidiabazhenova.webapp.dao.HistoryDao">
-      <point x="88.5" y="-73.0" />
-      <point x="1547.8125000000002" y="1383.0" />
-      <point x="2541.792458026783" y="1383.0" />
-      <point x="70.79999999999995" y="86.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.UserDao" target="com.lidiabazhenova.webapp.model.User.UserBuilder">
-      <point x="34.75" y="-114.0" />
-      <point x="5130.199084404557" y="399.0" />
-      <point x="5463.069245964367" y="399.0" />
-      <point x="-38.44444444444434" y="100.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.user.EditUsersServlet" target="com.lidiabazhenova.webapp.model.User">
-      <point x="41.0" y="-32.0" />
-      <point x="5653.377655833128" y="1838.0" />
-      <point x="5706.542834404557" y="1838.0" />
-      <point x="5706.542834404557" y="781.0" />
-      <point x="5562.337301519922" y="781.0" />
-      <point x="75.3125" y="141.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.order.EditOrdersServlet" target="com.lidiabazhenova.webapp.service.OrderService">
-      <point x="-85.60000000000002" y="-32.0" />
-      <point x="4254.369843493139" y="1818.0" />
-      <point x="3713.0924580267833" y="1818.0" />
-      <point x="107.10000000000014" y="114.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.user.AddUsersServlet" target="com.lidiabazhenova.webapp.model.User">
-      <point x="25.875" y="-32.0" />
-      <point x="5864.252655833128" y="1848.0" />
-      <point x="5859.542658662779" y="1848.0" />
-      <point x="5859.542658662779" y="761.0" />
-      <point x="5592.462301519922" y="761.0" />
-      <point x="105.4375" y="141.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.user.ListUsersServlet" target="com.lidiabazhenova.webapp.model.User">
-      <point x="0.0" y="-32.0" />
-      <point x="4819.469843493139" y="1393.0" />
-      <point x="4905.949084404557" y="1393.0" />
-      <point x="4905.949084404557" y="931.0" />
-      <point x="5411.712301519922" y="931.0" />
-      <point x="-75.3125" y="141.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.model.User.UserBuilder" target="com.lidiabazhenova.webapp.model.User">
-      <point x="19.22222222222217" y="100.0" />
-      <point x="5520.735912631033" y="419.0" />
-      <point x="5535.224801519922" y="419.0" />
-      <point x="48.19999999999982" y="-141.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.OrderDao" target="com.lidiabazhenova.webapp.model.Order.OrderBuilder">
-      <point x="107.625" y="-114.0" />
-      <point x="3903.5873015199218" y="951.0" />
-      <point x="4390.142458026783" y="951.0" />
-      <point x="-34.60000000000002" y="59.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.user.AddUsersServlet" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="-25.875" y="-32.0" />
-      <point x="5812.502655833128" y="1848.0" />
-      <point x="5848.542658662779" y="1848.0" />
-      <point x="5848.542658662779" y="771.0" />
-      <point x="4115.949694868888" y="771.0" />
-      <point x="144.94736842105272" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.LoginDao" target="com.lidiabazhenova.webapp.dao.LoginDao">
-      <point x="-117.0" y="87.0" />
-      <point x="2990.9924580267834" y="1219.0" />
-      <point x="2931.9924580267834" y="1219.0" />
-      <point x="2931.9924580267834" y="1170.0" />
-      <point x="-156.0" y="58.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.order.DeleteOrdersServlet" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="-29.0" y="-32.0" />
-      <point x="4553.969843493139" y="1838.0" />
-      <point x="4624.469843493139" y="1838.0" />
-      <point x="4624.469843493139" y="1333.0" />
-      <point x="4399.749801519922" y="1333.0" />
-      <point x="4399.749801519922" y="921.0" />
-      <point x="4035.4233790794146" y="921.0" />
-      <point x="64.42105263157896" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.ProductDao" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="138.0" y="-141.0" />
-      <point x="2187.9924580267834" y="861.0" />
-      <point x="3858.2654843425726" y="861.0" />
-      <point x="-112.73684210526312" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.model.User" target="com.lidiabazhenova.webapp.model.User">
-      <point x="-105.4375" y="141.0" />
-      <point x="5381.587301519922" y="741.0" />
-      <point x="5346.524801519922" y="741.0" />
-      <point x="5346.524801519922" y="580.0" />
-      <point x="-120.5" y="-0.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.login.LoginServlet" target="com.lidiabazhenova.webapp.service.LoginService">
-      <point x="-45.25" y="-32.0" />
-      <point x="125.25" y="73.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.AddProductsServlet" target="com.lidiabazhenova.webapp.service.ProductService">
-      <point x="-95.41666666666666" y="-32.0" />
-      <point x="1412.8032510712235" y="1778.0" />
-      <point x="1078.5625" y="1778.0" />
-      <point x="115.0" y="127.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.user.ListUsersServlet" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="-67.0" y="-32.0" />
-      <point x="4752.469843493139" y="1848.0" />
-      <point x="4746.7007171153655" y="1848.0" />
-      <point x="4746.7007171153655" y="911.0" />
-      <point x="4051.528642237309" y="911.0" />
-      <point x="80.52631578947376" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.user.AddUsersServlet" target="com.lidiabazhenova.webapp.model.User.UserBuilder">
-      <point x="77.625" y="-32.0" />
-      <point x="5916.002655833128" y="1848.0" />
-      <point x="5870.542658662779" y="1848.0" />
-      <point x="5870.542658662779" y="389.0" />
-      <point x="5578.4025792977" y="389.0" />
-      <point x="76.88888888888914" y="100.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.buyproduct.BuyProductsServlet" target="com.lidiabazhenova.webapp.model.Product">
-      <point x="-93.75" y="-32.0" />
-      <point x="497.25" y="1748.0" />
-      <point x="150.39484349313898" y="1748.0" />
-      <point x="150.39484349313898" y="389.0" />
-      <point x="899.0926586627793" y="389.0" />
-      <point x="-62.0" y="154.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.model.Product.ProductBuilder" target="com.lidiabazhenova.webapp.model.Product.ProductBuilder">
-      <point x="-80.0" y="113.5" />
-      <point x="914.949801519922" y="713.5" />
-      <point x="874.949801519922" y="713.5" />
-      <point x="874.949801519922" y="580.0" />
-      <point x="-100.0" y="-0.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.model.AbstractModel" target="com.lidiabazhenova.webapp.model.AbstractModel">
-      <point x="-80.33333333333326" y="59.5" />
-      <point x="1452.3257913601167" y="234.0" />
-      <point x="1392.15912469345" y="234.0" />
-      <point x="1392.15912469345" y="154.5" />
-      <point x="-120.5" y="-0.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.user.EditUsersServlet" target="com.lidiabazhenova.webapp.model.User.UserBuilder">
-      <point x="82.0" y="-32.0" />
-      <point x="5694.377655833128" y="1848.0" />
-      <point x="5739.886584404557" y="1848.0" />
-      <point x="5739.886584404557" y="399.0" />
-      <point x="5559.180357075477" y="399.0" />
-      <point x="57.666666666666515" y="100.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.user.EditUsersServlet" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="-41.0" y="-32.0" />
-      <point x="5571.377655833128" y="1838.0" />
-      <point x="5628.239087234208" y="1838.0" />
-      <point x="5628.239087234208" y="801.0" />
-      <point x="4099.844431710993" y="801.0" />
-      <point x="128.84210526315792" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.DeleteProductsServlet" target="com.lidiabazhenova.webapp.model.Product.ProductBuilder">
-      <point x="-30.625" y="-32.0" />
-      <point x="881.8865844045567" y="1738.0" />
-      <point x="729.0625" y="1738.0" />
-      <point x="729.0625" y="811.0" />
-      <point x="994.949801519922" y="811.0" />
+    <edge source="com.lidiabazhenova.webapp.service" target="com.lidiabazhenova.webapp.model.Order">
+      <point x="29.399999999999977" y="-18.5" />
+      <point x="1100.7702961672474" y="727.5" />
+      <point x="1199.1734320557491" y="727.5" />
+      <point x="1199.1734320557491" y="553.0" />
+      <point x="1257.3857142857141" y="553.0" />
       <point x="0.0" y="113.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.login.LoginServlet" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="45.25" y="-32.0" />
-      <point x="3440.7424580267834" y="1818.0" />
-      <point x="3402.4924580267834" y="1818.0" />
-      <point x="3402.4924580267834" y="921.0" />
-      <point x="3954.897063289941" y="921.0" />
-      <point x="-16.105263157894797" y="32.0" />
+    <edge source="com.lidiabazhenova.webapp.dao" target="com.lidiabazhenova.webapp.model.User">
+      <point x="48.0" y="-18.5" />
+      <point x="1113.0" y="563.0" />
+      <point x="1492.2166666666667" y="563.0" />
+      <point x="-48.19999999999999" y="194.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.user.AddUsersServlet" target="com.lidiabazhenova.webapp.service.UserService">
-      <point x="-77.625" y="-32.0" />
-      <point x="5760.752655833128" y="1828.0" />
-      <point x="5571.234798690271" y="1828.0" />
-      <point x="127.28571428571422" y="114.0" />
+    <edge source="com.lidiabazhenova.webapp.controllers.history" target="com.lidiabazhenova.webapp.model.Order">
+      <point x="48.66666666666663" y="-18.5" />
+      <point x="1370.2191927990707" y="1078.5" />
+      <point x="1424.032955865273" y="1078.5" />
+      <point x="1424.032955865273" y="513.0" />
+      <point x="1291.8142857142857" y="513.0" />
+      <point x="34.428571428571445" y="113.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.model.User" target="com.lidiabazhenova.webapp.model.User.UserBuilder">
-      <point x="-48.19999999999999" y="-141.0" />
-      <point x="5438.824801519922" y="409.0" />
-      <point x="5482.291468186589" y="409.0" />
-      <point x="-19.22222222222223" y="100.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.model.Order.OrderBuilder" target="com.lidiabazhenova.webapp.model.Order.OrderBuilder">
-      <point x="-69.20000000000005" y="59.5" />
-      <point x="4355.542458026783" y="659.5" />
-      <point x="4318.242458026783" y="659.5" />
-      <point x="4318.242458026783" y="580.0" />
-      <point x="-86.5" y="-0.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.AddProductsServlet" target="com.lidiabazhenova.webapp.model.Order">
-      <point x="19.083333333333258" y="-32.0" />
-      <point x="1527.3032510712235" y="1808.0" />
-      <point x="1793.4924580267832" y="1808.0" />
-      <point x="1793.4924580267832" y="379.0" />
-      <point x="4139.1789681865885" y="379.0" />
-      <point x="-96.39999999999998" y="100.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.service.OrderService" target="com.lidiabazhenova.webapp.dao.OrderDao">
-      <point x="114.75" y="-114.0" />
-      <point x="3720.7424580267834" y="1393.0" />
-      <point x="3903.5873015199218" y="1393.0" />
-      <point x="107.625" y="114.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.service.UserService" target="com.lidiabazhenova.webapp.dao.UserDao">
-      <point x="-74.25" y="-114.0" />
-      <point x="5369.699084404557" y="1393.0" />
-      <point x="5199.699084404557" y="1393.0" />
-      <point x="104.25" y="114.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.webdriver.WebDriverSelenium" target="com.lidiabazhenova.webapp.model.Product">
-      <point x="-143.0" y="-32.0" />
-      <point x="232.39484349313898" y="1393.0" />
-      <point x="313.394843493139" y="1393.0" />
-      <point x="313.394843493139" y="399.0" />
-      <point x="916.8069443770651" y="399.0" />
-      <point x="-44.28571428571422" y="154.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.user.EditUsersServlet" target="com.lidiabazhenova.webapp.service.UserService">
-      <point x="-82.0" y="-32.0" />
-      <point x="5530.377655833128" y="1848.0" />
-      <point x="5528.8062272617" y="1848.0" />
-      <point x="84.85714285714289" y="114.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.user.ListUsersServlet" target="com.lidiabazhenova.webapp.service.UserService">
-      <point x="67.0" y="-32.0" />
-      <point x="4886.469843493139" y="1838.0" />
-      <point x="5443.949084404557" y="1838.0" />
-      <point x="0.0" y="114.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.AddProductsServlet" target="com.lidiabazhenova.webapp.model.Product">
-      <point x="-19.083333333333258" y="-32.0" />
-      <point x="1489.136584404557" y="1758.0" />
-      <point x="1231.8125000000002" y="1758.0" />
-      <point x="1231.8125000000002" y="389.0" />
-      <point x="1040.806944377065" y="389.0" />
-      <point x="79.71428571428578" y="154.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.UserDao" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="-34.75" y="-114.0" />
-      <point x="5060.699084404557" y="811.0" />
-      <point x="4083.739168553099" y="811.0" />
-      <point x="112.73684210526312" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.history.HistoryServlet" target="com.lidiabazhenova.webapp.model.Order">
-      <point x="0.0" y="-32.0" />
-      <point x="2749.8125" y="1808.0" />
-      <point x="2799.4924580267834" y="1808.0" />
-      <point x="2799.4924580267834" y="399.0" />
-      <point x="4171.312301519922" y="399.0" />
-      <point x="-64.26666666666665" y="100.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.service.ProductService" target="com.lidiabazhenova.webapp.dao.ProductDao">
-      <point x="92.0" y="-127.5" />
-      <point x="1055.5625" y="1373.0" />
-      <point x="2123.592458026783" y="1373.0" />
-      <point x="73.59999999999991" y="141.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.DeleteProductsServlet" target="com.lidiabazhenova.webapp.service.ProductService">
-      <point x="30.625" y="-32.0" />
-      <point x="943.1365844045567" y="1778.0" />
-      <point x="1032.5625" y="1778.0" />
-      <point x="69.0" y="127.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.order.AddOrdersServlet" target="com.lidiabazhenova.webapp.service.OrderService">
-      <point x="-81.0" y="-32.0" />
-      <point x="4023.969843493139" y="1828.0" />
-      <point x="3682.4924580267834" y="1828.0" />
-      <point x="76.5" y="114.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.ProductDao" target="com.lidiabazhenova.webapp.model.Product.ProductBuilder">
-      <point x="-138.0" y="-141.0" />
-      <point x="1911.9924580267832" y="801.0" />
-      <point x="1074.949801519922" y="801.0" />
-      <point x="80.0" y="113.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.model.History" target="com.lidiabazhenova.webapp.model.AbstractModel">
-      <point x="0.0" y="-59.0" />
-      <point x="1385.979166666667" y="419.0" />
-      <point x="1532.65912469345" y="419.0" />
-      <point x="0.0" y="59.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.OrderDao" target="com.lidiabazhenova.webapp.dao.OrderDao">
-      <point x="-107.625" y="114.0" />
-      <point x="3688.3373015199218" y="1246.0" />
-      <point x="3632.4623015199218" y="1246.0" />
-      <point x="3632.4623015199218" y="1188.0" />
-      <point x="-143.5" y="76.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.model.Order" target="com.lidiabazhenova.webapp.model.Order">
-      <point x="-112.4666666666667" y="100.5" />
-      <point x="4123.112301519922" y="275.0" />
-      <point x="4095.0789681865886" y="275.0" />
-      <point x="4095.0789681865886" y="154.5" />
+    <edge source="com.lidiabazhenova.webapp.model.User" target="com.lidiabazhenova.webapp.model.User">
+      <point x="-96.40000000000003" y="194.5" />
+      <point x="1444.0166666666664" y="436.0" />
+      <point x="1399.9166666666665" y="436.0" />
+      <point x="1399.9166666666665" y="221.5" />
       <point x="-120.5" y="-0.0" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.model.User.UserBuilder" target="com.lidiabazhenova.webapp.model.User.UserBuilder">
-      <point x="-76.88888888888869" y="100.0" />
-      <point x="5424.624801519922" y="274.5" />
-      <point x="5395.01369040881" y="274.5" />
-      <point x="5395.01369040881" y="154.5" />
-      <point x="-86.5" y="-0.0" />
+    <edge source="com.lidiabazhenova.webapp.controllers.buyproduct.BuyProductsServlet" target="com.lidiabazhenova.webapp.model.Product">
+      <point x="-165.75" y="-32.0" />
+      <point x="324.335336817654" y="1078.5" />
+      <point x="0.0" y="1078.5" />
+      <point x="0.0" y="503.0" />
+      <point x="617.9357142857142" y="503.0" />
+      <point x="-71.71428571428572" y="221.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.service.OrderService" target="com.lidiabazhenova.webapp.model.Order">
-      <point x="38.25" y="-114.0" />
-      <point x="3644.2424580267834" y="1393.0" />
-      <point x="3601.9623015199218" y="1393.0" />
-      <point x="3601.9623015199218" y="409.0" />
-      <point x="4187.378968186588" y="409.0" />
-      <point x="-48.200000000000045" y="100.5" />
+    <edge source="com.lidiabazhenova.webapp.controllers.order" target="com.lidiabazhenova.webapp.service">
+      <point x="-46.0" y="-18.5" />
+      <point x="1459.032955865273" y="1068.5" />
+      <point x="1120.3702961672475" y="1068.5" />
+      <point x="49.0" y="18.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.UserDao" target="com.lidiabazhenova.webapp.model.User">
-      <point x="104.25" y="-114.0" />
-      <point x="5199.699084404557" y="941.0" />
-      <point x="5441.837301519922" y="941.0" />
-      <point x="-45.1875" y="141.0" />
+    <edge source="com.lidiabazhenova.webapp.webdriver.WebDriverSelenium" target="com.lidiabazhenova.webapp.model.Product">
+      <point x="209.66666666666663" y="-140.5" />
+      <point x="534.6666666666666" y="737.5" />
+      <point x="515.0310975609755" y="737.5" />
+      <point x="515.0310975609755" y="513.0" />
+      <point x="653.7928571428571" y="513.0" />
+      <point x="-35.85714285714283" y="221.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.EditProductsServlet" target="com.lidiabazhenova.webapp.model.Product">
-      <point x="-90.80000000000018" y="-32.0" />
-      <point x="22.699999999999818" y="1828.0" />
-      <point x="103.17480151992186" y="1828.0" />
-      <point x="103.17480151992186" y="369.0" />
-      <point x="863.6640872342077" y="369.0" />
-      <point x="-97.42857142857156" y="154.5" />
+    <edge source="com.lidiabazhenova.webapp.controllers.user" target="com.lidiabazhenova.webapp.service">
+      <point x="-43.0" y="-18.5" />
+      <point x="1675.8400987224159" y="1058.5" />
+      <point x="1136.7036295005807" y="1058.5" />
+      <point x="65.33333333333331" y="18.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.service.UserService" target="com.lidiabazhenova.webapp.model.User">
-      <point x="74.25" y="-114.0" />
-      <point x="5518.199084404557" y="951.0" />
-      <point x="5502.087301519922" y="951.0" />
-      <point x="15.0625" y="141.0" />
+    <edge source="com.lidiabazhenova.webapp.dao" target="com.lidiabazhenova.webapp.model.History">
+      <point x="-16.0" y="-18.5" />
+      <point x="1049.0" y="523.0" />
+      <point x="1023.8499999999999" y="523.0" />
+      <point x="48.200000000000045" y="140.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.ListProductsServlet" target="com.lidiabazhenova.webapp.model.Product">
-      <point x="-44.59999999999991" y="-32.0" />
-      <point x="2478.2125000000005" y="1738.0" />
-      <point x="1815.4924580267832" y="1738.0" />
-      <point x="1815.4924580267832" y="369.0" />
-      <point x="1058.5212300913508" y="369.0" />
-      <point x="97.42857142857156" y="154.5" />
+    <edge source="com.lidiabazhenova.webapp.model.Order" target="com.lidiabazhenova.webapp.model.Order">
+      <point x="-103.28571428571429" y="113.5" />
+      <point x="1154.1" y="355.0" />
+      <point x="1116.8857142857141" y="355.0" />
+      <point x="1116.8857142857141" y="221.5" />
+      <point x="-120.5" y="-0.0" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.model.User" target="com.lidiabazhenova.webapp.model.AbstractModel">
-      <point x="-96.39999999999998" y="-141.0" />
-      <point x="5390.624801519922" y="349.0" />
-      <point x="1612.9924580267832" y="349.0" />
-      <point x="80.33333333333331" y="59.5" />
+    <edge source="com.lidiabazhenova.webapp.dao" target="com.lidiabazhenova.webapp.model.Product">
+      <point x="-48.0" y="-18.5" />
+      <point x="1017.0" y="483.0" />
+      <point x="797.2214285714285" y="483.0" />
+      <point x="107.57142857142858" y="221.5" />
+    </edge>
+    <edge source="com.lidiabazhenova.webapp.controllers.product" target="com.lidiabazhenova.webapp.model.Product">
+      <point x="-19.25" y="-18.5" />
+      <point x="788.835336817654" y="1058.5" />
+      <point x="765.7763356562136" y="1058.5" />
+      <point x="765.7763356562136" y="503.0" />
+      <point x="725.5071428571428" y="503.0" />
+      <point x="35.85714285714283" y="221.5" />
+    </edge>
+    <edge source="com.lidiabazhenova.webapp.controllers.login" target="com.lidiabazhenova.webapp.service">
+      <point x="0.0" y="-18.5" />
+      <point x="16.333333333333314" y="18.5" />
     </edge>
     <edge source="com.lidiabazhenova.webapp.webdriver.WebDriverSelenium" target="com.lidiabazhenova.webapp.webdriver.WebDriverFactory">
-      <point x="0.0" y="-32.0" />
-      <point x="375.394843493139" y="1393.0" />
-      <point x="385.394843493139" y="1393.0" />
-      <point x="-61.5" y="32.0" />
+      <point x="-209.66666666666663" y="-140.5" />
+      <point x="115.33333333333337" y="737.5" />
+      <point x="204.58533681765402" y="737.5" />
+      <point x="-61.5" y="46.0" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.order.EditOrdersServlet" target="com.lidiabazhenova.webapp.model.Order.OrderBuilder">
-      <point x="0.0" y="-32.0" />
-      <point x="4339.969843493139" y="1848.0" />
-      <point x="4346.069843493139" y="1848.0" />
-      <point x="4346.069843493139" y="1353.0" />
-      <point x="4486.242458026783" y="1353.0" />
-      <point x="4486.242458026783" y="951.0" />
-      <point x="4459.342458026784" y="951.0" />
-      <point x="34.600000000000136" y="59.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.LoginDao" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="78.0" y="-87.0" />
-      <point x="3185.9924580267834" y="911.0" />
-      <point x="3938.7918001320463" y="911.0" />
-      <point x="-32.21052631578948" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.model.Product.ProductBuilder" target="com.lidiabazhenova.webapp.model.Product">
-      <point x="-75.0" y="-113.5" />
-      <point x="919.949801519922" y="419.0" />
-      <point x="952.2355158056362" y="419.0" />
-      <point x="-8.85714285714289" y="154.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.order.DeleteOrdersServlet" target="com.lidiabazhenova.webapp.model.Order.OrderBuilder">
-      <point x="29.0" y="-32.0" />
-      <point x="4611.969843493139" y="1848.0" />
-      <point x="4635.469843493139" y="1848.0" />
-      <point x="4635.469843493139" y="1363.0" />
-      <point x="4757.7007171153655" y="1363.0" />
-      <point x="4757.7007171153655" y="901.0" />
-      <point x="4493.942458026783" y="901.0" />
-      <point x="69.20000000000005" y="59.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.HistoryDao" target="com.lidiabazhenova.webapp.dao.HistoryDao">
-      <point x="0.0" y="86.5" />
-      <point x="2470.9924580267834" y="1238.5" />
-      <point x="2253.9924580267834" y="1238.5" />
-      <point x="2253.9924580267834" y="1054.3333333333335" />
-      <point x="-177.0" y="-57.66666666666663" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.service.UserService" target="com.lidiabazhenova.webapp.service.UserService">
-      <point x="-127.28571428571422" y="114.0" />
-      <point x="5316.663370118842" y="1674.5" />
-      <point x="5275.449084404557" y="1674.5" />
-      <point x="5275.449084404557" y="1616.5" />
-      <point x="-148.5" y="76.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.service.HistoryService" target="com.lidiabazhenova.webapp.service.HistoryService">
-      <point x="0.0" y="73.0" />
-      <point x="1459.3125000000002" y="1653.5" />
-      <point x="1242.3125000000002" y="1653.5" />
-      <point x="1242.3125000000002" y="1491.8333333333335" />
-      <point x="-177.0" y="-48.66666666666663" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.LoginDao" target="com.lidiabazhenova.webapp.dao.connection.ConnectionUtil">
-      <point x="-78.0" y="-87.0" />
-      <point x="0.0" y="59.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.order.ListOrdersServlet" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="0.0" y="-32.0" />
-      <point x="3871.969843493139" y="1838.0" />
-      <point x="3951.1498015199218" y="1838.0" />
-      <point x="3951.1498015199218" y="941.0" />
-      <point x="3987.1075896057305" y="941.0" />
-      <point x="16.105263157894797" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.order.ListOrdersServlet" target="com.lidiabazhenova.webapp.service.OrderService">
-      <point x="-70.0" y="-32.0" />
-      <point x="3801.969843493139" y="1848.0" />
-      <point x="3651.892458026783" y="1848.0" />
-      <point x="45.90000000000009" y="114.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.HistoryDao" target="com.lidiabazhenova.webapp.model.History">
-      <point x="-44.25" y="-86.5" />
-      <point x="2426.7424580267834" y="781.0" />
-      <point x="1431.479166666667" y="781.0" />
-      <point x="45.5" y="59.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.ListProductsServlet" target="com.lidiabazhenova.webapp.model.Order">
-      <point x="0.0" y="-32.0" />
-      <point x="2522.8125" y="1798.0" />
-      <point x="2669.4924580267834" y="1798.0" />
-      <point x="2669.4924580267834" y="389.0" />
-      <point x="4155.245634853255" y="389.0" />
-      <point x="-80.33333333333337" y="100.5" />
+    <edge source="com.lidiabazhenova.webapp.service" target="com.lidiabazhenova.webapp.model.Product">
+      <point x="-58.80000000000001" y="-18.5" />
+      <point x="1012.5702961672474" y="737.5" />
+      <point x="908.5202961672475" y="737.5" />
+      <point x="908.5202961672475" y="493.0" />
+      <point x="761.3642857142856" y="493.0" />
+      <point x="71.71428571428572" y="221.5" />
     </edge>
     <edge source="com.lidiabazhenova.webapp.model.Product" target="com.lidiabazhenova.webapp.model.Product">
-      <point x="-115.14285714285734" y="154.5" />
-      <point x="845.949801519922" y="329.0" />
-      <point x="817.0926586627793" y="329.0" />
-      <point x="817.0926586627793" y="154.5" />
-      <point x="-124.0" y="-0.0" />
+      <point x="-107.57142857142856" y="221.5" />
+      <point x="582.0785714285714" y="463.0" />
+      <point x="544.1499999999999" y="463.0" />
+      <point x="544.1499999999999" y="221.5" />
+      <point x="-125.5" y="-0.0" />
     </edge>
     <edge source="com.lidiabazhenova.webapp.controllers.buyproduct.BuyProductsServlet" target="com.lidiabazhenova.webapp.model.History">
-      <point x="-18.75" y="-32.0" />
-      <point x="572.25" y="1748.0" />
-      <point x="600.394843493139" y="1748.0" />
-      <point x="600.394843493139" y="1343.0" />
-      <point x="633.394843493139" y="1343.0" />
-      <point x="633.394843493139" y="821.0" />
-      <point x="1310.1458333333337" y="821.0" />
-      <point x="-75.83333333333326" y="59.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.OrderDao" target="com.lidiabazhenova.webapp.dao.connection.ConnectionUtil">
-      <point x="-107.625" y="-114.0" />
-      <point x="3688.3373015199218" y="831.0" />
-      <point x="3117.9924580267834" y="831.0" />
-      <point x="88.0" y="59.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.order.EditOrdersServlet" target="com.lidiabazhenova.webapp.model.Order">
-      <point x="85.59999999999991" y="-32.0" />
-      <point x="4425.569843493139" y="1848.0" />
-      <point x="4448.250717115365" y="1848.0" />
-      <point x="4448.250717115365" y="1373.0" />
-      <point x="4768.7007171153655" y="1373.0" />
-      <point x="4768.7007171153655" y="369.0" />
-      <point x="4331.978968186589" y="369.0" />
-      <point x="96.40000000000009" y="100.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.history.HistoryServlet" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="38.200000000000045" y="-32.0" />
-      <point x="2788.0125000000003" y="1818.0" />
-      <point x="2810.4924580267834" y="1818.0" />
-      <point x="2810.4924580267834" y="901.0" />
-      <point x="3922.6865369741517" y="901.0" />
-      <point x="-48.31578947368416" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.DeleteProductsServlet" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="91.875" y="-32.0" />
-      <point x="1004.3865844045567" y="1788.0" />
-      <point x="1158.0625000000002" y="1788.0" />
-      <point x="1158.0625000000002" y="1363.0" />
-      <point x="1804.4924580267832" y="1363.0" />
-      <point x="1804.4924580267832" y="851.0" />
-      <point x="3842.1602211846775" y="851.0" />
-      <point x="-128.84210526315792" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.AddProductsServlet" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="57.25" y="-32.0" />
-      <point x="1565.4699177378902" y="1818.0" />
-      <point x="1804.4924580267832" y="1818.0" />
-      <point x="1804.4924580267832" y="1393.0" />
-      <point x="2658.4924580267834" y="1393.0" />
-      <point x="2658.4924580267834" y="881.0" />
-      <point x="3890.4760106583617" y="881.0" />
-      <point x="-80.52631578947376" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.order.DeleteOrdersServlet" target="com.lidiabazhenova.webapp.service.OrderService">
-      <point x="-87.0" y="-32.0" />
-      <point x="4495.969843493139" y="1808.0" />
-      <point x="3743.6924580267832" y="1808.0" />
-      <point x="137.70000000000005" y="114.0" />
+      <point x="55.25" y="-32.0" />
+      <point x="545.335336817654" y="1078.5" />
+      <point x="650.0" y="1078.5" />
+      <point x="650.0" y="523.0" />
+      <point x="927.4499999999998" y="523.0" />
+      <point x="-48.200000000000045" y="140.5" />
     </edge>
     <edge source="com.lidiabazhenova.webapp.webdriver.WebDriverFactory" target="com.lidiabazhenova.webapp.webdriver.WebDriverSelenium">
-      <point x="61.5" y="32.0" />
-      <point x="508.394843493139" y="1393.0" />
-      <point x="518.394843493139" y="1393.0" />
-      <point x="143.0" y="-32.0" />
+      <point x="61.5" y="46.0" />
+      <point x="327.585336817654" y="737.5" />
+      <point x="325.0" y="737.5" />
+      <point x="0.0" y="-140.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.service.HistoryService" target="com.lidiabazhenova.webapp.model.History">
-      <point x="-88.5" y="-73.0" />
-      <point x="-15.166666666666742" y="59.0" />
+    <edge source="com.lidiabazhenova.webapp.service" target="com.lidiabazhenova.webapp.model.History">
+      <point x="-29.400000000000034" y="-18.5" />
+      <point x="1041.9702961672474" y="727.5" />
+      <point x="950.5" y="727.5" />
+      <point x="950.5" y="523.0" />
+      <point x="975.6499999999999" y="523.0" />
+      <point x="0.0" y="140.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.history.HistoryServlet" target="com.lidiabazhenova.webapp.service.OrderService">
-      <point x="76.40000000000009" y="-32.0" />
-      <point x="2826.2125000000005" y="1848.0" />
-      <point x="3621.292458026783" y="1848.0" />
-      <point x="15.299999999999955" y="114.0" />
+    <edge source="com.lidiabazhenova.webapp.dao" target="com.lidiabazhenova.webapp.model.Order">
+      <point x="16.0" y="-18.5" />
+      <point x="1081.0" y="543.0" />
+      <point x="1222.9571428571428" y="543.0" />
+      <point x="-34.42857142857143" y="113.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.EditProductsServlet" target="com.lidiabazhenova.webapp.model.Product.ProductBuilder">
-      <point x="0.0" y="-32.0" />
-      <point x="113.5" y="1848.0" />
-      <point x="125.17480151992186" y="1848.0" />
-      <point x="125.17480151992186" y="801.0" />
-      <point x="954.949801519922" y="801.0" />
-      <point x="-40.0" y="113.5" />
+    <edge source="com.lidiabazhenova.webapp.controllers.product" target="com.lidiabazhenova.webapp.model.Order">
+      <point x="19.25" y="-18.5" />
+      <point x="827.335336817654" y="1058.5" />
+      <point x="897.5202961672475" y="1058.5" />
+      <point x="897.5202961672475" y="533.0" />
+      <point x="1188.5285714285712" y="533.0" />
+      <point x="-68.85714285714286" y="113.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.ProductDao" target="com.lidiabazhenova.webapp.dao.connection.ConnectionUtil">
-      <point x="46.0" y="-141.0" />
-      <point x="2095.9924580267834" y="821.0" />
-      <point x="2853.9924580267834" y="821.0" />
-      <point x="-176.0" y="59.0" />
+    <edge source="com.lidiabazhenova.webapp.controllers.history" target="com.lidiabazhenova.webapp.service">
+      <point x="-48.66666666666663" y="-18.5" />
+      <point x="1272.8858594657374" y="1078.5" />
+      <point x="1104.036962833914" y="1078.5" />
+      <point x="32.66666666666663" y="18.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.service.ProductService" target="com.lidiabazhenova.webapp.service.ProductService">
-      <point x="-69.0" y="127.5" />
-      <point x="894.5625" y="1708.0" />
-      <point x="739.5625" y="1708.0" />
-      <point x="739.5625" y="1455.5" />
-      <point x="-184.0" y="-85.0" />
+    <edge source="com.lidiabazhenova.webapp.service" target="com.lidiabazhenova.webapp.model.User">
+      <point x="58.80000000000001" y="-18.5" />
+      <point x="1130.1702961672474" y="737.5" />
+      <point x="1274.1020034843207" y="737.5" />
+      <point x="1274.1020034843207" y="573.0" />
+      <point x="1540.4166666666665" y="573.0" />
+      <point x="0.0" y="194.5" />
     </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.UserDao" target="com.lidiabazhenova.webapp.dao.connection.ConnectionUtil">
-      <point x="-104.25" y="-114.0" />
-      <point x="4991.199084404557" y="821.0" />
-      <point x="3205.9924580267834" y="821.0" />
-      <point x="176.0" y="59.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.order.AddOrdersServlet" target="com.lidiabazhenova.webapp.model.Order.OrderBuilder">
-      <point x="81.0" y="-32.0" />
-      <point x="4185.969843493139" y="1848.0" />
-      <point x="4208.4507171153655" y="1848.0" />
-      <point x="4208.4507171153655" y="1343.0" />
-      <point x="4424.742458026783" y="1343.0" />
-      <point x="0.0" y="59.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.ProductDao" target="com.lidiabazhenova.webapp.model.Product">
-      <point x="-46.0" y="-141.0" />
-      <point x="2003.9924580267832" y="359.0" />
-      <point x="1076.2355158056366" y="359.0" />
-      <point x="115.14285714285734" y="154.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.order.AddOrdersServlet" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="-27.0" y="-32.0" />
-      <point x="4077.969843493139" y="1838.0" />
-      <point x="4131.469843493139" y="1838.0" />
-      <point x="4131.469843493139" y="941.0" />
-      <point x="4003.212852763625" y="941.0" />
-      <point x="32.21052631578948" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.user.DeleteUsersServlet" target="com.lidiabazhenova.webapp.model.User">
-      <point x="27.875" y="-32.0" />
-      <point x="5211.5" y="1828.0" />
-      <point x="5244.949084404557" y="1828.0" />
-      <point x="5244.949084404557" y="951.0" />
-      <point x="5471.962301519922" y="951.0" />
-      <point x="-15.0625" y="141.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.model.Order" target="com.lidiabazhenova.webapp.model.Order.OrderBuilder">
-      <point x="64.26666666666665" y="100.5" />
-      <point x="4299.845634853255" y="389.0" />
-      <point x="4489.617458026783" y="389.0" />
-      <point x="64.875" y="-59.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.OrderDao" target="com.lidiabazhenova.webapp.exception.DataSourceException">
-      <point x="35.875" y="-114.0" />
-      <point x="3831.8373015199218" y="931.0" />
-      <point x="3971.002326447836" y="931.0" />
-      <point x="0.0" y="32.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.model.Product" target="com.lidiabazhenova.webapp.model.Product.ProductBuilder">
-      <point x="44.28571428571422" y="154.5" />
-      <point x="1005.3783729484935" y="409.0" />
-      <point x="1069.949801519922" y="409.0" />
-      <point x="75.0" y="-113.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.buyproduct.BuyProductsServlet" target="com.lidiabazhenova.webapp.service.HistoryService">
-      <point x="93.75" y="-32.0" />
-      <point x="684.75" y="1798.0" />
-      <point x="1530.1125000000002" y="1798.0" />
-      <point x="70.79999999999995" y="73.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.AddProductsServlet" target="com.lidiabazhenova.webapp.service.OrderService">
-      <point x="95.41666666666666" y="-32.0" />
-      <point x="1603.636584404557" y="1828.0" />
-      <point x="3560.092458026783" y="1828.0" />
-      <point x="-45.90000000000009" y="114.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.history.HistoryServlet" target="com.lidiabazhenova.webapp.model.History">
-      <point x="-38.200000000000045" y="-32.0" />
-      <point x="2711.6125" y="1818.0" />
-      <point x="2734.0115844045567" y="1818.0" />
-      <point x="2734.0115844045567" y="771.0" />
-      <point x="1461.8125000000002" y="771.0" />
-      <point x="75.83333333333326" y="59.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.dao.OrderDao" target="com.lidiabazhenova.webapp.model.Order">
-      <point x="-35.875" y="-114.0" />
-      <point x="3760.0873015199218" y="831.0" />
-      <point x="3747.8865844045567" y="831.0" />
-      <point x="3747.8865844045567" y="419.0" />
-      <point x="4203.445634853255" y="419.0" />
-      <point x="-32.13333333333321" y="100.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.user.DeleteUsersServlet" target="com.lidiabazhenova.webapp.model.User.UserBuilder">
-      <point x="-27.875" y="-32.0" />
-      <point x="5155.75" y="1818.0" />
-      <point x="4894.949084404557" y="1818.0" />
-      <point x="4894.949084404557" y="389.0" />
-      <point x="5443.847023742144" y="389.0" />
-      <point x="-57.666666666666515" y="100.0" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.controllers.product.DeleteProductsServlet" target="com.lidiabazhenova.webapp.model.Product">
-      <point x="-91.875" y="-32.0" />
-      <point x="820.6365844045567" y="1748.0" />
-      <point x="622.394843493139" y="1748.0" />
-      <point x="622.394843493139" y="409.0" />
-      <point x="934.5212300913508" y="409.0" />
-      <point x="-26.57142857142844" y="154.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.service.OrderService" target="com.lidiabazhenova.webapp.dao.HistoryDao">
-      <point x="-38.25" y="-114.0" />
-      <point x="3567.7424580267834" y="1363.0" />
-      <point x="2612.592458026783" y="1363.0" />
-      <point x="141.5999999999999" y="86.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.service.ProductService" target="com.lidiabazhenova.webapp.model.Product">
-      <point x="-92.0" y="-127.5" />
-      <point x="871.5625" y="1343.0" />
-      <point x="1209.8125000000002" y="1343.0" />
-      <point x="1209.8125000000002" y="399.0" />
-      <point x="1023.0926586627793" y="399.0" />
-      <point x="62.0" y="154.5" />
-    </edge>
-    <edge source="com.lidiabazhenova.webapp.service.OrderService" target="com.lidiabazhenova.webapp.dao.ProductDao">
-      <point x="-114.75" y="-114.0" />
-      <point x="3491.2424580267834" y="1373.0" />
-      <point x="2197.1924580267832" y="1373.0" />
-      <point x="147.20000000000005" y="141.0" />
+    <edge source="com.lidiabazhenova.webapp.controllers.history" target="com.lidiabazhenova.webapp.model.History">
+      <point x="0.0" y="-18.5" />
+      <point x="1321.5525261324042" y="1078.5" />
+      <point x="1340.3858594657374" y="1078.5" />
+      <point x="1340.3858594657374" y="523.0" />
+      <point x="1072.05" y="523.0" />
+      <point x="96.40000000000009" y="140.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="3135.9999999999995" y="1697.0" />
+  <settings layout="Hierarchic Group" zoom="0.5178326474622771" x="1329.5" y="719.0" />
   <SelectedNodes />
   <Categories>
-    <Category>Fields</Category>
-    <Category>Constructors</Category>
     <Category>Methods</Category>
-    <Category>Properties</Category>
-    <Category>Inner Classes</Category>
+    <Category>Fields</Category>
   </Categories>
   <SCOPE>All</SCOPE>
-  <VISIBILITY>public</VISIBILITY>
+  <VISIBILITY>private</VISIBILITY>
 </Diagram>
 
