@@ -86,10 +86,11 @@ public class HistoryDao {
     }
 
     private History populateHistoryFromResultSet(final ResultSet resultSet) throws SQLException, ParseException {
-        final History history = new History();
-        history.setDescription(resultSet.getString("description"));
-        history.setOrderId(resultSet.getLong("order_id"));
-        history.setDate(new Date(resultSet.getTimestamp("date").getTime()));
+        final History history = new History.HistoryBuilder()
+                .setDate(new Date(resultSet.getTimestamp("date").getTime()))
+                .setDescription(resultSet.getString("description"))
+                .setOrderId(resultSet.getLong("order_id"))
+                .build();
         return history;
     }
 }

@@ -28,10 +28,11 @@ public class BuyProductsServlet extends HttpServlet {
             Long orderId = Long.valueOf(request.getParameter("orderId"));
             final List<Product> products = ProductService.getInstance().getProductsByOrderId(orderId);
             final StringBuilder result = WebDriverSelenium.runSeleniumWebdriver(products);
-            final History history = new History();
-            history.setOrderId(orderId);
-            history.setDescription(result.toString());
-            history.setDate(new Date());
+            final History history = new History.HistoryBuilder()
+                    .setDate(new Date())
+                    .setDescription(result.toString())
+                    .setOrderId(orderId)
+                    .build();
             HistoryService.getInstance().addHistory(history);
             response.sendRedirect("/list-orders.do");
         } catch (Exception e) {
