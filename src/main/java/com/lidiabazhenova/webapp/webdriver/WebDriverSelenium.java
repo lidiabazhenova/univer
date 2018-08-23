@@ -3,7 +3,6 @@ package com.lidiabazhenova.webapp.webdriver;
 import com.lidiabazhenova.webapp.model.Product;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
