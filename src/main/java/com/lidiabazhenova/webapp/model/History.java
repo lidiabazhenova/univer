@@ -2,7 +2,7 @@ package com.lidiabazhenova.webapp.model;
 
 import java.util.Date;
 
-public class History extends AbstractModel {
+public class History {
 
     private String description;
     private long orderId;

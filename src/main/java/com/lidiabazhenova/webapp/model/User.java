@@ -2,7 +2,7 @@ package com.lidiabazhenova.webapp.model;
 
 import java.util.Objects;
 
-public class User extends AbstractModel {
+public class User {
 
     private long userId;
     private String login;
