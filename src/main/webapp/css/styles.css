@@ -78,7 +78,6 @@ nav.navbar {
     border: none;
     border-bottom: none;
     opacity: 1;
-    /*display: none;*/
     z-index: 9999;
 }
 
@@ -275,19 +274,6 @@ Login form
     transition: all .2s ease-in-out 0s;
 }
 
-/*.login-form .group label .icon:before {*/
-    /*left: 3px;*/
-    /*width: 5px;*/
-    /*bottom: 6px;*/
-    /*transform: scale(0) rotate(0);*/
-/*}*/
-
-/*.login-form .group label .icon:after {*/
-    /*top: 6px;*/
-    /*right: 0;*/
-    /*!*transform: scale(0) rotate(0);*!*/
-/*}*/
-
 .login-form .group .check:checked + label {
     color: #fff;
 }
@@ -295,22 +281,6 @@ Login form
 .login-form .group .check:checked + label .icon {
     background: #1161ee;
 }
-
-/*.login-form .group .check:checked + label .icon:before {*/
-    /*transform: scale(1) rotate(45deg);*/
-/*}*/
-
-/*.login-form .group .check:checked + label .icon:after {*/
-    /*transform: scale(1) rotate(-45deg);*/
-/*}*/
-
-/*.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm {*/
-    /*transform: rotate(0);*/
-/*}*/
-
-/*.login-html .sign-up:checked + .tab + .login-form .sign-up-htm {*/
-    /*transform: rotate(0);*/
-/*}*/
 
 .error-msg {
     color: red;
